@@ -80,6 +80,15 @@
     animation: fadeIn 0.5s ease-in-out;
   }
   
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -89,5 +98,42 @@
       opacity: 1;
       transform: translateY(0);
     }
+  }
+
+  /* Custom Scrollbar Styles */
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--color-gradientRed) 0%, var(--color-gradientMaroon) 50%, var(--color-gradientOrange) 100%);
+    border-radius: 10px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+    transition: all 0.3s ease;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, 
+      color-mix(in srgb, var(--color-gradientRed) 80%, white) 0%, 
+      color-mix(in srgb, var(--color-gradientMaroon) 80%, white) 50%, 
+      color-mix(in srgb, var(--color-gradientOrange) 80%, white) 100%);
+    border: 1px solid transparent;
+    transform: scale(1.1);
+  }
+
+  ::-webkit-scrollbar-corner {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  /* Firefox Scrollbar */
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-gradientMaroon) rgba(255, 255, 255, 0.1);
   }
 }

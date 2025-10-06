@@ -63,7 +63,7 @@ const Experience = () => {
       </div>
       
       {/* Tab Content */}
-      <div className="mt-8">
+      <div className="mt-4">
         {activeTab === 'education' && (
           <div className="fade-in">
             <div className="space-y-3">
@@ -85,7 +85,7 @@ const Experience = () => {
               <div className="flex justify-start mt-4">
                 <button 
                   onClick={() => toggleShowAll('education')}
-                  className="px-6 py-2 bg-gray-700/50 font-semibold hover:opacity-90 transition-opacity"
+                  className="px-6 py-2 bg-gray-700/50 rounded-lg font-semibold hover:opacity-90 transition-opacity"
                 >
                   {showAll.education ? 'Show Less' : `See More (${educationData.length - 3} more)`}
                 </button>

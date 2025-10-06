@@ -1,4 +1,5 @@
 import React from 'react'
+import { Project, Certificates } from '../data.js'
 
 const About = () => {
   return (
@@ -28,7 +29,7 @@ const About = () => {
         <div className="flex flex-col gap-4 bg-gray-700/50 px-12 py-6 rounded-xl">
           <div className="flex justify-between">
             <img src="public/assets/total-projects.png" alt="Total Projects" />
-            <p className="text-2xl font-semibold">12</p>
+            <p className="text-2xl font-semibold">{Project.length}</p>
           </div>
           <div className="flex justify-between items-center gap-36">
             <div>
@@ -43,7 +44,7 @@ const About = () => {
         <div className="flex flex-col gap-4 bg-gray-700/50 px-12 py-6 rounded-xl">
           <div className="flex justify-between">
             <img src="public/assets/certificates.png" alt="Certificates" />
-            <p className="text-2xl font-semibold">42</p>
+            <p className="text-2xl font-semibold">{Certificates.length}</p>
           </div>
           <div className="flex justify-between items-center gap-36">
             <div>

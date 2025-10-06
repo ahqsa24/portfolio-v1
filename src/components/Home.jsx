@@ -43,7 +43,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div id="home" className="min-h-screen flex flex-col gap-8 px-24 py-24">
+    <div id="home" className="min-h-screen flex flex-col gap-8 px-24 justify-center">
         <p className="text-xl rounded-full bg-gray-700/50 border border-white py-2 px-8 w-fit">Ready to Develop</p>
         <h1 className="flex flex-col gap-8 font-bold text-7xl">
           <span className="bg-gradient-to-r from-gradientRed via-gradientMaroon to-gradientOrange bg-clip-text text-transparent">Ahmad Qaulan</span>
