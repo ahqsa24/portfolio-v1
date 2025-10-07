@@ -35,6 +35,13 @@ import API from "/assets/Projects/API.png";
 // Certificates
 import Certificates1 from "/assets/Certificates/1.png";
 
+// Social Media
+import Linkedin from "/assets/Social/LinkedIn.png";
+import Github from "/assets/Social/GitHub.png";
+import Instagram from "/assets/Social/Instagram.png";
+import Email from "/assets/Social/Gmail.png";
+import Youtube from "/assets/Social/YouTube.png";
+
 // TechStack
 import HTML from "/assets/TechStack/HTML.png";
 import CSS from "/assets/TechStack/CSS.png";
@@ -528,5 +535,43 @@ export const TechStack = [
         id: 16,
         picture: Postman,
         Title: "Postman",
+    }
+]
+
+export const SocialMedia = [
+    {
+        id: 1,
+        picture: Linkedin,
+        Title: "Linkedln",
+        Name: "Ahmad Qaulan Sadida",
+        link: "https://www.linkedin.com/in/adidsadida"
+    },
+    {
+        id: 2,
+        picture: Github,
+        Title: "GitHub",
+        Name: "ahqsa24",
+        link: "https://github.com/ahqsa24"
+    },
+    {
+        id: 3,
+        picture: Instagram,
+        Title: "Instagram",
+        Name: "@adidsadida24",
+        link: "https://www.instagram.com/adidsadida24/"
+    },
+    {
+        id: 4,
+        picture: Email,
+        Title: "Email",
+        Name: "adhiet353@gmail.com",
+        link: "mailto:adhiet353@gmail.com"
+    },
+    {
+        id: 5,
+        picture: Youtube,
+        Title: "YouTube",
+        Name: "Cozzy",
+        link: "https://www.youtube.com/adidsadida"
     }
 ]
