@@ -61,6 +61,68 @@ import Vercell from "/assets/TechStack/Vercell.png";
 import Postman from "/assets/TechStack/Postman.png";
 import MySQL from "/assets/TechStack/MySQL.png";
 
+// Others
+import About from "/assets/about-image.png";
+import Arrow from "/assets/arrow (1).png";
+import Certificate from "/assets/certificates.png";
+import Code from "/assets/Code (1).png";
+import Contact from "/assets/contact-icon.png";
+import Experiences from "/assets/experiences.png";
+import Logo from "/assets/Logo-1.png";
+import ProjectIcon from "/assets/project-icon.png";
+import TotalProjects from "/assets/total-projects.png";
+
+export const Image = [
+    {
+        id: 1,
+        picture: About,
+        name: "about-image"
+    },
+    {
+        id: 2,
+        picture: Arrow,
+        name: "arrow"
+    },
+    {
+        id: 3,
+        picture: Certificate,
+        name: "certificates"
+    },
+    {
+        id: 4,
+        picture: Code,
+        name: "code"
+    },
+    {
+        id: 5,
+        picture: Contact,
+        name: "contact-icon"
+    },
+    {
+        id: 6,
+        picture: Experiences,
+        name: "experiences"
+    },
+    {
+        id: 7,
+        picture: Logo,
+        name: "logo"
+    },
+    {
+        id: 8,
+        picture: ProjectIcon,
+        name: "project-icon"
+    },
+    {
+        id: 9,
+        picture: TotalProjects,
+        name: "total-projects"
+    }
+]
+
+// Export individual images for easy import in components
+export { About, Arrow, Certificate, Code, Contact, Experiences, Logo, ProjectIcon, TotalProjects };
+
 export const educationData = [
     {
         id: 1,

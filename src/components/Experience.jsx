@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { educationData, organizationData } from '../data.js'
+import { educationData, organizationData, Code } from '../data.js'
 
 const Experience = () => {
   const [activeTab, setActiveTab] = useState('education');
@@ -35,9 +35,9 @@ const Experience = () => {
     <div id="experience" className="min-h-screen px-4 sm:px-8 md:px-16 lg:px-24 py-12 sm:py-16 md:py-20 lg:py-24">
       <div className="flex flex-col justify-center items-center">
         <h1 className="flex justify-center mb-4 sm:mb-6 text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-gradientRed via-gradientMaroon to-gradientOrange bg-clip-text text-transparent">Experiences</h1>
-        <p className="flex w-full sm:w-[80%] md:w-[70%] lg:w-[60%] text-center text-sm sm:text-base md:text-lg leading-relaxed">Explore my journey through education and organizational involvement. Each section highlights key milestones in my academic growth and leadership experiences, shaping my technical expertise and professional development.</p>
+        <p className="flex w-full sm:w-[80%] md:w-[70%] text-center text-sm sm:text-base md:text-lg leading-relaxed">Explore my journey through education and organizational involvement. Each section highlights key milestones in my academic growth and leadership experiences, shaping my technical expertise and professional development.</p>
       </div>
-      <div className="flex flex-col sm:flex-row gap-2 sm:gap-8 mt-8 sm:mt-10 md:mt-12 justify-between bg-gray-700/50 py-2 rounded-xl">
+      <div className="flex flex-row sm:flex-row gap-2 sm:gap-8 mt-8 sm:mt-10 md:mt-12 justify-between bg-gray-700/50 py-2 rounded-xl">
         <div 
           className={`flex flex-col gap-2 mx-auto items-center py-3 sm:py-4 w-full sm:w-[45%] rounded-xl cursor-pointer transition-all duration-300 ${
             activeTab === 'education' 
@@ -46,7 +46,7 @@ const Experience = () => {
           }`}
           onClick={() => handleTabClick('education')}
         >
-          <img src="public/assets/Code (1).png" alt="Education" className="w-6 h-6 sm:w-8 sm:h-8" />
+          <img src={Code} alt="Education"/>
           <p className="text-sm sm:text-base">Education</p>
         </div>
         <div 
@@ -57,7 +57,7 @@ const Experience = () => {
           }`}
           onClick={() => handleTabClick('organization')}
         >
-          <img src="public/assets/Code (1).png" alt="Organization" className="w-6 h-6 sm:w-8 sm:h-8" />
+          <img src={Code} alt="Organization"/>
           <p className="text-sm sm:text-base">Organization</p>
         </div>
       </div>

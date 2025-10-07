@@ -51,7 +51,7 @@ const Contact = () => {
     <div id="contact" className="min-h-screen px-4 sm:px-8 md:px-16 lg:px-24 py-8 sm:py-12 md:py-16 lg:py-24">
       <div className="flex flex-col justify-center items-center mb-8 sm:mb-12">
         <h1 className="flex justify-center mb-4 sm:mb-6 text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-gradientRed via-gradientMaroon to-gradientOrange bg-clip-text text-transparent text-center">Contact Me</h1>
-        <p className="flex w-full sm:w-[80%] md:w-[70%] lg:w-[60%] text-center text-sm sm:text-base md:text-lg px-4">I would love to hear from you! Whether you have a question, feedback, or just want to connect, feel free to reach out.</p>
+        <p className="flex w-full sm:w-[80%] md:w-[70%] text-center text-sm sm:text-base md:text-lg leading-relaxed">I would love to hear from you! Whether you have a question, feedback, or just want to connect, feel free to reach out.</p>
       </div>
       
       {/* Main Content - Side by Side Layout */}
@@ -59,7 +59,7 @@ const Contact = () => {
         
         {/* Left Side - Social Media Section */}
         <div className="lg:w-xl flex flex-col gap-6">
-          <div className="bg-gray-700/50 w-xl p-4 sm:p-6 md:p-8 rounded-xl h-full flex flex-col">
+          <div className="bg-gray-700/50 p-4 sm:p-6 md:p-8 rounded-xl h-full flex flex-col">
             <div className="mb-6">
               <h2 className="text-xl sm:text-2xl font-bold mb-2 bg-gradient-to-r from-gradientRed via-gradientMaroon to-gradientOrange bg-clip-text text-transparent">Connect with Me</h2>
               <p className="text-sm lg:text-lg sm:text-base">Feel free to reach out through any of these platforms.</p>

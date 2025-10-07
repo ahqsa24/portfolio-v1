@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react'
+import { useNavigate, useLocation } from 'react-router-dom'
 
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -12,15 +15,17 @@ const Navbar = () => {
       // Update scroll state for blur effect
       setIsScrolled(scrollPosition > 50);
       
-      // Update active section
-      const sections = ['home', 'about', 'experience', 'portfolio', 'contact'];
-      const scrollWithOffset = scrollPosition + 100; // Offset for better detection
+      // Only update active section if we're on the main page
+      if (location.pathname === '/') {
+        const sections = ['home', 'about', 'experience', 'portfolio', 'contact'];
+        const scrollWithOffset = scrollPosition + 100; // Offset for better detection
 
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const section = document.getElementById(sections[i]);
-        if (section && scrollWithOffset >= section.offsetTop) {
-          setActiveSection(sections[i]);
-          break;
+        for (let i = sections.length - 1; i >= 0; i--) {
+          const section = document.getElementById(sections[i]);
+          if (section && scrollWithOffset >= section.offsetTop) {
+            setActiveSection(sections[i]);
+            break;
+          }
         }
       }
     };
@@ -29,10 +34,16 @@ const Navbar = () => {
     handleScroll(); // Call once to set initial active section
 
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [location.pathname]);
 
   const handleNavClick = (section) => {
-    setActiveSection(section);
+    // If we're not on the main page, navigate to main page first
+    if (location.pathname !== '/') {
+      navigate(`/#${section}`);
+      window.location.href = `/#${section}`;
+    } else {
+      setActiveSection(section);
+    }
     setIsMobileMenuOpen(false); // Close mobile menu when clicking a link
   };
 

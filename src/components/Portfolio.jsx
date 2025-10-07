@@ -1,5 +1,5 @@
 import { React, useState }from 'react'
-import { Project, Certificates, TechStack } from '../data.js'
+import { Project, Certificates, TechStack, Code } from '../data.js'
 
 const Portfolio = () => {
   const [activeTab, setActiveTab] = useState('projects');
@@ -38,10 +38,10 @@ const Portfolio = () => {
   };
   
   return (
-    <div id="portfolio" className="min-h-screen px-24 py-24">
+    <div id="portfolio" className="min-h-screen px-4 sm:px-8 md:px-16 lg:px-24 py-12 sm:py-16 md:py-20 lg:py-24">
       <div className="flex flex-col justify-center items-center">
-        <h1 className="flex justify-center mb-6 text-5xl font-bold bg-gradient-to-r from-gradientRed via-gradientMaroon to-gradientOrange bg-clip-text text-transparent">Portfolio</h1>
-        <p className="flex w-[60%] text-center text-lg">Explore my journey through projects, certifications, and technical expertise. Each section represents a milestone in my continuous learning path.</p>
+        <h1 className="flex justify-center mb-6 lg:text-5xl text-3xl font-bold bg-gradient-to-r from-gradientRed via-gradientMaroon to-gradientOrange bg-clip-text text-transparent">Portfolio</h1>
+        <p className="flex w-full sm:w-[80%] md:w-[70%] text-center text-sm sm:text-base md:text-lg leading-relaxed">Explore my journey through projects, certifications, and technical expertise. Each section represents a milestone in my continuous learning path.</p>
       </div>
       <div className="flex gap-8 mt-12 justify-between bg-gray-700/50 py-2 rounded-xl">
         <div 
@@ -52,7 +52,7 @@ const Portfolio = () => {
           }`}
           onClick={() => handleTabClick('projects')}
         >
-          <img src="public/assets/Code (1).png" alt="Projects" />
+          <img src={Code} alt="Projects" />
           <p>Projects</p>
         </div>
         <div 
@@ -63,7 +63,7 @@ const Portfolio = () => {
           }`}
           onClick={() => handleTabClick('certificates')}
         >
-          <img src="public/assets/Code (1).png" alt="Certificates" />
+          <img src={Code} alt="Certificates" />
           <p>Certificates</p>
         </div>
         <div 
@@ -74,7 +74,7 @@ const Portfolio = () => {
           }`}
           onClick={() => handleTabClick('techstack')}
         >
-          <img src="public/assets/Code (1).png" alt="Tech Stack" />
+          <img src={Code} alt="Tech Stack" />
           <p>Tech Stack</p>
         </div>
       </div>
