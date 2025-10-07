@@ -35,6 +35,8 @@ createRoot(document.getElementById('root')).render(
           <Route path="/" element={<MainPortfolio />} />
           {/* Project detail page */}
           <Route path="/project/:id" element={<DetailProject />} />
+          {/* Fallback route for any unmatched paths */}
+          <Route path="*" element={<MainPortfolio />} />
         </Routes>
       </div>
     </Router>

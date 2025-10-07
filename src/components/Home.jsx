@@ -44,33 +44,33 @@ const Home = () => {
   }, []);
 
   return (
-    <div id="home" className="min-h-screen flex flex-col gap-4 sm:gap-6 md:gap-8 px-4 sm:px-8 md:px-16 lg:px-24 justify-center">
-        <p className="text-sm sm:text-base md:text-lg lg:text-xl rounded-full bg-gray-700/50 border border-white py-2 px-4 sm:px-6 md:px-8 w-fit">Ready to Develop</p>
-        <h1 className="flex flex-col gap-4 sm:gap-6 md:gap-8 font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
-          <span className="bg-gradient-to-r from-gradientRed via-gradientMaroon to-gradientOrange bg-clip-text text-transparent">Ahmad Qaulan</span>
-          <span> Sadida</span>
+    <div id="home" className="min-h-screen flex flex-col gap-4 sm:gap-6 md:gap-8 px-4 sm:px-8 md:px-16 lg:px-24 justify-center animate-fade-in">
+        <p className="text-sm sm:text-base md:text-lg lg:text-xl rounded-full bg-gray-700/50 border border-white py-2 px-4 sm:px-6 md:px-8 w-fit hover:bg-gray-600/60 hover:border-gray-300 hover:scale-105 transition-all duration-300 cursor-pointer animate-slide-in-down">Ready to Develop</p>
+        <h1 className="flex flex-col gap-4 sm:gap-6 md:gap-8 font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl animate-slide-in-left">
+          <span className="bg-gradient-to-r from-gradientRed via-gradientMaroon to-gradientOrange bg-clip-text text-transparent hover:from-gradientOrange hover:via-gradientRed hover:to-gradientMaroon transition-all duration-500 cursor-default">Ahmad Qaulan</span>
+          <span className="hover:text-gray-300 transition-colors duration-300 cursor-default"> Sadida</span>
         </h1>
-        <h3 className="text-lg sm:text-xl md:text-2xl">
+        <h3 className="text-lg sm:text-xl md:text-2xl animate-slide-in-right">
           {currentText}
           <span className={`${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity duration-100`}>|</span>
         </h3>
-        <p className="text-sm sm:text-base md:text-lg leading-relaxed">Membangun Antarmuka Digital yang Responsif, Interaktif, dan Estetis <br className="hidden sm:block" /> untuk Pengalaman Pengguna Terbaik.</p>
-        <div className="languages text-sm sm:text-base md:text-lg flex flex-wrap gap-2 w-full sm:w-[80%] md:w-[60%] lg:w-full max-w-fit">
-            <p className="rounded-full bg-gray-700/50 border border-white py-1 px-3 sm:px-4 md:px-6 w-fit">React</p>
-            <p className="rounded-full bg-gray-700/50 border border-white py-1 px-3 sm:px-4 md:px-6 w-fit">Express</p>
-            <p className="rounded-full bg-gray-700/50 border border-white py-1 px-3 sm:px-4 md:px-6 w-fit">NodeJS</p>
-            <p className="rounded-full bg-gray-700/50 border border-white py-1 px-3 sm:px-4 md:px-6 w-fit">Tailwind</p>
-            <p className="rounded-full bg-gray-700/50 border border-white py-1 px-3 sm:px-4 md:px-6 w-fit">UI/UX</p>
-            <p className="rounded-full bg-gray-700/50 border border-white py-1 px-3 sm:px-4 md:px-6 w-fit">Figma</p>
+        <p className="text-sm sm:text-base md:text-lg leading-relaxed hover:text-gray-300 transition-colors duration-300 animate-slide-in-up">Membangun Antarmuka Digital yang Responsif, Interaktif, dan Estetis <br className="hidden sm:block" /> untuk Pengalaman Pengguna Terbaik.</p>
+        <div className="languages text-sm sm:text-base md:text-lg flex flex-wrap gap-2 w-full sm:w-[80%] md:w-[60%] lg:w-full max-w-fit animate-slide-in-up delay-200">
+            <p className="rounded-full bg-gray-700/50 border border-white py-1 px-3 sm:px-4 md:px-6 w-fit hover:bg-gradient-to-r hover:from-gradientRed hover:via-gradientMaroon hover:to-gradientOrange hover:scale-110 hover:shadow-lg hover:shadow-gradientRed/30 transition-all duration-300 cursor-pointer">React</p>
+            <p className="rounded-full bg-gray-700/50 border border-white py-1 px-3 sm:px-4 md:px-6 w-fit hover:bg-gradient-to-r hover:from-gradientRed hover:via-gradientMaroon hover:to-gradientOrange hover:scale-110 hover:shadow-lg hover:shadow-gradientRed/30 transition-all duration-300 cursor-pointer">Express</p>
+            <p className="rounded-full bg-gray-700/50 border border-white py-1 px-3 sm:px-4 md:px-6 w-fit hover:bg-gradient-to-r hover:from-gradientRed hover:via-gradientMaroon hover:to-gradientOrange hover:scale-110 hover:shadow-lg hover:shadow-gradientRed/30 transition-all duration-300 cursor-pointer">NodeJS</p>
+            <p className="rounded-full bg-gray-700/50 border border-white py-1 px-3 sm:px-4 md:px-6 w-fit hover:bg-gradient-to-r hover:from-gradientRed hover:via-gradientMaroon hover:to-gradientOrange hover:scale-110 hover:shadow-lg hover:shadow-gradientRed/30 transition-all duration-300 cursor-pointer">Tailwind</p>
+            <p className="rounded-full bg-gray-700/50 border border-white py-1 px-3 sm:px-4 md:px-6 w-fit hover:bg-gradient-to-r hover:from-gradientRed hover:via-gradientMaroon hover:to-gradientOrange hover:scale-110 hover:shadow-lg hover:shadow-gradientRed/30 transition-all duration-300 cursor-pointer">UI/UX</p>
+            <p className="rounded-full bg-gray-700/50 border border-white py-1 px-3 sm:px-4 md:px-6 w-fit hover:bg-gradient-to-r hover:from-gradientRed hover:via-gradientMaroon hover:to-gradientOrange hover:scale-110 hover:shadow-lg hover:shadow-gradientRed/30 transition-all duration-300 cursor-pointer">Figma</p>
         </div>
-        <div className="text-sm sm:text-base md:text-lg flex flex-col sm:flex-row gap-3 sm:gap-4">
-            <button className="flex gap-2 items-center justify-center rounded-lg bg-gray-700/50 py-2 sm:py-1 px-6 sm:px-8 w-full sm:w-fit">
-              <img src={ProjectIcon} alt="Projects" className="w-4 h-4 sm:w-5 sm:h-5" />
-              <a href="#projects">Projects</a>
+        <div className="text-sm sm:text-base md:text-lg flex flex-col sm:flex-row gap-3 sm:gap-4 animate-slide-in-up delay-400">
+            <button className="group flex gap-2 items-center justify-center rounded-lg bg-gray-700/50 py-2 sm:py-1 px-6 sm:px-8 w-full sm:w-fit hover:bg-gradient-to-r hover:from-gradientRed hover:via-gradientMaroon hover:to-gradientOrange hover:scale-105 hover:shadow-xl hover:shadow-gradientRed/30 transition-all duration-300">
+              <img src={ProjectIcon} alt="Projects" className="w-4 h-4 sm:w-5 sm:h-5 group-hover:scale-110 transition-transform duration-300" />
+              <a href="#projects" className="group-hover:text-white transition-colors duration-300">Projects</a>
             </button>
-            <button className="flex gap-2 items-center justify-center rounded-lg bg-gray-700/50 py-2 sm:py-1 px-6 sm:px-8 w-full sm:w-fit">
-              <img src={Contact} alt="Contact" className="w-4 h-4 sm:w-5 sm:h-5" />
-              <a href="#contact">Contact</a>
+            <button className="group flex gap-2 items-center justify-center rounded-lg bg-gray-700/50 py-2 sm:py-1 px-6 sm:px-8 w-full sm:w-fit hover:bg-gradient-to-r hover:from-gradientRed hover:via-gradientMaroon hover:to-gradientOrange hover:scale-105 hover:shadow-xl hover:shadow-gradientRed/30 transition-all duration-300">
+              <img src={Contact} alt="Contact" className="w-4 h-4 sm:w-5 sm:h-5 group-hover:scale-110 transition-transform duration-300" />
+              <a href="#contact" className="group-hover:text-white transition-colors duration-300">Contact</a>
             </button>
         </div>
     </div>

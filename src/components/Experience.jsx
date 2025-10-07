@@ -33,31 +33,31 @@ const Experience = () => {
 
   return (
     <div id="experience" className="min-h-screen px-4 sm:px-8 md:px-16 lg:px-24 py-12 sm:py-16 md:py-20 lg:py-24">
-      <div className="flex flex-col justify-center items-center">
-        <h1 className="flex justify-center mb-4 sm:mb-6 text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-gradientRed via-gradientMaroon to-gradientOrange bg-clip-text text-transparent">Experiences</h1>
-        <p className="flex w-full sm:w-[80%] md:w-[70%] text-center text-sm sm:text-base md:text-lg leading-relaxed">Explore my journey through education and organizational involvement. Each section highlights key milestones in my academic growth and leadership experiences, shaping my technical expertise and professional development.</p>
+      <div className="flex flex-col justify-center items-center animate-fade-in">
+        <h1 className="flex justify-center mb-4 sm:mb-6 text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-gradientRed via-gradientMaroon to-gradientOrange bg-clip-text text-transparent hover:from-gradientOrange hover:via-gradientRed hover:to-gradientMaroon transition-all duration-500">Experiences</h1>
+        <p className="flex w-full sm:w-[80%] md:w-[70%] text-center text-sm sm:text-base md:text-lg leading-relaxed hover:text-gray-300 transition-colors duration-300">Explore my journey through education and organizational involvement. Each section highlights key milestones in my academic growth and leadership experiences, shaping my technical expertise and professional development.</p>
       </div>
-      <div className="flex flex-row sm:flex-row gap-2 sm:gap-8 mt-8 sm:mt-10 md:mt-12 justify-between bg-gray-700/50 py-2 rounded-xl">
+      <div className="flex flex-row sm:flex-row gap-2 sm:gap-8 mt-8 sm:mt-10 md:mt-12 justify-between bg-gray-700/50 py-2 rounded-xl hover:bg-gray-600/60 transition-all duration-300 animate-slide-in-up delay-200">
         <div 
-          className={`flex flex-col gap-2 mx-auto items-center py-3 sm:py-4 w-full sm:w-[45%] rounded-xl cursor-pointer transition-all duration-300 ${
+          className={`group flex flex-col gap-2 mx-auto items-center py-3 sm:py-4 w-full sm:w-[45%] rounded-xl cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg ${
             activeTab === 'education' 
-              ? 'bg-gradient-to-r from-gradientRed via-gradientMaroon to-gradientOrange text-white' 
-              : 'text-gray-300 hover:text-white'
+              ? 'bg-gradient-to-r from-gradientRed via-gradientMaroon to-gradientOrange text-white shadow-xl shadow-gradientRed/30' 
+              : 'text-gray-300 hover:text-white hover:bg-gray-600/30'
           }`}
           onClick={() => handleTabClick('education')}
         >
-          <img src={Code} alt="Education"/>
-          <p className="text-sm sm:text-base">Education</p>
+          <img src={Code} alt="Education" className="group-hover:scale-110 transition-transform duration-300"/>
+          <p className="text-sm sm:text-base group-hover:font-semibold transition-all duration-300">Education</p>
         </div>
         <div 
-          className={`flex flex-col gap-2 mx-auto items-center py-3 sm:py-4 w-full sm:w-[45%] rounded-xl cursor-pointer transition-all duration-300 ${
+          className={`group flex flex-col gap-2 mx-auto items-center py-3 sm:py-4 w-full sm:w-[45%] rounded-xl cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg ${
             activeTab === 'organization' 
-              ? 'bg-gradient-to-r from-gradientRed via-gradientMaroon to-gradientOrange text-white' 
-              : 'text-gray-300 hover:text-white'
+              ? 'bg-gradient-to-r from-gradientRed via-gradientMaroon to-gradientOrange text-white shadow-xl shadow-gradientRed/30' 
+              : 'text-gray-300 hover:text-white hover:bg-gray-600/30'
           }`}
           onClick={() => handleTabClick('organization')}
         >
-          <img src={Code} alt="Organization"/>
+          <img src={Code} alt="Organization" className="group-hover:scale-110 transition-transform duration-300"/>
           <p className="text-sm sm:text-base">Organization</p>
         </div>
       </div>
