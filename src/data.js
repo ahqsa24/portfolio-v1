@@ -8,7 +8,8 @@ import Necis from "/assets/Experiences/Necis.png";
 import CractIT from "../public/assets/CractIT.png";
 import Codepanda from "../public/assets/Codepanda.png";
 import Newsmaker from "../public/assets/Newsmaker.png";
-import Ignacium9 from "../public/assets/Ignacium9.png"; */}
+import Ignacium9 from "../public/assets/Ignacium9.png"; 
+import LPK from "../public/assets/LPK.png"*/}
 
 // Organization Images
 import IEEE from "/assets/Experiences/IEEE.png";
