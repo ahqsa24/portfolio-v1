@@ -34,6 +34,29 @@ import API from "/assets/Projects/API.png";
 
 // Certificates
 import Certificates1 from "/assets/Certificates/1.png";
+import Certificates2 from "/assets/Certificates/2.png";
+import Certificates3 from "/assets/Certificates/3.png";
+import Certificates4 from "/assets/Certificates/4.png";
+import Certificates5 from "/assets/Certificates/5.png";
+import Certificates6 from "/assets/Certificates/6.png";
+import Certificates7 from "/assets/Certificates/7.png";
+import Certificates8 from "/assets/Certificates/8.png";
+import Certificates9 from "/assets/Certificates/9.png";
+import Certificates10 from "/assets/Certificates/10.png";
+import Certificates11 from "/assets/Certificates/11.png";
+import Certificates12 from "/assets/Certificates/12.png";
+import Certificates13 from "/assets/Certificates/13.png";
+import Certificates14 from "/assets/Certificates/14.png";
+import Certificates15 from "/assets/Certificates/15.png";
+import Certificates16 from "/assets/Certificates/16.png";
+import Certificates17 from "/assets/Certificates/17.png";
+import Certificates18 from "/assets/Certificates/18.png";
+import Certificates19 from "/assets/Certificates/19.png";
+import Certificates20 from "/assets/Certificates/20.png";
+import Certificates21 from "/assets/Certificates/21.png";
+import Certificates22 from "/assets/Certificates/22.png";
+import Certificates23 from "/assets/Certificates/23.png";
+import Certificates24 from "/assets/Certificates/24.png";
 
 // Social Media
 import Linkedin from "/assets/Social/LinkedIn.png";
@@ -65,12 +88,16 @@ import MySQL from "/assets/TechStack/MySQL.png";
 import About from "/assets/about-image.png";
 import Arrow from "/assets/arrow (1).png";
 import Certificate from "/assets/certificates.png";
-import Code from "/assets/Code (1).png";
+import Code from "/assets/Code.png";
 import Contact from "/assets/contact-icon.png";
 import Experiences from "/assets/experiences.png";
 import Logo from "/assets/Logo-1.png";
 import ProjectIcon from "/assets/project-icon.png";
 import TotalProjects from "/assets/total-projects.png";
+import Certif from "/assets/Certificate.png";
+import Education from "/assets/Education.png";
+import Organization from "/assets/Organization.png";
+import Tech from "/assets/Tech.png";
 
 export const Image = [
     {
@@ -117,11 +144,31 @@ export const Image = [
         id: 9,
         picture: TotalProjects,
         name: "total-projects"
+    },
+    {
+        id: 10,
+        picture: Certif,
+        name: "certificate"
+    },
+    {
+        id: 11,
+        picture: Education,
+        name: "education"
+    },
+    {
+        id: 12,
+        picture: Organization,
+        name: "organization"
+    },
+    {
+        id: 13,
+        picture: Tech,
+        name: "tech"
     }
-]
+];
 
 // Export individual images for easy import in components
-export { About, Arrow, Certificate, Code, Contact, Experiences, Logo, ProjectIcon, TotalProjects };
+export { About, Arrow, Certificate, Code, Contact, Experiences, Logo, ProjectIcon, TotalProjects, Certif, Education, Organization, Tech };
 
 export const educationData = [
     {
@@ -401,117 +448,117 @@ export const Certificates = [
     },
     {
         id: 2,
-        picture: Certificates1,
+        picture: Certificates2,
         Title: "Belajar Membuat Aplikasi Web dengan React.js",
     },
     {
         id: 3,
-        picture: Certificates1,
+        picture: Certificates3,
         Title: "Belajar Jaringan Komputer untuk Pemula",
     },
     {
         id: 4,
-        picture: Certificates1,
+        picture: Certificates4,
         Title: "UIUX Design Mastery Skilvul",
     },
     {
         id: 5,
-        picture: Certificates1,
+        picture: Certificates5,
         Title: "Belajar Penerapan Machine Learning dengan Google Cloud",
     },
     {
         id: 6,
-        picture: Certificates1,
+        picture: Certificates6,
         Title: "Belajar Dasar-Dasar DevOps",
     },
     {
         id: 7,
-        picture: Certificates1,
+        picture: Certificates7,
         Title: "Belajar Back-End Pemula dengan JavaScript",
     },
     {
         id: 8,
-        picture: Certificates1,
+        picture: Certificates8,
         Title: "Menjadi Google Cloud Engineer",
     },
     {
         id: 9,
-        picture: Certificates1,
+        picture: Certificates9,
         Title: "Belajar Membuat Aplikasi Back-End untuk Pemula dengan Google Cloud",
     },
     {
         id: 10,
-        picture: Certificates1,
+        picture: Certificates10,
         Title: "Belajar Dasar AI",
     },
     {
         id: 11,
-        picture: Certificates1,
+        picture: Certificates11,
         Title: "Belajar Dasar Pemrograman JavaScript",
     },
     {
         id: 12,
-        picture: Certificates1,
+        picture: Certificates12,
         Title: "Belajar Dasar Pemrograman Web",
     },
     {
         id: 13,
-        picture: Certificates1,
+        picture: Certificates13,
         Title: "Belajar Dasar Git dengan GitHub",
     },
     {
         id: 14,
-        picture: Certificates1,
+        picture: Certificates14,
         Title: "Pengenalan ke Logika Pemrograman (Programming Logic 101)",
     },
     {
         id: 15,
-        picture: Certificates1,
+        picture: Certificates15,
         Title: "Memulai Dasar Pemrograman untuk Menjadi Pengembang Software",
     },
     {
         id: 16,
-        picture: Certificates1,
+        picture: Certificates16,
         Title: "Belajar Machine Learning untuk Pemula",
     },
     {
         id: 17,
-        picture: Certificates1,
+        picture: Certificates17,
         Title: "Belajar Dasar SQL",
     },
     {
         id: 18,
-        picture: Certificates1,
+        picture: Certificates18,
         Title: "Belajar Dasar Data Science",
     },
     {
         id: 19,
-        picture: Certificates1,
+        picture: Certificates19,
         Title: "Belajar Dasar Manajemen Proyek",
     },
     {
         id: 20,
-        picture: Certificates1,
+        picture: Certificates20,
         Title: "Belajar Dasar Visualisasi Data",
     },
     {
         id: 21,
-        picture: Certificates1,
+        picture: Certificates21,
         Title: "Belajar Dasar Pemrograman Python",
     },
     {
         id: 22,
-        picture: Certificates1,
+        picture: Certificates22,
         Title: "Belajar Membuat Front-End Web untuk Pemula",
     },
     {
         id: 23,
-        picture: Certificates1,
+        picture: Certificates23,
         Title: "Belajar Dasar AWS Cloud",
     },
     {
         id: 24,
-        picture: Certificates1,
+        picture: Certificates24,
         Title: "Belajar Implementasi CI CD",
     },
 

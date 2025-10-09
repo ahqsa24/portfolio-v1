@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { educationData, organizationData, Code } from '../data.js'
+import { educationData, organizationData, Organization, Education } from '../data.js'
 
 const Experience = () => {
   const [activeTab, setActiveTab] = useState('education');
@@ -46,7 +46,7 @@ const Experience = () => {
           }`}
           onClick={() => handleTabClick('education')}
         >
-          <img src={Code} alt="Education" className="group-hover:scale-110 transition-transform duration-300"/>
+          <img src={Education} alt="Education" className="group-hover:scale-110 transition-transform duration-300"/>
           <p className="text-sm sm:text-base group-hover:font-semibold transition-all duration-300">Education</p>
         </div>
         <div 
@@ -57,7 +57,7 @@ const Experience = () => {
           }`}
           onClick={() => handleTabClick('organization')}
         >
-          <img src={Code} alt="Organization" className="group-hover:scale-110 transition-transform duration-300"/>
+          <img src={Organization} alt="Organization" className="group-hover:scale-110 transition-transform duration-300"/>
           <p className="text-sm sm:text-base">Organization</p>
         </div>
       </div>
