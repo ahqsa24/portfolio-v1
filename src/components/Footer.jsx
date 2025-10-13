@@ -13,7 +13,7 @@ const Footer = () => {
                         <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Ahqsa Portfolio</span>
                     </a>
                 </div>
-                <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-2">
+                <div className="grid grid-cols-1 gap-8 sm:gap-6 sm:grid-cols-2">
                     <div>
                         <h2 className="mb-6 text-lg font-bold bg-gradient-to-r from-gradientRed via-gradientMaroon to-gradientOrange bg-clip-text text-transparent uppercase dark:text-white">Resources</h2>
                         <ul className="text-gray-500 dark:text-gray-400 font-medium">
