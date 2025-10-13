@@ -21,7 +21,8 @@ const DetailProject = () => {
     return (
       <div className="min-h-screen flex items-center justify-center px-4 sm:px-8 md:px-16 lg:px-24 pt-20">
         <div className="text-center">
-          <h1 className="text-xl sm:text-2xl font-bold text-red-500 mb-4">Project Not Found</h1>
+          <h1 className="text-9xl font-bold bg-gradient-to-r from-gradientRed via-gradientMaroon to-gradientOrange bg-clip-text text-transparent">404</h1>
+          <h1 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-gradientRed via-gradientMaroon to-gradientOrange bg-clip-text text-transparent mb-4">Project Not Found</h1>
           <p className="text-gray-400 mb-6">The project you're looking for doesn't exist.</p>
           <button 
             onClick={handleBackClick}
@@ -52,7 +53,7 @@ const DetailProject = () => {
 
         {/* Project Header */}
         <div className="mb-6 sm:mb-8">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold lg:mb-8 sm:mb-4 bg-gradient-to-r from-gradientRed via-gradientMaroon to-gradientOrange bg-clip-text text-transparent">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold lg:mb-8 sm:mb-4">
             {project.Title}
           </h1>
           <img 

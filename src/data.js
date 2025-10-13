@@ -356,10 +356,9 @@ export const Project = [
         ],
         Technologies: ["VanillaCSS", "JavaScript"],
         KeyFeature: [
-            { text: "Mengbubungkan perangkat desa dengan inovator untuk menerapkan inovasi yang diterapkan." },
-            { text: "Menyediakan fitur pencarian dan filter untuk mempermudah pencocokan inovasi, desa, dan inovator" },
-            { text: "Memantau aktivitas inovasi dan klaim melalui dashboard admin" },
-            { text: "Memberikan sistem badge dan ranking untuk mendorong partisipasi aktif dan inovasi unggulan" }
+            { text: "Memudahkan para penggiat traveling untuk saling bertanya dan mengutarakan pendapat dengan fitur forum bersama." },
+            { text: "Membantu para penggiat traveling untuk merekap tempat yang sudah mereka kunjungi dengan fitur daftar kunjungan." },
+            { text: "Membantu penggiat travelling untuk mencari informasi terkait tempat wisata yang dituju berbasis artikel informatif" }
         ]
     },
     {
