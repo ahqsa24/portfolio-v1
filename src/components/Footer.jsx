@@ -9,7 +9,7 @@ const Footer = () => {
               <div className="md:flex md:justify-between">
                 <div className="mb-6 md:mb-0">
                     <a href="https://www.linkedin.com/in/adidsadida/" className="flex items-center">
-                        <img src={Logo} className="h-8 me-3" alt="Ahqsa Logo" />
+                        <img src={Logo} className="h-8 me-3" alt="Ahqsa" />
                         <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Ahqsa Portfolio</span>
                     </a>
                 </div>
