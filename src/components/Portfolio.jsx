@@ -43,7 +43,7 @@ const Portfolio = () => {
         <h1 className="flex justify-center mb-6 lg:text-5xl text-3xl font-bold bg-gradient-to-r from-gradientRed via-gradientMaroon to-gradientOrange bg-clip-text text-transparent hover:from-gradientOrange hover:via-gradientRed hover:to-gradientMaroon transition-all duration-500">Portfolio</h1>
         <p className="flex w-full sm:w-[80%] md:w-[70%] text-center text-sm sm:text-base md:text-lg leading-relaxed hover:text-gray-300 transition-colors duration-300">Explore my journey through projects, certifications, and technical expertise. Each section represents a milestone in my continuous learning path.</p>
       </div>
-      <div className="flex gap-8 mt-12 justify-between bg-gray-700/50 py-2 rounded-xl hover:bg-gray-600/60 transition-all duration-300 animate-slide-in-up delay-200">
+      <div className="flex gap-8 mt-12 justify-between bg-gradientRed dark:bg-gray-700/50 py-2 rounded-xl hover:bg-gray-600/60 transition-all duration-300 animate-slide-in-up delay-200">
         <div 
           className={`group flex flex-col gap-2 mx-auto items-center py-4 w-[30%] rounded-xl cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-gradientRed/20 ${
             activeTab === 'projects' 
@@ -85,23 +85,23 @@ const Portfolio = () => {
           <div className="fade-in w-full animate-slide-in-up delay-300">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
               {getDisplayData(Project, 'projects').map((project, index) => (
-                <div key={project.id} className={`group flex flex-col p-4 gap-2 bg-gray-700/50 rounded-xl cursor-pointer transition-all duration-500 hover:bg-gray-600/70 hover:scale-105 hover:shadow-2xl hover:shadow-gradientRed/20 animate-fade-in`} style={{animationDelay: `${index * 100}ms`}}>
+                <div key={project.id} className={`group flex flex-col p-4 gap-2 bg-gradientRed dark:bg-gray-700/50 rounded-xl cursor-pointer transition-all duration-500 hover:bg-gray-600/70 hover:scale-105 hover:shadow-2xl hover:shadow-gradientRed/20 animate-fade-in`} style={{animationDelay: `${index * 100}ms`}}>
                   <div className="overflow-hidden rounded-lg">
                     <img src={project.picture} alt={project.Title} className="w-full h-full object-cover rounded-lg group-hover:scale-110 transition-transform duration-500" />
                   </div>
                   <div>
-                    <h2 className="font-bold text-xl group-hover:text-gradientRed transition-colors duration-300">{project.Title}</h2>
-                    <p className="text-sm mt-2 text-gray-300 line-clamp-3 overflow-hidden group-hover:text-gray-200 transition-colors duration-300">{project.Description}</p>
+                    <h2 className="font-bold text-xl text-white group-hover:text-gradientRed transition-colors duration-300">{project.Title}</h2>
+                    <p className="text-sm mt-2 text-white dark:text-gray-300 line-clamp-3 overflow-hidden group-hover:text-gray-200 transition-colors duration-300">{project.Description}</p>
                     <div className="flex flex-wrap gap-2 mt-3">
                       {project.Technologies.map((tech, index) => (
-                        <span key={index} className="px-2 py-1 bg-gray-600 rounded-full text-xs hover:bg-gradient-to-r hover:from-gradientRed hover:to-gradientOrange hover:text-white transition-all duration-300 cursor-pointer">
+                        <span key={index} className="px-2 py-1 bg-yellow-50 dark:bg-gray-600 rounded-full text-xs hover:bg-gradient-to-r hover:from-gradientRed hover:to-gradientOrange hover:text-white transition-all duration-300 cursor-pointer">
                           {tech}
                         </span>
                       ))}
                     </div>
                   </div>
                   <div className="flex mt-2 justify-end">
-                    <button className="flex gap-2 rounded-lg bg-gray-900 px-8 py-2 w-fit hover:bg-gradient-to-r hover:from-gradientRed hover:to-gradientOrange hover:scale-105 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-gradientRed/30">
+                    <button className="flex gap-2 rounded-lg bg-yellow-50 dark:bg-gray-900 px-8 py-2 w-fit hover:bg-gradient-to-r hover:from-gradientRed hover:to-gradientOrange hover:scale-105 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-gradientRed/30">
                       <a href={`/project/${project.id}`} className="flex items-center gap-2">
                         Details
                         <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
