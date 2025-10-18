@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
+import { navData } from '../text.js'
 
 const Navbar = () => {
+  const navItems = navData[0];
   const [activeSection, setActiveSection] = useState('home');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -19,22 +21,69 @@ const Navbar = () => {
       // Only update active section if we're on the main page
       if (location.pathname === '/') {
         const sections = ['home', 'about', 'experience', 'portfolio', 'contact'];
-        const scrollWithOffset = scrollPosition + 100; // Offset for better detection
+        const navbarHeight = 80; // Approximate navbar height
+        const offset = navbarHeight + 100; // Add some buffer for better UX
 
-        for (let i = sections.length - 1; i >= 0; i--) {
+        // Iterate forward and update to the last section that meets the criteria
+        let currentSection = 'home'; // Default to home
+        for (let i = 0; i < sections.length; i++) {
           const section = document.getElementById(sections[i]);
-          if (section && scrollWithOffset >= section.offsetTop) {
-            setActiveSection(sections[i]);
-            break;
+          if (section) {
+            const sectionTop = section.offsetTop;
+            // Check if we've scrolled past this section's start (minus offset)
+            // Only update if section is valid and positioned
+            if (section.offsetTop > 0 && scrollPosition + offset >= sectionTop) {
+              currentSection = sections[i];
+            }
           }
         }
+        setActiveSection(currentSection);
+      }
+    };
+
+    // Initial detection on mount or route change
+    const detectInitialSection = () => {
+      // Check if there's a hash in the URL
+      const hash = window.location.hash.replace('#', '');
+      if (hash && ['home', 'about', 'experience', 'portfolio', 'contact'].includes(hash)) {
+        setActiveSection(hash);
+        // Scroll to the section
+        const element = document.getElementById(hash);
+        if (element) {
+          const navbarHeight = 80;
+          const elementPosition = element.offsetTop - navbarHeight;
+          window.scrollTo({
+            top: elementPosition,
+            behavior: 'auto' // Use 'auto' instead of 'smooth' for initial load
+          });
+        }
+      } else {
+        // Otherwise detect based on scroll position
+        handleScroll();
+      }
+    };
+
+    // Handle hash changes (e.g., when clicking browser back/forward)
+    const handleHashChange = () => {
+      const hash = window.location.hash.replace('#', '');
+      if (hash && ['home', 'about', 'experience', 'portfolio', 'contact'].includes(hash)) {
+        setActiveSection(hash);
       }
     };
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Call once to set initial active section
+    window.addEventListener('hashchange', handleHashChange);
+    
+    // Delay initial detection to ensure DOM is fully rendered
+    const timer = setTimeout(() => {
+      detectInitialSection();
+    }, 150);
 
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('hashchange', handleHashChange);
+      clearTimeout(timer);
+    };
   }, [location.pathname]);
 
   // Initialize theme from current document state on mount
@@ -45,12 +94,26 @@ const Navbar = () => {
   }, []);
 
   const handleNavClick = (section) => {
+    // Update active section immediately for instant feedback
+    setActiveSection(section);
+    
     // If we're not on the main page, navigate to main page first
     if (location.pathname !== '/') {
       navigate(`/#${section}`);
       window.location.href = `/#${section}`;
     } else {
-      setActiveSection(section);
+      // Smooth scroll to section
+      const element = document.getElementById(section);
+      if (element) {
+        const navbarHeight = 80;
+        const elementPosition = element.offsetTop - navbarHeight;
+        window.scrollTo({
+          top: elementPosition,
+          behavior: 'smooth'
+        });
+        // Update URL hash without triggering page reload
+        window.history.pushState(null, '', `#${section}`);
+      }
     }
     setIsMobileMenuOpen(false); // Close mobile menu when clicking a link
   };
@@ -77,7 +140,7 @@ const Navbar = () => {
       <div className="flex items-center justify-between py-4 sm:py-6 px-4 sm:px-8 md:px-16 lg:px-24">
         {/* Logo */}
         <div className="font-bold text-lg sm:text-xl bg-gradient-to-r from-gradientRed via-gradientMaroon to-gradientOrange bg-clip-text text-transparent">
-          Ahqsa
+          {navItems.title}
         </div>
 
         {/* Desktop Menu */}

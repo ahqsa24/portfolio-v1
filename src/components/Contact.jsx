@@ -1,8 +1,12 @@
 import React, { useState, useRef } from 'react'
 import emailjs from '@emailjs/browser'
 import { SocialMedia } from '../data.js'
+import { contactData } from '../text.js'
 
 const Contact = () => {
+  // Use the first contact data variant (you can change the index to use different variants)
+  const contactContent = contactData[0]
+
   const form = useRef();
   const [isLoading, setIsLoading] = useState(false);
   const [message, setMessage] = useState('');
@@ -50,8 +54,8 @@ const Contact = () => {
   return (
     <div id="contact" className="min-h-screen px-4 sm:px-8 md:px-16 lg:px-24 py-8 sm:py-12 md:py-16 lg:py-24">
       <div className="flex flex-col justify-center items-center mb-8 sm:mb-12 animate-fade-in">
-        <h1 className="flex justify-center mb-4 sm:mb-6 text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-gradientRed via-gradientMaroon to-gradientOrange bg-clip-text text-transparent text-center hover:from-gradientOrange hover:via-gradientRed hover:to-gradientMaroon transition-all duration-500">Contact Me</h1>
-        <p className="flex w-full sm:w-[80%] md:w-[70%] text-center text-sm sm:text-base md:text-lg leading-relaxed hover:text-gray-300 transition-colors duration-300">I would love to hear from you! Whether you have a question, feedback, or just want to connect, feel free to reach out.</p>
+        <h1 className="flex justify-center mb-4 sm:mb-6 text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-gradientRed via-gradientMaroon to-gradientOrange bg-clip-text text-transparent text-center hover:from-gradientOrange hover:via-gradientRed hover:to-gradientMaroon transition-all duration-500">{contactContent.heading}</h1>
+        <p className="flex w-full sm:w-[80%] md:w-[70%] text-center text-sm sm:text-base md:text-lg leading-relaxed hover:text-gray-300 transition-colors duration-300">{contactContent.text}</p>
       </div>
       
       {/* Main Content - Side by Side Layout */}
@@ -59,10 +63,10 @@ const Contact = () => {
         
         {/* Left Side - Social Media Section */}
         <div className="lg:w-xl flex flex-col gap-6 animate-slide-in-left">
-          <div className="bg-gray-700/50 p-4 sm:p-6 md:p-8 rounded-xl h-full flex flex-col hover:bg-gray-600/60 hover:shadow-2xl hover:shadow-gradientRed/10 transition-all duration-500">
+          <div className="bg-gradientMaroon dark:bg-gray-700/50 p-4 sm:p-6 md:p-8 rounded-xl h-full flex flex-col hover:bg-gray-600/60 hover:shadow-2xl hover:shadow-gradientRed/10 transition-all duration-500">
             <div className="mb-6">
-              <h2 className="text-xl sm:text-2xl font-bold mb-2 bg-gradient-to-r from-gradientRed via-gradientMaroon to-gradientOrange bg-clip-text text-transparent">Connect with Me</h2>
-              <p className="text-sm lg:text-lg sm:text-base">Feel free to reach out through any of these platforms.</p>
+              <h2 className="text-xl sm:text-2xl font-bold mb-2 bg-gradient-to-r from-gradientRed via-gradientMaroon to-gradientOrange bg-clip-text text-transparent">{contactData[1].heading}</h2>
+              <p className="text-sm lg:text-lg sm:text-base">{contactData[1].text}</p>
             </div>
             
             <div className="space-y-4 flex-1">
@@ -100,11 +104,11 @@ const Contact = () => {
         
         {/* Right Side - Contact Form */}
         <div className="lg:w-7xl animate-slide-in-right">
-          <div className="bg-gray-700/50 p-4 sm:p-6 md:p-8 rounded-xl hover:bg-gray-600/60 hover:shadow-2xl hover:shadow-gradientOrange/10 transition-all duration-500">
+          <div className="bg-gradientMaroon dark:bg-gray-700/50 p-4 sm:p-6 md:p-8 rounded-xl hover:bg-gradientMaroon/80 hover:shadow-2xl hover:shadow-gradientOrange/10 transition-all duration-500">
             <form ref={form} onSubmit={sendEmail} className="flex flex-col">
               <div>
-                <h2 className="text-xl sm:text-2xl font-bold mb-2 bg-gradient-to-r from-gradientRed via-gradientMaroon to-gradientOrange bg-clip-text text-transparent">Get in Touch</h2>
-                <p className="text-sm sm:text-base md:text-lg mb-4">Have something to discuss? Send me a message and let's talk.</p>
+                <h2 className="text-xl sm:text-2xl font-bold mb-2 bg-gradient-to-r from-gradientRed via-gradientMaroon to-gradientOrange bg-clip-text text-transparent">{contactData[2].heading}</h2>
+                <p className="text-sm sm:text-base md:text-lg mb-4">{contactData[2].text}</p>
               </div>
               
               {message && (
