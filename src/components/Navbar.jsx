@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
+import { navData } from '../text.js'
 
 const Navbar = () => {
+  const navItems = navData[0];
   const [activeSection, setActiveSection] = useState('home');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -18,22 +20,32 @@ const Navbar = () => {
       // Only update active section if we're on the main page
       if (location.pathname === '/') {
         const sections = ['home', 'about', 'experience', 'portfolio', 'contact'];
-        const scrollWithOffset = scrollPosition + 100; // Offset for better detection
+        const scrollWithOffset = scrollPosition; // Offset for better detection
 
-        for (let i = sections.length - 1; i >= 0; i--) {
+        // Iterate from first to last to properly detect the current section
+        let currentSection = 'home'; // Default to home
+        for (let i = 0; i < sections.length; i++) {
           const section = document.getElementById(sections[i]);
-          if (section && scrollWithOffset >= section.offsetTop) {
-            setActiveSection(sections[i]);
-            break;
+          // Only update if section exists and has a valid offsetTop
+          if (section && section.offsetTop > 0 && scrollWithOffset >= section.offsetTop) {
+            currentSection = sections[i];
           }
         }
+        setActiveSection(currentSection);
       }
     };
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Call once to set initial active section
+    
+    // Delay initial call to ensure DOM is fully rendered
+    const timer = setTimeout(() => {
+      handleScroll();
+    }, 100);
 
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      clearTimeout(timer);
+    };
   }, [location.pathname]);
 
   const handleNavClick = (section) => {
@@ -56,7 +68,7 @@ const Navbar = () => {
       <div className="flex items-center justify-between py-4 sm:py-6 px-4 sm:px-8 md:px-16 lg:px-24">
         {/* Logo */}
         <div className="font-bold text-lg sm:text-xl bg-gradient-to-r from-gradientRed via-gradientMaroon to-gradientOrange bg-clip-text text-transparent">
-          Ahqsa
+          {navItems.title}
         </div>
 
         {/* Desktop Menu */}

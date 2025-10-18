@@ -12,6 +12,21 @@ Live Demo: https://portfolio-ahqsa.vercel.app/
 - React Router v7 for routing
 - EmailJS for contact form (optional)
 
+## 🎨 Customizing Your Portfolio
+
+Want to personalize the text, images, and content? All customizable content is in **`src/text.js`** for easy editing.
+
+**Quick customization:**
+- Edit `src/text.js` to change text content (name, bio, headings, etc.)
+- Replace images in `/public/assets/` and update imports in `text.js`
+
+**Detailed guide:** See [`CUSTOMIZATION_GUIDE.md`](./CUSTOMIZATION_GUIDE.md) for step-by-step instructions on:
+- Changing your name and job titles
+- Updating section headings and descriptions
+- Replacing images (profile picture, logo, icons)
+- Adding/removing tech stack badges
+- Customizing contact section text
+
 ## 📋 Prerequisites
 Make sure you have:
 - Node.js 18+ (LTS recommended)
