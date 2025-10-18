@@ -1,17 +1,19 @@
-import React from 'react'
-import { Project, Certificates, About as AboutImage, TotalProjects, Certificate, Experiences } from '../data.js'
+import { Project, Certificates } from '../data.js'
+import { TotalProjects, About as AboutImage, Certificate, Experiences, aboutData } from '../text.js'
 
 const About = () => {
+  const about = aboutData[0] // Get the first (and only) about data object
+
   return (
     <div id="about" className="min-h-screen px-4 sm:px-8 md:px-16 lg:px-24 py-12 sm:py-16 md:py-20 lg:py-24">
-      <h1 className="flex justify-center mb-8 sm:mb-10 md:mb-12 text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-gradientRed via-gradientMaroon to-gradientOrange bg-clip-text text-transparent hover:from-gradientOrange hover:via-gradientRed hover:to-gradientMaroon transition-all duration-500 animate-fade-in">About Me</h1>
+      <h1 className="flex justify-center mb-8 sm:mb-10 md:mb-12 text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-gradientRed via-gradientMaroon to-gradientOrange bg-clip-text text-transparent hover:from-gradientOrange hover:via-gradientRed hover:to-gradientMaroon transition-all duration-500 animate-fade-in">{about.heading}</h1>
       <div className="flex xl:flex-row flex-col-reverse md:flex-row-reverse lg:flex-col-reverse justify-between gap-8 lg:gap-12">
         <div className="flex flex-col gap-6 sm:gap-8 flex-1 animate-slide-in-left">
           <h1 className="flex flex-col gap-3 sm:gap-4 font-bold text-3xl sm:text-4xl md:text-5xl">
-            <span className="bg-gradient-to-r from-gradientRed via-gradientMaroon to-gradientOrange bg-clip-text text-transparent hover:from-gradientOrange hover:via-gradientRed hover:to-gradientMaroon transition-all duration-500 cursor-default">Hello I'm</span>
-            <span className="hover:text-gray-300 transition-colors duration-300 cursor-default">Ahmad Qaulan Sadida</span>
+            <span className="bg-gradient-to-r from-gradientRed via-gradientMaroon to-gradientOrange bg-clip-text text-transparent hover:from-gradientOrange hover:via-gradientRed hover:to-gradientMaroon transition-all duration-500 cursor-default">{about.firstLine}</span>
+            <span className="hover:text-gray-300 transition-colors duration-300 cursor-default">{about.name}</span>
           </h1>
-          <p className="text-sm sm:text-base md:text-lg w-full lg:w-full xl:w-[80%] text-justify leading-relaxed hover:text-gray-300 transition-colors duration-300">I am an undergraduate student of Computer Science at IPB University with a strong interest in programming and creative fields, especially web development and graphic design. I consider myself a hardworking person with good time management skills. When I commit to something, I strive to achieve it to the best of my ability.</p>
+          <p className="text-sm sm:text-base md:text-lg w-full lg:w-full xl:w-[80%] text-justify leading-relaxed hover:text-gray-300 transition-colors duration-300">{about.description}</p>
           <div className="text-sm sm:text-base md:text-lg flex flex-col sm:flex-row gap-3 sm:gap-4">
             <button className="group flex gap-2 items-center justify-center rounded-lg bg-gradient-to-r from-gradientRed via-gradientMaroon to-gradientOrange py-2 sm:py-1 px-6 sm:px-8 w-full sm:w-fit hover:from-gradientOrange hover:via-gradientRed hover:to-gradientMaroon hover:scale-105 hover:shadow-xl hover:shadow-gradientRed/30 transition-all duration-300">
               <a href="https://drive.google.com/file/d/1iG7oQWNnhBpxQSON7Wdki1vqO167zSJM/view?usp=drive_link" className="group-hover:text-white transition-colors duration-300">Curriculum Vitae</a>

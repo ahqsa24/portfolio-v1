@@ -3,13 +3,6 @@ import IPB from "/assets/Experiences/IPB.png";
 import Bangkit from "/assets/Experiences/Bangkit.png";
 import Necis from "/assets/Experiences/Necis.png";
 
-// Work Images
-{/*import Tybloo from "../public/assets/Tybloo.png";
-import CractIT from "../public/assets/CractIT.png";
-import Codepanda from "../public/assets/Codepanda.png";
-import Newsmaker from "../public/assets/Newsmaker.png";
-import Ignacium9 from "../public/assets/Ignacium9.png"; 
-import LPK from "../public/assets/LPK.png"*/}
 
 // Organization Images
 import IEEE from "/assets/Experiences/IEEE.png";
@@ -70,7 +63,6 @@ import Youtube from "/assets/Social/YouTube.png";
 import HTML from "/assets/TechStack/HTML.png";
 import CSS from "/assets/TechStack/CSS.png";
 import JavaScript from "/assets/TechStack/JavaScript.png";
-//import TypeScript from "/assets/TechStack/TypeScript.png";
 import ReactJS from "/assets/TechStack/ReactJS.png";
 import TailwindCSS from "/assets/TechStack/TailwindCSS.png";
 import ExpressJS from "/assets/TechStack/ExpressJS.png";
@@ -84,92 +76,6 @@ import Vite from "/assets/TechStack/Vite.png";
 import Vercell from "/assets/TechStack/Vercell.png";
 import Postman from "/assets/TechStack/Postman.png";
 import MySQL from "/assets/TechStack/MySQL.png";
-
-// Others
-import About from "/assets/about-image.png";
-import Arrow from "/assets/arrow (1).png";
-import Certificate from "/assets/certificates.png";
-import Code from "/assets/Code.png";
-import Contact from "/assets/contact-icon.png";
-import Experiences from "/assets/experiences.png";
-import Logo from "/assets/Logo-1.png";
-import ProjectIcon from "/assets/project-icon.png";
-import TotalProjects from "/assets/total-projects.png";
-import Certif from "/assets/Certificate.png";
-import Education from "/assets/Education.png";
-import Organization from "/assets/Organization.png";
-import Tech from "/assets/Tech.png";
-
-export const Image = [
-    {
-        id: 1,
-        picture: About,
-        name: "about-image"
-    },
-    {
-        id: 2,
-        picture: Arrow,
-        name: "arrow"
-    },
-    {
-        id: 3,
-        picture: Certificate,
-        name: "certificates"
-    },
-    {
-        id: 4,
-        picture: Code,
-        name: "code"
-    },
-    {
-        id: 5,
-        picture: Contact,
-        name: "contact-icon"
-    },
-    {
-        id: 6,
-        picture: Experiences,
-        name: "experiences"
-    },
-    {
-        id: 7,
-        picture: Logo,
-        name: "logo"
-    },
-    {
-        id: 8,
-        picture: ProjectIcon,
-        name: "project-icon"
-    },
-    {
-        id: 9,
-        picture: TotalProjects,
-        name: "total-projects"
-    },
-    {
-        id: 10,
-        picture: Certif,
-        name: "certificate"
-    },
-    {
-        id: 11,
-        picture: Education,
-        name: "education"
-    },
-    {
-        id: 12,
-        picture: Organization,
-        name: "organization"
-    },
-    {
-        id: 13,
-        picture: Tech,
-        name: "tech"
-    }
-];
-
-// Export individual images for easy import in components
-export { About, Arrow, Certificate, Code, Contact, Experiences, Logo, ProjectIcon, TotalProjects, Certif, Education, Organization, Tech };
 
 export const educationData = [
     {
@@ -185,6 +91,13 @@ export const educationData = [
         institution: "Bangkit Academy",
         degree: "Cloud Computing Cohort",
         year: "2024",
+        description: [
+            { text: "Selected as one of 4,636 students from 45,841 applicants to participate in the Bangkit program and graduated with an 'A' grade." },
+            { text: "Acquired hands-on experience with Google Cloud technologies, covering infrastructure, networking, security, load balancing, and Kubernetes for building and managing scalable cloud environments." },
+            { text: "Gained knowledge in implementing DevOps practices, system monitoring, and designing reliable cloud infrastructures using tools such as Terraform and Google Cloud Observability." },
+            { text: "Strengthened programming expertise in JavaScript, Git/GitHub, and backend development to support scalable application deployment." },
+            { text: "Developed practical skills in cloud application development, including integrating services such as Cloud Run, Firestore, and Cloud Storage to deliver secure, end-to-end solutions." }
+        ]
     },
     {
         id: 3,
