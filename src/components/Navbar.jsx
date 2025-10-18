@@ -20,41 +20,92 @@ const Navbar = () => {
       // Only update active section if we're on the main page
       if (location.pathname === '/') {
         const sections = ['home', 'about', 'experience', 'portfolio', 'contact'];
-        const scrollWithOffset = scrollPosition; // Offset for better detection
+        const navbarHeight = 80; // Approximate navbar height
+        const offset = navbarHeight + 100; // Add some buffer for better UX
 
-        // Iterate from first to last to properly detect the current section
+        // Iterate forward and update to the last section that meets the criteria
         let currentSection = 'home'; // Default to home
         for (let i = 0; i < sections.length; i++) {
           const section = document.getElementById(sections[i]);
-          // Only update if section exists and has a valid offsetTop
-          if (section && section.offsetTop > 0 && scrollWithOffset >= section.offsetTop) {
-            currentSection = sections[i];
+          if (section) {
+            const sectionTop = section.offsetTop;
+            // Check if we've scrolled past this section's start (minus offset)
+            // Only update if section is valid and positioned
+            if (section.offsetTop > 0 && scrollPosition + offset >= sectionTop) {
+              currentSection = sections[i];
+            }
           }
         }
         setActiveSection(currentSection);
       }
     };
 
+    // Initial detection on mount or route change
+    const detectInitialSection = () => {
+      // Check if there's a hash in the URL
+      const hash = window.location.hash.replace('#', '');
+      if (hash && ['home', 'about', 'experience', 'portfolio', 'contact'].includes(hash)) {
+        setActiveSection(hash);
+        // Scroll to the section
+        const element = document.getElementById(hash);
+        if (element) {
+          const navbarHeight = 80;
+          const elementPosition = element.offsetTop - navbarHeight;
+          window.scrollTo({
+            top: elementPosition,
+            behavior: 'auto' // Use 'auto' instead of 'smooth' for initial load
+          });
+        }
+      } else {
+        // Otherwise detect based on scroll position
+        handleScroll();
+      }
+    };
+
+    // Handle hash changes (e.g., when clicking browser back/forward)
+    const handleHashChange = () => {
+      const hash = window.location.hash.replace('#', '');
+      if (hash && ['home', 'about', 'experience', 'portfolio', 'contact'].includes(hash)) {
+        setActiveSection(hash);
+      }
+    };
+
     window.addEventListener('scroll', handleScroll);
+    window.addEventListener('hashchange', handleHashChange);
     
-    // Delay initial call to ensure DOM is fully rendered
+    // Delay initial detection to ensure DOM is fully rendered
     const timer = setTimeout(() => {
-      handleScroll();
-    }, 100);
+      detectInitialSection();
+    }, 150);
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('hashchange', handleHashChange);
       clearTimeout(timer);
     };
   }, [location.pathname]);
 
   const handleNavClick = (section) => {
+    // Update active section immediately for instant feedback
+    setActiveSection(section);
+    
     // If we're not on the main page, navigate to main page first
     if (location.pathname !== '/') {
       navigate(`/#${section}`);
       window.location.href = `/#${section}`;
     } else {
-      setActiveSection(section);
+      // Smooth scroll to section
+      const element = document.getElementById(section);
+      if (element) {
+        const navbarHeight = 80;
+        const elementPosition = element.offsetTop - navbarHeight;
+        window.scrollTo({
+          top: elementPosition,
+          behavior: 'smooth'
+        });
+        // Update URL hash without triggering page reload
+        window.history.pushState(null, '', `#${section}`);
+      }
     }
     setIsMobileMenuOpen(false); // Close mobile menu when clicking a link
   };
