@@ -42,7 +42,7 @@ const DetailProject = () => {
         <div className="mb-6 sm:mb-8">
           <button 
             onClick={handleBackClick}
-            className="flex items-center gap-2 dark:text-gray-400 hover:text-white transition-colors"
+            className="flex items-center gap-2 dark:text-gray-400 hover:text-gray-900/60 dark:hover:text-white transition-colors"
           >
             <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />

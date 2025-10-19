@@ -55,7 +55,7 @@ const Contact = () => {
     <div id="contact" className="min-h-screen px-4 sm:px-8 md:px-16 lg:px-24 py-8 sm:py-12 md:py-16 lg:py-24">
       <div className="flex flex-col justify-center items-center mb-8 sm:mb-12 animate-fade-in">
         <h1 className="flex justify-center mb-4 sm:mb-6 text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-gradientRed via-gradientMaroon to-gradientOrange bg-clip-text text-transparent text-center hover:from-gradientOrange hover:via-gradientRed hover:to-gradientMaroon transition-all duration-500">{contactContent.heading}</h1>
-        <p className="flex w-full sm:w-[80%] md:w-[70%] text-center text-sm sm:text-base md:text-lg leading-relaxed hover:text-gray-300 transition-colors duration-300">{contactContent.text}</p>
+        <p className="flex w-full sm:w-[80%] md:w-[70%] text-center text-sm sm:text-base md:text-lg leading-relaxed hover:text-gray-900/60 dark:hover:text-gray-300 transition-colors duration-300">{contactContent.text}</p>
       </div>
       
       {/* Main Content - Side by Side Layout */}
@@ -63,10 +63,10 @@ const Contact = () => {
         
         {/* Left Side - Social Media Section */}
         <div className="lg:w-xl flex flex-col gap-6 animate-slide-in-left">
-          <div className="bg-gradientMaroon dark:bg-gray-700/50 p-4 sm:p-6 md:p-8 rounded-xl h-full flex flex-col hover:bg-gray-600/60 hover:shadow-2xl hover:shadow-gradientRed/10 transition-all duration-500">
+          <div className="bg-gradientMaroon dark:bg-gray-700/50 p-4 sm:p-6 md:p-8 rounded-xl h-full flex flex-col hover:bg-gradientMaroon/80 dark:hover:bg-gray-600/60 hover:shadow-2xl hover:shadow-gradientRed/10 transition-all duration-500">
             <div className="mb-6">
-              <h2 className="text-xl sm:text-2xl font-bold mb-2 bg-gradient-to-r from-gradientRed via-gradientMaroon to-gradientOrange bg-clip-text text-transparent">{contactData[1].heading}</h2>
-              <p className="text-sm lg:text-lg sm:text-base">{contactData[1].text}</p>
+              <h2 className="text-xl sm:text-2xl font-bold mb-2 text-amber-50 dark:bg-gradient-to-r dark:from-gradientRed dark:via-gradientMaroon dark:to-gradientOrange dark:bg-clip-text dark:text-transparent">{contactData[1].heading}</h2>
+              <p className="text-sm text-amber-50 lg:text-lg sm:text-base">{contactData[1].text}</p>
             </div>
             
             <div className="space-y-4 flex-1">
@@ -86,7 +86,7 @@ const Contact = () => {
                   />
                   <div className="flex-1">
                     <p className="text-sm sm:text-base font-medium text-white group-hover:text-gradientOrange transition-colors duration-300">{socialmedia.Title}</p>
-                    <p className="text-xs sm:text-sm text-gray-300 group-hover:text-gray-200 transition-colors duration-300">{socialmedia.Name}</p>
+                    <p className="text-xs sm:text-sm text-amber-50 group-hover:text-gray-200 transition-colors duration-300">{socialmedia.Name}</p>
                   </div>
                   <svg 
                     className="w-4 h-4 text-gray-400 group-hover:text-gradientOrange group-hover:translate-x-1 transition-all duration-300" 
@@ -104,59 +104,59 @@ const Contact = () => {
         
         {/* Right Side - Contact Form */}
         <div className="lg:w-7xl animate-slide-in-right">
-          <div className="bg-gradientMaroon dark:bg-gray-700/50 p-4 sm:p-6 md:p-8 rounded-xl hover:bg-gradientMaroon/80 hover:shadow-2xl hover:shadow-gradientOrange/10 transition-all duration-500">
+          <div className="bg-gradientMaroon dark:bg-gray-700/50 p-4 sm:p-6 md:p-8 rounded-xl dark:hover:bg-gray-600/50 hover:bg-gradientMaroon/80 hover:shadow-2xl hover:shadow-gradientOrange/10 transition-all duration-500">
             <form ref={form} onSubmit={sendEmail} className="flex flex-col">
               <div>
-                <h2 className="text-xl sm:text-2xl font-bold mb-2 bg-gradient-to-r from-gradientRed via-gradientMaroon to-gradientOrange bg-clip-text text-transparent">{contactData[2].heading}</h2>
-                <p className="text-sm sm:text-base md:text-lg mb-4">{contactData[2].text}</p>
+                <h2 className="text-xl sm:text-2xl font-bold mb-2 text-amber-50 dark:bg-gradient-to-r dark:from-gradientRed dark:via-gradientMaroon dark:to-gradientOrange dark:bg-clip-text dark:text-transparent">{contactData[2].heading}</h2>
+                <p className="text-sm text-amber-50 sm:text-base md:text-lg mb-4">{contactData[2].text}</p>
               </div>
               
               {message && (
-                <div className="mb-4 p-3 rounded-lg bg-gray-600/50 text-white text-sm sm:text-base animate-fade-in">
+                <div className="mb-4 p-3 rounded-lg bg-gray-600/30 text-white text-sm sm:text-base animate-fade-in">
                   {message}
                 </div>
               )}
               
-              <label className="mb-2 text-base sm:text-lg font-medium text-gray-300" htmlFor="name">Name</label>
+              <label className="mb-2 text-base sm:text-lg font-medium text-amber-50" htmlFor="name">Name</label>
               <input 
                 type="text" 
                 id="name"
                 name="name"
                 value={formData.name}
                 onChange={handleInputChange}
-                className="mb-4 p-2 sm:p-3 rounded-xl bg-gray-700/50 text-white border border-gray-600 focus:outline-none focus:border-gradientRed focus:shadow-lg focus:shadow-gradientRed/20 focus:scale-105 hover:bg-gray-600/50 transition-all duration-300 text-sm sm:text-base"
+                className="mb-4 p-2 sm:p-3 rounded-xl bg-gray-700/30 text-white border border-gray-600 focus:outline-none focus:border-gradientRed focus:shadow-lg focus:shadow-gradientRed/20 focus:scale-105 hover:bg-gray-600/50 transition-all duration-300 text-sm sm:text-base"
                 placeholder="Your Name"
                 required
               /> 
-              <label className="mb-2 text-base sm:text-lg font-medium text-gray-300" htmlFor="email">Email</label>
+              <label className="mb-2 text-base sm:text-lg font-medium text-amber-50" htmlFor="email">Email</label>
               <input 
                 type="email" 
                 id="email"
                 name="email"
                 value={formData.email}
                 onChange={handleInputChange}
-                className="mb-4 p-2 sm:p-3 rounded-xl bg-gray-700/50 text-white border border-gray-600 focus:outline-none focus:border-gradientMaroon focus:shadow-lg focus:shadow-gradientMaroon/20 focus:scale-105 hover:bg-gray-600/50 transition-all duration-300 text-sm sm:text-base"
+                className="mb-4 p-2 sm:p-3 rounded-xl bg-gray-700/30 text-white border border-gray-600 focus:outline-none focus:border-gradientMaroon focus:shadow-lg focus:shadow-gradientMaroon/20 focus:scale-105 hover:bg-gray-600/50 transition-all duration-300 text-sm sm:text-base"
                 placeholder="Your Email"
                 required
               />
-              <label className="mb-2 text-base sm:text-lg font-medium text-gray-300" htmlFor="subject">Subject</label>
+              <label className="mb-2 text-base sm:text-lg font-medium text-amber-50" htmlFor="subject">Subject</label>
               <input 
                 type="text" 
                 id="subject"
                 name="subject"
                 value={formData.subject}
                 onChange={handleInputChange}
-                className="mb-4 p-2 sm:p-3 rounded-xl bg-gray-700/50 text-white border border-gray-600 focus:outline-none focus:border-gradientOrange focus:shadow-lg focus:shadow-gradientOrange/20 focus:scale-105 hover:bg-gray-600/50 transition-all duration-300 text-sm sm:text-base"
+                className="mb-4 p-2 sm:p-3 rounded-xl bg-gray-700/30 text-white border border-gray-600 focus:outline-none focus:border-gradientOrange focus:shadow-lg focus:shadow-gradientOrange/20 focus:scale-105 hover:bg-gray-600/50 transition-all duration-300 text-sm sm:text-base"
                 placeholder="Your Subject"
                 required
               />
-              <label className="mb-2 text-base sm:text-lg font-medium text-gray-300" htmlFor="message">Message</label>
+              <label className="mb-2 text-base sm:text-lg font-medium text-amber-50" htmlFor="message">Message</label>
               <textarea
                 id="message"
                 name="message"
                 value={formData.message}
                 onChange={handleInputChange}
-                className="mb-4 p-2 sm:p-3 rounded-xl bg-gray-700/50 text-white border border-gray-600 focus:outline-none focus:border-gradientRed focus:shadow-lg focus:shadow-gradientRed/20 focus:scale-105 hover:bg-gray-600/50 transition-all duration-300 text-sm sm:text-base resize-none"
+                className="mb-4 p-2 sm:p-3 rounded-xl bg-gray-700/30 text-white border border-gray-600 focus:outline-none focus:border-gradientRed focus:shadow-lg focus:shadow-gradientRed/20 focus:scale-105 hover:bg-gray-600/50 transition-all duration-300 text-sm sm:text-base resize-none"
                 placeholder="Your Message"
                 rows="4"
                 required
@@ -164,7 +164,7 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={isLoading}
-                className={`group w-fit px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-gradientRed via-gradientMaroon to-gradientOrange text-white font-semibold rounded-lg transition-all duration-500 text-sm sm:text-base hover:scale-105 hover:shadow-2xl hover:shadow-gradientRed/30 hover:from-gradientOrange hover:to-gradientRed ${
+                className={`group w-fit px-6 sm:px-8 py-3 sm:py-4 bg-gray-900 dark:bg-gradient-to-r dark:from-gradientRed dark:via-gradientMaroon dark:to-gradientOrange text-white font-semibold rounded-lg transition-all duration-500 text-sm sm:text-base hover:scale-105 hover:shadow-2xl hover:shadow-gradientRed/30 hover:from-gradientOrange hover:to-gradientRed ${
                   isLoading ? 'opacity-50 cursor-not-allowed' : 'hover:opacity-90'
                 }`}
               >

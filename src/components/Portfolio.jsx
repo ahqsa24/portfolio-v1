@@ -44,9 +44,9 @@ const Portfolio = () => {
     <div id="portfolio" className="min-h-screen px-4 sm:px-8 md:px-16 lg:px-24 py-12 sm:py-16 md:py-20 lg:py-24">
       <div className="flex flex-col justify-center items-center animate-fade-in">
         <h1 className="flex justify-center mb-6 lg:text-5xl text-3xl font-bold bg-gradient-to-r from-gradientRed via-gradientMaroon to-gradientOrange bg-clip-text text-transparent hover:from-gradientOrange hover:via-gradientRed hover:to-gradientMaroon transition-all duration-500">{portfolioContent.heading}</h1>
-        <p className="flex w-full sm:w-[80%] md:w-[70%] text-center text-sm sm:text-base md:text-lg leading-relaxed hover:text-gray-300 transition-colors duration-300">{portfolioContent.text}</p>
+        <p className="flex w-full sm:w-[80%] md:w-[70%] text-center text-sm sm:text-base md:text-lg leading-relaxed hover:text-gray-900/60 dark:hover:text-gray-300 transition-colors duration-300">{portfolioContent.text}</p>
       </div>
-      <div className="flex gap-8 mt-12 justify-between bg-gradientMaroon dark:bg-gray-700/50 py-2 rounded-xl hover:bg-gray-600/60 transition-all duration-300 animate-slide-in-up delay-200">
+      <div className="flex gap-8 mt-12 justify-between bg-gradientMaroon dark:bg-gray-700/50 py-2 rounded-xl hover:bg-gradientMaroon/80 dark:hover:bg-gray-600/60 transition-all duration-300 animate-slide-in-up delay-200">
         <div 
           className={`group flex flex-col gap-2 mx-auto items-center py-4 w-[30%] rounded-xl cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-gradientRed/20 ${
             activeTab === 'projects' 
@@ -88,12 +88,12 @@ const Portfolio = () => {
           <div className="fade-in w-full animate-slide-in-up delay-300">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
               {getDisplayData(Project, 'projects').map((project, index) => (
-                <div key={project.id} className={`group flex flex-col p-4 gap-2 bg-gradientMaroon dark:bg-gray-700/50 rounded-xl cursor-pointer transition-all duration-500 hover:bg-gray-600/70 hover:scale-105 hover:shadow-2xl hover:shadow-gradientRed/20 animate-fade-in`} style={{animationDelay: `${index * 100}ms`}}>
+                <div key={project.id} className={`group flex flex-col p-4 gap-2 bg-gradientMaroon dark:bg-gray-700/50 rounded-xl cursor-pointer transition-all duration-500 hover:bg-gradientMaroon/80 dark:hover:bg-gray-600/70 hover:scale-105 hover:shadow-2xl hover:shadow-gradientRed/20 animate-fade-in`} style={{animationDelay: `${index * 100}ms`}}>
                   <div className="overflow-hidden rounded-lg">
                     <img src={project.picture} alt={project.Title} className="w-full h-full object-cover rounded-lg group-hover:scale-110 transition-transform duration-500" />
                   </div>
                   <div>
-                    <h2 className="font-bold text-xl text-amber-50 group-hover:text-gradientRed transition-colors duration-300">{project.Title}</h2>
+                    <h2 className="font-bold text-xl text-amber-50 dark:group-hover:text-gradientRed transition-colors duration-300">{project.Title}</h2>
                     <p className="text-sm mt-2 text-amber-50 dark:text-gray-300 line-clamp-3 overflow-hidden group-hover:text-gray-200 transition-colors duration-300">{project.Description}</p>
                     <div className="flex flex-wrap gap-2 mt-3">
                       {project.Technologies.map((tech, index) => (
@@ -120,7 +120,7 @@ const Portfolio = () => {
               <div className="flex justify-start mt-6">
                 <button 
                   onClick={() => toggleShowAll('projects')}
-                  className="px-6 py-2 bg-gradientMaroon dark:bg-gray-700/50 rounded-lg font-semibold hover:bg-gradient-to-r hover:from-gradientRed hover:to-gradientOrange hover:scale-105 hover:shadow-lg transition-all duration-300"
+                  className="px-6 py-2 text-amber-50 bg-gradientMaroon dark:bg-gray-700/50 rounded-lg font-semibold hover:bg-gradient-to-r hover:from-gradientRed hover:to-gradientOrange hover:scale-105 hover:shadow-lg transition-all duration-300"
                 >
                   {showAll.projects ? 'Show Less' : `See More (${Project.length - 6} more)`}
                 </button>
@@ -158,7 +158,7 @@ const Portfolio = () => {
               <div className="flex justify-start mt-6">
                 <button 
                   onClick={() => toggleShowAll('certificates')}
-                  className="px-6 py-2 bg-gradientMaroon dark:bg-gray-700/50 rounded-lg font-semibold hover:bg-gradient-to-r hover:from-gradientMaroon hover:to-gradientOrange hover:scale-105 hover:shadow-lg transition-all duration-300"
+                  className="px-6 py-2 text-amber-50 bg-gradientMaroon dark:bg-gray-700/50 rounded-lg font-semibold hover:bg-gradient-to-r hover:from-gradientMaroon hover:to-gradientOrange hover:scale-105 hover:shadow-lg transition-all duration-300"
                 >
                   {showAll.certificates ? 'Show Less' : `See More (${Certificates.length - 6} more)`}
                 </button>
@@ -172,16 +172,16 @@ const Portfolio = () => {
             {TechStack.map((techstack, index) => (
               <div 
                 key={techstack.id} 
-                className={`group flex flex-col p-6 gap-3 bg-gradientMaroon text-amber-50 dark:bg-gray-700/50 rounded-xl items-center w-48 hover:scale-110 hover:bg-gray-600/70 hover:shadow-2xl hover:shadow-gradientOrange/20 transition-all duration-500 cursor-pointer animate-fade-in`}
+                className={`group flex flex-col p-6 gap-3 bg-gradientMaroon text-amber-50 dark:bg-gray-700/50 rounded-xl items-center w-48 hover:scale-110 hover:bg-gradientMaroon/80 dark:hover:bg-gray-600/70 hover:shadow-2xl hover:shadow-gradientOrange/20 transition-all duration-500 cursor-pointer animate-fade-in`}
                 style={{animationDelay: `${index * 50}ms`}}
               >
                 <div className="overflow-hidden rounded-lg">
                   <img src={techstack.picture} alt={techstack.Title} className="w-24 h-24 object-cover rounded-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-500" />
                 </div>
                 <div>
-                  <h2 className="text-lg text-center font-semibold group-hover:text-gradientOrange group-hover:scale-105 transition-all duration-300">{techstack.Title}</h2>
+                  <h2 className="text-lg text-center font-semibold dark:group-hover:text-gradientOrange group-hover:scale-105 transition-all duration-300">{techstack.Title}</h2>
                 </div>
-                <div className="w-0 h-0.5 bg-gradient-to-r from-gradientRed to-gradientOrange group-hover:w-full transition-all duration-500"></div>
+                <div className="w-0 h-0.5  bg-amber-50 dark:bg-gradient-to-r dark:from-gradientRed dark:to-gradientOrange group-hover:w-full transition-all duration-500"></div>
               </div>
             ))}
           </div>
