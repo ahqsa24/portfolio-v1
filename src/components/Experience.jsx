@@ -72,7 +72,6 @@ const Experience = () => {
             <div className="space-y-3">
               {getDisplayData(educationData, 'education').map((education) => (
                 <div key={education.id} className="bg-gradientMaroon dark:bg-gray-700/50 p-3 sm:p-4 rounded-xl sm:flex-row gap-3 sm:gap-4 items-start sm:items-center">
-                <div key={education.id} className="bg-gradientMaroon dark:bg-gray-700/50 p-3 sm:p-4 rounded-xl sm:flex-row gap-3 sm:gap-4 items-start sm:items-center">
                   <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-start">
                     <img 
                       src={education.picture} 
@@ -134,7 +133,6 @@ const Experience = () => {
           <div className="fade-in">
             <div className="space-y-3">
               {getDisplayData(organizationData, 'organization').map((org) => (
-                <div key={org.id} className="bg-gradientMaroon dark:bg-gray-700/50 p-3 sm:p-4 rounded-xl">
                 <div key={org.id} className="bg-gradientMaroon dark:bg-gray-700/50 p-3 sm:p-4 rounded-xl">
                   <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-start">
                     <img 

@@ -69,20 +69,15 @@ const Home = () => {
         <div className="languages text-sm sm:text-base md:text-lg flex flex-wrap gap-2 w-full sm:w-[80%] md:w-[60%] lg:w-full max-w-fit animate-slide-in-up delay-200">
             {techStack.map((tech, index) => (
               <p key={index} className="rounded-full bg-gradientMaroon text-amber-50 dark:bg-gray-700/50 border border-white py-1 px-3 sm:px-4 md:px-6 w-fit hover:bg-gradient-to-r hover:from-gradientRed hover:via-gradientMaroon hover:to-gradientOrange hover:scale-110 hover:shadow-lg hover:shadow-gradientRed/30 transition-all duration-300 cursor-pointer">{tech}</p>
-              <p key={index} className="rounded-full bg-gradientMaroon text-amber-50 dark:bg-gray-700/50 border border-white py-1 px-3 sm:px-4 md:px-6 w-fit hover:bg-gradient-to-r hover:from-gradientRed hover:via-gradientMaroon hover:to-gradientOrange hover:scale-110 hover:shadow-lg hover:shadow-gradientRed/30 transition-all duration-300 cursor-pointer">{tech}</p>
             ))}
         </div>
         <div className="text-sm sm:text-base md:text-lg flex flex-col sm:flex-row gap-3 sm:gap-4 animate-slide-in-up delay-400">
             <button className="group flex gap-2 items-center justify-center rounded-lg bg-gradientMaroon text-amber-50 dark:bg-gray-700/50 py-2 sm:py-1 px-6 sm:px-8 w-full sm:w-fit hover:bg-gradient-to-r hover:from-gradientRed hover:via-gradientMaroon hover:to-gradientOrange hover:scale-105 hover:shadow-xl hover:shadow-gradientRed/30 transition-all duration-300">
-            <button className="group flex gap-2 items-center justify-center rounded-lg bg-gradientMaroon text-amber-50 dark:bg-gray-700/50 py-2 sm:py-1 px-6 sm:px-8 w-full sm:w-fit hover:bg-gradient-to-r hover:from-gradientRed hover:via-gradientMaroon hover:to-gradientOrange hover:scale-105 hover:shadow-xl hover:shadow-gradientRed/30 transition-all duration-300">
               <img src={ProjectIcon} alt="Projects" className="w-4 h-4 sm:w-5 sm:h-5 group-hover:scale-110 transition-transform duration-300" />
-              <a href="#portfolio" className="group-hover:text-amber-50 transition-colors duration-300">Projects</a>
               <a href="#portfolio" className="group-hover:text-amber-50 transition-colors duration-300">Projects</a>
             </button>
             <button className="group flex gap-2 items-center justify-center rounded-lg bg-gradientMaroon text-amber-50 dark:bg-gray-700/50 py-2 sm:py-1 px-6 sm:px-8 w-full sm:w-fit hover:bg-gradient-to-r hover:from-gradientRed hover:via-gradientMaroon hover:to-gradientOrange hover:scale-105 hover:shadow-xl hover:shadow-gradientRed/30 transition-all duration-300">
-            <button className="group flex gap-2 items-center justify-center rounded-lg bg-gradientMaroon text-amber-50 dark:bg-gray-700/50 py-2 sm:py-1 px-6 sm:px-8 w-full sm:w-fit hover:bg-gradient-to-r hover:from-gradientRed hover:via-gradientMaroon hover:to-gradientOrange hover:scale-105 hover:shadow-xl hover:shadow-gradientRed/30 transition-all duration-300">
               <img src={Contact} alt="Contact" className="w-4 h-4 sm:w-5 sm:h-5 group-hover:scale-110 transition-transform duration-300" />
-              <a href="#contact" className="group-hover:text-amber-50 transition-colors duration-300">Contact</a>
               <a href="#contact" className="group-hover:text-amber-50 transition-colors duration-300">Contact</a>
             </button>
         </div>
