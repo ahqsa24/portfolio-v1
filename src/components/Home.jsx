@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react'
-import { ProjectIcon, Contact, homeData } from '../text.js'
+import { ProjectIcon, Contact, homeData } from '../content.js'
 
 const Home = () => {
   // Extract data from homeData

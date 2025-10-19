@@ -1,4 +1,4 @@
-import { footerData } from '../text.js'
+import { footerData } from '../content.js'
 
 const Footer = () => {
     // Extract footer data from text.js

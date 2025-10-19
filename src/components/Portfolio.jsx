@@ -1,6 +1,6 @@
 import { React, useState }from 'react'
 import { Project, Certificates, TechStack } from '../data.js'
-import { Code, Tech, Certif, portfolioData } from '../text.js'
+import { Code, Tech, Certif, portfolioData } from '../content.js'
 
 const Portfolio = () => {
   const portfolioContent = portfolioData[0] // Get heading and intro text
