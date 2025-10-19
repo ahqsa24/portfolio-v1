@@ -38,9 +38,9 @@ const Experience = () => {
     <div id="experience" className="min-h-screen px-4 sm:px-8 md:px-16 lg:px-24 py-12 sm:py-16 md:py-20 lg:py-24">
       <div className="flex flex-col justify-center items-center animate-fade-in">
         <h1 className="flex justify-center mb-4 sm:mb-6 text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-gradientRed via-gradientMaroon to-gradientOrange bg-clip-text text-transparent hover:from-gradientOrange hover:via-gradientRed hover:to-gradientMaroon transition-all duration-500">{experienceContent.heading}</h1>
-        <p className="flex w-full sm:w-[80%] md:w-[70%] text-center text-sm sm:text-base md:text-lg leading-relaxed hover:text-gray-300 transition-colors duration-300">{experienceContent.text}</p>
+        <p className="flex w-full sm:w-[80%] md:w-[70%] text-center text-sm sm:text-base md:text-lg leading-relaxed hover:text-gray-900/60 dark:hover:text-gray-300 transition-colors duration-300">{experienceContent.text}</p>
       </div>
-      <div className="flex flex-row sm:flex-row gap-2 sm:gap-8 mt-8 sm:mt-10 md:mt-12 justify-between bg-gray-700/50 py-2 rounded-xl hover:bg-gray-600/60 transition-all duration-300 animate-slide-in-up delay-200">
+      <div className="flex flex-row sm:flex-row gap-2 sm:gap-8 mt-8 sm:mt-10 md:mt-12 justify-between bg-gradientMaroon dark:bg-gray-700/50 py-2 rounded-xl hover:bg-gradinetMaroon/80 dark:hover:bg-gray-600/60 transition-all duration-300 animate-slide-in-up delay-200">
         <div 
           className={`group flex flex-col gap-2 mx-auto items-center py-3 sm:py-4 w-full sm:w-[45%] rounded-xl cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg ${
             activeTab === 'education' 
@@ -71,7 +71,7 @@ const Experience = () => {
           <div className="fade-in">
             <div className="space-y-3">
               {getDisplayData(educationData, 'education').map((education) => (
-                <div key={education.id} className="bg-gray-700/50 p-3 sm:p-4 rounded-xl sm:flex-row gap-3 sm:gap-4 items-start sm:items-center">
+                <div key={education.id} className="bg-gradientMaroon dark:bg-gray-700/50 p-3 sm:p-4 rounded-xl sm:flex-row gap-3 sm:gap-4 items-start sm:items-center">
                   <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-start">
                     <img 
                       src={education.picture} 
@@ -79,14 +79,14 @@ const Experience = () => {
                       className="w-12 h-12 sm:w-16 sm:h-16 object-cover rounded-lg flex-shrink-0"
                     />
                     <div className="flex-1">
-                      <h3 className="text-lg sm:text-xl font-semibold mb-1 sm:mb-2">{education.degree}</h3>
-                      <p className="text-base sm:text-lg text-gray-300 mb-1">{education.institution}</p>
-                      <p className="text-xs sm:text-sm text-gray-400">{education.year}</p>
+                      <h3 className="text-lg sm:text-xl font-semibold text-amber-50 mb-1 sm:mb-2">{education.degree}</h3>
+                      <p className="text-base sm:text-lg text-amber-50 mb-1">{education.institution}</p>
+                      <p className="text-xs sm:text-sm text-amber-50/70 dark:text-gray-400">{education.year}</p>
                     </div>
                     {education.description && (
                         <button
                           onClick={() => toggleDescription(education.id)}
-                          className="p-2 hover:bg-gray-600 rounded-full transition-colors flex-shrink-0"
+                          className="p-2 hover:bg-gradientMaroon/80 dark:hover:bg-gray-600 rounded-full transition-colors flex-shrink-0"
                         >
                           <svg 
                             className={`w-4 h-4 sm:w-5 sm:h-5 text-gray-300 transform transition-transform duration-300 ${
@@ -105,7 +105,7 @@ const Experience = () => {
                     <div className="mt-3 sm:mt-4 fade-in">
                       <ul className="space-y-1">
                         {education.description.map((desc, index) => (
-                          <li key={index} className="text-gray-200 text-xs sm:text-sm flex items-start">
+                          <li key={index} className="text-amber-50 text-xs sm:text-sm flex items-start">
                             <span className="mr-2">•</span>
                             {desc.text}
                           </li>
@@ -120,7 +120,7 @@ const Experience = () => {
               <div className="flex justify-start mt-4">
                 <button 
                   onClick={() => toggleShowAll('education')}
-                  className="px-4 sm:px-6 py-2 bg-gray-700/50 rounded-lg text-sm sm:text-base font-semibold hover:opacity-90 transition-opacity"
+                  className="px-4 sm:px-6 py-2 text-amber-50 bg-gradientMaroon dark:bg-gray-700/50 rounded-lg text-sm sm:text-base font-semibold hover:opacity-90 transition-opacity"
                 >
                   {showAll.education ? 'Show Less' : `See More (${educationData.length - 3} more)`}
                 </button>
@@ -133,7 +133,7 @@ const Experience = () => {
           <div className="fade-in">
             <div className="space-y-3">
               {getDisplayData(organizationData, 'organization').map((org) => (
-                <div key={org.id} className="bg-gray-700/50 p-3 sm:p-4 rounded-xl">
+                <div key={org.id} className="bg-gradientMaroon dark:bg-gray-700/50 p-3 sm:p-4 rounded-xl">
                   <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-start">
                     <img 
                       src={org.picture} 
@@ -141,14 +141,14 @@ const Experience = () => {
                       className="w-12 h-12 sm:w-16 sm:h-16 object-cover rounded-lg flex-shrink-0"
                     />
                     <div className="flex-1">
-                      <h3 className="text-lg sm:text-xl font-semibold mb-1 sm:mb-2">{org.role}</h3>
-                      <p className="text-base sm:text-lg text-gray-300 mb-1">{org.organization}</p>
-                      <p className="text-xs sm:text-sm text-gray-400">{org.year}</p>
+                      <h3 className="text-lg sm:text-xl text-amber-50 font-semibold mb-1 sm:mb-2">{org.role}</h3>
+                      <p className="text-base sm:text-lg text-amber-50 mb-1">{org.organization}</p>
+                      <p className="text-xs sm:text-sm text-amber-50/70 dark:text-gray-400">{org.year}</p>
                     </div>
                     {org.description && (
                       <button
                         onClick={() => toggleDescription(org.id)}
-                        className="p-2 hover:bg-gray-600 rounded-full transition-colors flex-shrink-0"
+                        className="p-2 hover:bg-gradientMaroon/80 dark:hover:bg-gray-600 rounded-full transition-colors flex-shrink-0"
                       >
                         <svg 
                           className={`w-4 h-4 sm:w-5 sm:h-5 text-gray-300 transform transition-transform duration-300 ${
@@ -167,7 +167,7 @@ const Experience = () => {
                     <div className="mt-3 sm:mt-4 fade-in">
                       <ul className="space-y-1">
                         {org.description.map((desc, index) => (
-                          <li key={index} className="text-gray-200 text-xs sm:text-sm flex items-start">
+                          <li key={index} className="text-amber-50 text-xs sm:text-sm flex items-start">
                             <span className="mr-2">•</span>
                             {desc.text}
                           </li>
@@ -182,7 +182,7 @@ const Experience = () => {
               <div className="flex justify-start mt-4">
                 <button 
                   onClick={() => toggleShowAll('organization')}
-                  className="px-4 sm:px-6 py-2 bg-gray-700/50 rounded-lg text-sm sm:text-base font-semibold hover:opacity-90 transition-opacity"
+                  className="px-4 sm:px-6 py-2 text-amber-50 bg-gradientMaroon dark:bg-gray-700/50 rounded-lg text-sm sm:text-base font-semibold hover:opacity-90 transition-opacity"
                 >
                   {showAll.organization ? 'Show Less' : `See More (${organizationData.length - 3} more)`}
                 </button>

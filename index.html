@@ -11,10 +11,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:wght@300;400;500;600;700;800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
+    <script>
+        // Set default theme to dark mode
+        // Only use light mode if explicitly set in localStorage
+        if (localStorage.getItem('color-theme') === 'light') {
+            document.documentElement.classList.remove('dark');
+        } else {
+            // Default to dark mode
+            document.documentElement.classList.add('dark');
+            // Set localStorage to dark if not set yet
+            if (!localStorage.getItem('color-theme')) {
+                localStorage.setItem('color-theme', 'dark');
+            }
+        }
+    </script>
     <title>Ahqsa Portfolio</title>
   </head>
-  <body class="bg-gray-900 text-amber-50 top-0 left-0">
+  <body class="bg-yellow-50 dark:bg-gray-900 text-gray-900 dark:text-amber-50 top-0 left-0">
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
