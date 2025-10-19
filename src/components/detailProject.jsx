@@ -14,7 +14,8 @@ const DetailProject = () => {
   const project = getProjectById(id);
 
   const handleBackClick = () => {
-    navigate('/#portfolio')
+    // Navigate to home page with state to scroll to portfolio
+    navigate('/', { state: { scrollTo: 'portfolio' } })
   };
 
   if (!project) {

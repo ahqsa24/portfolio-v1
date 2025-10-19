@@ -23,37 +23,19 @@
 // ============================================
 // Update these paths if you rename or move your asset files
 import About from "/assets/about-image.png";
-import Arrow from "/assets/arrow (1).png";
-import Certificate from "/assets/certificates.png";
-import Code from "/assets/Code.png";
-import Contact from "/assets/contact-icon.png";
-import Experiences from "/assets/experiences.png";
-import Logo from "/assets/Logo-1.png";
-import ProjectIcon from "/assets/project-icon.png";
-import TotalProjects from "/assets/total-projects.png";
-import Certif from "/assets/Certificate.png";
-import Education from "/assets/Education.png";
-import Organization from "/assets/Organization.png";
-import Tech from "/assets/Tech.png";
+import Logo from "/assets/Logo.png";
+
+// Note: Icon images (ProjectIcon, Contact, TotalProjects, Certificate, Experiences, Code, Certif, Education, Organization, Tech)
+// have been replaced with React Icons library for better performance and smaller bundle size.
+// See: Home.jsx, About.jsx, Experience.jsx, Portfolio.jsx for React Icons implementation.
 
 // Export individual images for component imports
-export { About, Arrow, Certificate, Code, Contact, Experiences, Logo, ProjectIcon, TotalProjects, Certif, Education, Organization, Tech };
+export { About, Logo };
 
 // Asset registry (optional, for programmatic access)
 export const Image = [
     { id: 1, picture: About, name: "about-image" },
-    { id: 2, picture: Arrow, name: "arrow" },
-    { id: 3, picture: Certificate, name: "certificates" },
-    { id: 4, picture: Code, name: "code" },
-    { id: 5, picture: Contact, name: "contact-icon" },
-    { id: 6, picture: Experiences, name: "experiences" },
-    { id: 7, picture: Logo, name: "logo" },
-    { id: 8, picture: ProjectIcon, name: "project-icon" },
-    { id: 9, picture: TotalProjects, name: "total-projects" },
-    { id: 10, picture: Certif, name: "certificate" },
-    { id: 11, picture: Education, name: "education" },
-    { id: 12, picture: Organization, name: "organization" },
-    { id: 13, picture: Tech, name: "tech" }
+    { id: 2, picture: Logo, name: "logo" }
 ];
 
 // ============================================

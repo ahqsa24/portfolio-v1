@@ -3,7 +3,6 @@ import IPB from "/assets/Experiences/IPB.png";
 import Bangkit from "/assets/Experiences/Bangkit.png";
 import Necis from "/assets/Experiences/Necis.png";
 
-
 // Organization Images
 import IEEE from "/assets/Experiences/IEEE.png";
 import Himalkom from "/assets/Experiences/Himalkom.png";
@@ -52,30 +51,8 @@ import Certificates22 from "/assets/Certificates/22.png";
 import Certificates23 from "/assets/Certificates/23.png";
 import Certificates24 from "/assets/Certificates/24.png";
 
-// Social Media
-import Linkedin from "/assets/Social/LinkedIn.png";
-import Github from "/assets/Social/GitHub.png";
-import Instagram from "/assets/Social/Instagram.png";
-import Email from "/assets/Social/Gmail.png";
-import Youtube from "/assets/Social/YouTube.png";
-
-// TechStack
-import HTML from "/assets/TechStack/HTML.png";
-import CSS from "/assets/TechStack/CSS.png";
-import JavaScript from "/assets/TechStack/JavaScript.png";
-import ReactJS from "/assets/TechStack/ReactJS.png";
-import TailwindCSS from "/assets/TechStack/TailwindCSS.png";
-import ExpressJS from "/assets/TechStack/ExpressJS.png";
-import NextJS from "/assets/TechStack/NextJS.png";
-import NodeJS from "/assets/TechStack/NodeJS.png";
-import ShadeUI from "/assets/TechStack/ShadeUI.png";
-import Figma from "/assets/TechStack/Figma.png";
-import GCloud from "/assets/TechStack/GCloud.png";
-import Firebase from "/assets/TechStack/Firebase.png";
-import Vite from "/assets/TechStack/Vite.png";
-import Vercell from "/assets/TechStack/Vercell.png";
-import Postman from "/assets/TechStack/Postman.png";
-import MySQL from "/assets/TechStack/MySQL.png";
+// Note: Social Media and TechStack icons are now handled by React Icons library
+// No need to import images anymore - see Portfolio.jsx and Contact.jsx
 
 export const educationData = [
     {
@@ -480,82 +457,66 @@ export const Certificates = [
 export const TechStack = [
     {
         id: 1,
-        picture: HTML,
         Title: "HTML",
     },
     {
         id: 2,
-        picture: CSS,
         Title: "CSS",
     },
     {
         id: 3,
-        picture: JavaScript,
         Title: "JavaScript",
     },
     {
         id: 4,
-        picture: ReactJS,
         Title: "ReactJS",
     },
     {
         id: 5,
-        picture: TailwindCSS,
         Title: "Tailwind CSS",
     },
     {
         id: 6,
-        picture: NodeJS,
         Title: "Nodejs",
     },
     {
         id: 7,
-        picture: ExpressJS,
         Title: "ExpressJS",
     },
     {
         id: 8,
-        picture: NextJS,
         Title: "NextJS",
     },
     {
         id: 9,
-        picture: ShadeUI,
-        Title: "Shade UI",
+        Title: "Shadcn/UI",
     },
     {
         id: 10,
-        picture: Vite,
         Title: "Vite",
     },
     {
         id: 11,
-        picture: Firebase,
         Title: "Firebase",
     },
     {
         id: 12,
-        picture: Vercell,
-        Title: "Vercell",
+        Title: "Vercel",
     },
     {
         id: 13,
-        picture: MySQL,
         Title: "MySQL",
     },
     {
         id: 14,
-        picture: GCloud,
-        Title: "Google Cloud",
+        Title: "Google Cloud Platform",
     },
     {
         id: 15,
-        picture: Figma,
         Title: "Figma",
     },
     {
         id: 16,
-        picture: Postman,
         Title: "Postman",
     }
 ]
@@ -563,35 +524,30 @@ export const TechStack = [
 export const SocialMedia = [
     {
         id: 1,
-        picture: Linkedin,
         Title: "Linkedln",
         Name: "Ahmad Qaulan Sadida",
         link: "https://www.linkedin.com/in/adidsadida"
     },
     {
         id: 2,
-        picture: Github,
         Title: "GitHub",
         Name: "ahqsa24",
         link: "https://github.com/ahqsa24"
     },
     {
         id: 3,
-        picture: Instagram,
         Title: "Instagram",
         Name: "@adidsadida24",
         link: "https://www.instagram.com/adidsadida24/"
     },
     {
         id: 4,
-        picture: Email,
         Title: "Email",
         Name: "adhiet353@gmail.com",
         link: "mailto:adhiet353@gmail.com"
     },
     {
         id: 5,
-        picture: Youtube,
         Title: "YouTube",
         Name: "Cozzy",
         link: "https://www.youtube.com/adidsadida"

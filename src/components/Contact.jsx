@@ -2,10 +2,20 @@ import React, { useState, useRef } from 'react'
 import emailjs from '@emailjs/browser'
 import { SocialMedia } from '../data.js'
 import { contactData } from '../content.js'
+import { FaLinkedin, FaGithub, FaInstagram, FaYoutube, FaEnvelope } from 'react-icons/fa'
 
 const Contact = () => {
   // Use the first contact data variant (you can change the index to use different variants)
   const contactContent = contactData[0]
+
+  // Icon mapping for social media
+  const socialMediaIcons = {
+    'Linkedln': FaLinkedin,
+    'GitHub': FaGithub,
+    'Instagram': FaInstagram,
+    'Email': FaEnvelope,
+    'YouTube': FaYoutube
+  }
 
   const form = useRef();
   const [isLoading, setIsLoading] = useState(false);
@@ -70,34 +80,43 @@ const Contact = () => {
             </div>
             
             <div className="space-y-4 flex-1">
-              {SocialMedia.map((socialmedia, index) => (
-                <a 
-                  key={socialmedia.id}
-                  href={socialmedia.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`flex items-center gap-4 p-4 bg-gray-600/30 rounded-xl hover:bg-gradient-to-r hover:from-gradientRed/20 hover:to-gradientOrange/20 hover:scale-105 hover:shadow-lg hover:shadow-gradientRed/20 transition-all duration-500 cursor-pointer group animate-fade-in`}
-                  style={{animationDelay: `${index * 100}ms`}}
-                >
-                  <img 
-                    src={socialmedia.picture} 
-                    alt={socialmedia.Title} 
-                    className="w-10 h-10 sm:w-12 sm:h-12 object-cover rounded-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-500"
-                  />
-                  <div className="flex-1">
-                    <p className="text-sm sm:text-base font-medium text-white group-hover:text-gradientOrange transition-colors duration-300">{socialmedia.Title}</p>
-                    <p className="text-xs sm:text-sm text-amber-50 group-hover:text-gray-200 transition-colors duration-300">{socialmedia.Name}</p>
-                  </div>
-                  <svg 
-                    className="w-4 h-4 text-gray-400 group-hover:text-gradientOrange group-hover:translate-x-1 transition-all duration-300" 
-                    fill="none" 
-                    stroke="currentColor" 
-                    viewBox="0 0 24 24"
+              {SocialMedia.map((socialmedia, index) => {
+                const IconComponent = socialMediaIcons[socialmedia.Title]
+                return (
+                  <a 
+                    key={socialmedia.id}
+                    href={socialmedia.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`flex items-center gap-4 p-4 bg-gray-600/30 rounded-xl hover:bg-gradient-to-r hover:from-gradientRed/20 hover:to-gradientOrange/20 hover:scale-105 hover:shadow-lg hover:shadow-gradientRed/20 transition-all duration-500 cursor-pointer group animate-fade-in`}
+                    style={{animationDelay: `${index * 100}ms`}}
                   >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                </a>
-              ))}
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-lg bg-gray-700/50 group-hover:bg-gradient-to-r group-hover:from-gradientRed group-hover:to-gradientOrange transition-all duration-500">
+                      {IconComponent ? (
+                        <IconComponent className="w-6 h-6 sm:w-7 sm:h-7 text-amber-50 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500" />
+                      ) : (
+                        <img 
+                          src={socialmedia.picture} 
+                          alt={socialmedia.Title} 
+                          className="w-10 h-10 sm:w-12 sm:h-12 object-cover rounded-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-500"
+                        />
+                      )}
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-sm sm:text-base font-medium text-white group-hover:text-gradientOrange transition-colors duration-300">{socialmedia.Title}</p>
+                      <p className="text-xs sm:text-sm text-amber-50 group-hover:text-gray-200 transition-colors duration-300">{socialmedia.Name}</p>
+                    </div>
+                    <svg 
+                      className="w-4 h-4 text-gray-400 group-hover:text-gradientOrange group-hover:translate-x-1 transition-all duration-300" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                )
+              })}
             </div>
           </div>
         </div>

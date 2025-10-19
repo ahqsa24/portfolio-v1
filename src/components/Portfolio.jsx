@@ -1,9 +1,32 @@
 import { React, useState }from 'react'
 import { Project, Certificates, TechStack } from '../data.js'
-import { Code, Tech, Certif, portfolioData } from '../content.js'
+import { portfolioData } from '../content.js'
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNode, FaFigma } from 'react-icons/fa'
+import { SiTailwindcss, SiExpress, SiNextdotjs, SiMysql, SiPostman, SiVercel, SiVite, SiFirebase, SiShadcnui, SiGooglecloud } from 'react-icons/si'
+import { HiCode, HiBadgeCheck, HiViewGridAdd } from 'react-icons/hi'
 
 const Portfolio = () => {
   const portfolioContent = portfolioData[0] // Get heading and intro text
+
+  // Icon mapping for tech stack
+  const techStackIcons = {
+    'HTML': FaHtml5,
+    'CSS': FaCss3Alt,
+    'JavaScript': FaJs,
+    'ReactJS': FaReact,
+    'Tailwind CSS': SiTailwindcss,
+    'Nodejs': FaNode,
+    'ExpressJS': SiExpress,
+    'NextJS': SiNextdotjs,
+    'Shadcn/UI': SiShadcnui,
+    'Figma': FaFigma,
+    'Google Cloud Platform': SiGooglecloud,
+    'Firebase': SiFirebase,
+    'Vite': SiVite,
+    'Vercel': SiVercel,
+    'Postman': SiPostman,
+    'MySQL': SiMysql
+  }
 
   const [activeTab, setActiveTab] = useState('projects');
   const [showAll, setShowAll] = useState({
@@ -55,7 +78,7 @@ const Portfolio = () => {
           }`}
           onClick={() => handleTabClick('projects')}
         >
-          <img src={Code} alt="Projects" className="group-hover:scale-110 transition-transform duration-300" />
+          <HiCode className="w-8 h-8 sm:w-10 sm:h-10 group-hover:scale-110 transition-transform duration-300" />
           <p className="group-hover:font-semibold transition-all duration-300">Projects</p>
         </div>
         <div 
@@ -66,7 +89,7 @@ const Portfolio = () => {
           }`}
           onClick={() => handleTabClick('certificates')}
         >
-          <img src={Certif} alt="Certificates" className="group-hover:scale-110 transition-transform duration-300" />
+          <HiBadgeCheck className="w-8 h-8 sm:w-10 sm:h-10 group-hover:scale-110 transition-transform duration-300" />
           <p className="group-hover:font-semibold transition-all duration-300">Certificates</p>
         </div>
         <div 
@@ -77,7 +100,7 @@ const Portfolio = () => {
           }`}
           onClick={() => handleTabClick('techstack')}
         >
-          <img src={Tech} alt="Tech Stack" className="group-hover:scale-110 transition-transform duration-300" />
+          <HiViewGridAdd className="w-8 h-8 sm:w-10 sm:h-10 group-hover:scale-110 transition-transform duration-300" />
           <p className="group-hover:font-semibold transition-all duration-300">Tech Stack</p>
         </div>
       </div>
@@ -169,21 +192,28 @@ const Portfolio = () => {
 
         {activeTab === 'techstack' && (
           <div className="flex flex-wrap justify-center gap-6 w-full max-w-7xl mx-auto animate-slide-in-up delay-300">
-            {TechStack.map((techstack, index) => (
-              <div 
-                key={techstack.id} 
-                className={`group flex flex-col p-6 gap-3 bg-gradientMaroon text-amber-50 dark:bg-gray-700/50 rounded-xl items-center w-48 hover:scale-110 hover:bg-gradientMaroon/80 dark:hover:bg-gray-600/70 hover:shadow-2xl hover:shadow-gradientOrange/20 transition-all duration-500 cursor-pointer animate-fade-in`}
-                style={{animationDelay: `${index * 50}ms`}}
-              >
-                <div className="overflow-hidden rounded-lg">
-                  <img src={techstack.picture} alt={techstack.Title} className="w-24 h-24 object-cover rounded-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-500" />
+            {TechStack.map((techstack, index) => {
+              const IconComponent = techStackIcons[techstack.Title]
+              return (
+                <div 
+                  key={techstack.id} 
+                  className={`group flex flex-col p-6 gap-3 bg-gradientMaroon text-amber-50 dark:bg-gray-700/50 rounded-xl items-center w-48 hover:scale-110 hover:bg-gradientMaroon/80 dark:hover:bg-gray-600/70 hover:shadow-2xl hover:shadow-gradientOrange/20 transition-all duration-500 cursor-pointer animate-fade-in`}
+                  style={{animationDelay: `${index * 50}ms`}}
+                >
+                  <div className="overflow-hidden rounded-lg">
+                    {IconComponent ? (
+                      <IconComponent className="w-24 h-24 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500" />
+                    ) : (
+                      <img src={techstack.picture} alt={techstack.Title} className="w-24 h-24 object-cover rounded-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-500" />
+                    )}
+                  </div>
+                  <div>
+                    <h2 className="text-lg text-center font-semibold dark:group-hover:text-gradientOrange group-hover:scale-105 transition-all duration-300">{techstack.Title}</h2>
+                  </div>
+                  <div className="w-0 h-0.5  bg-amber-50 dark:bg-gradient-to-r dark:from-gradientRed dark:to-gradientOrange group-hover:w-full transition-all duration-500"></div>
                 </div>
-                <div>
-                  <h2 className="text-lg text-center font-semibold dark:group-hover:text-gradientOrange group-hover:scale-105 transition-all duration-300">{techstack.Title}</h2>
-                </div>
-                <div className="w-0 h-0.5  bg-amber-50 dark:bg-gradient-to-r dark:from-gradientRed dark:to-gradientOrange group-hover:w-full transition-all duration-500"></div>
-              </div>
-            ))}
+              )
+            })}
           </div>
         )}
       </div>
