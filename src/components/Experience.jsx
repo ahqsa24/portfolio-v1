@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { educationData, organizationData } from '../data.js'
-import { Organization, Education, experiencesData } from '../text.js'
+import { Organization, Education, experiencesData } from '../content.js'
 
 const Experience = () => {
   const experienceContent = experiencesData[0] // Get heading and intro text

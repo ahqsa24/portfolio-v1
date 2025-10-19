@@ -1,5 +1,5 @@
 import { Project, Certificates } from '../data.js'
-import { TotalProjects, About as AboutImage, Certificate, Experiences, aboutData } from '../text.js'
+import { TotalProjects, About as AboutImage, Certificate, Experiences, aboutData } from '../content.js'
 
 const About = () => {
   const about = aboutData[0] // Get the first (and only) about data object
