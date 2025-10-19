@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react'
 import emailjs from '@emailjs/browser'
 import { SocialMedia } from '../data.js'
-import { contactData } from '../text.js'
+import { contactData } from '../content.js'
 
 const Contact = () => {
   // Use the first contact data variant (you can change the index to use different variants)
