@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { educationData, organizationData } from '../data.js'
-import { Organization, Education, experiencesData } from '../content.js'
+import { experiencesData } from '../content.js'
+import { HiAcademicCap, HiUserGroup } from 'react-icons/hi'
 
 const Experience = () => {
   const experienceContent = experiencesData[0] // Get heading and intro text
@@ -49,7 +50,7 @@ const Experience = () => {
           }`}
           onClick={() => handleTabClick('education')}
         >
-          <img src={Education} alt="Education" className="group-hover:scale-110 transition-transform duration-300"/>
+          <HiAcademicCap className="w-8 h-8 sm:w-10 sm:h-10 group-hover:scale-110 transition-transform duration-300" />
           <p className="text-sm sm:text-base group-hover:font-semibold transition-all duration-300">Education</p>
         </div>
         <div 
@@ -60,7 +61,7 @@ const Experience = () => {
           }`}
           onClick={() => handleTabClick('organization')}
         >
-          <img src={Organization} alt="Organization" className="group-hover:scale-110 transition-transform duration-300"/>
+          <HiUserGroup className="w-8 h-8 sm:w-10 sm:h-10 group-hover:scale-110 transition-transform duration-300" />
           <p className="text-sm sm:text-base">Organization</p>
         </div>
       </div>

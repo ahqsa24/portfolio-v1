@@ -2,10 +2,11 @@
 import { motion } from 'framer-motion'
 import { variants } from '../animations/motion'
 
-export default function MotionSection({ children, variant = 'fadeInUp', delay = 0, aos, className = '' }) {
+export default function MotionSection({ children, variant = 'fadeInUp', delay = 0, aos, className = '', id }) {
   const v = variants[variant]
   return (
     <motion.section
+      id={id}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.2 }}

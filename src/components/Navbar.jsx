@@ -93,16 +93,20 @@ const Navbar = () => {
     }
   }, []);
 
-  const handleNavClick = (section) => {
+  const handleNavClick = (e, section) => {
+    e.preventDefault(); // Prevent default anchor behavior
+    
     // Update active section immediately for instant feedback
     setActiveSection(section);
     
-    // If we're not on the main page, navigate to main page first
+    // Close mobile menu when clicking a link
+    setIsMobileMenuOpen(false);
+    
+    // If we're not on the main page, navigate to main page first with scroll state
     if (location.pathname !== '/') {
-      navigate(`/#${section}`);
-      window.location.href = `/#${section}`;
+      navigate('/', { state: { scrollTo: section } });
     } else {
-      // Smooth scroll to section
+      // Smooth scroll to section on same page
       const element = document.getElementById(section);
       if (element) {
         const navbarHeight = 80;
@@ -115,7 +119,6 @@ const Navbar = () => {
         window.history.pushState(null, '', `#${section}`);
       }
     }
-    setIsMobileMenuOpen(false); // Close mobile menu when clicking a link
   };
 
   const toggleMobileMenu = () => {
@@ -149,7 +152,7 @@ const Navbar = () => {
             <a 
               href="#home" 
               className={`nav-link ${activeSection === 'home' ? 'active' : ''}`}
-              onClick={() => handleNavClick('home')}
+              onClick={(e) => handleNavClick(e, 'home')}
             >
               Home
             </a>
@@ -158,7 +161,7 @@ const Navbar = () => {
             <a 
               href="#about" 
               className={`nav-link ${activeSection === 'about' ? 'active' : ''}`}
-              onClick={() => handleNavClick('about')}
+              onClick={(e) => handleNavClick(e, 'about')}
             >
               About
             </a>
@@ -167,7 +170,7 @@ const Navbar = () => {
             <a 
               href="#experience" 
               className={`nav-link ${activeSection === 'experience' ? 'active' : ''}`}
-              onClick={() => handleNavClick('experience')}
+              onClick={(e) => handleNavClick(e, 'experience')}
             >
               Experience
             </a>
@@ -176,7 +179,7 @@ const Navbar = () => {
             <a 
               href="#portfolio" 
               className={`nav-link ${activeSection === 'portfolio' ? 'active' : ''}`}
-              onClick={() => handleNavClick('portfolio')}
+              onClick={(e) => handleNavClick(e, 'portfolio')}
             >
               Portfolio
             </a>
@@ -185,7 +188,7 @@ const Navbar = () => {
             <a 
               href="#contact" 
               className={`nav-link ${activeSection === 'contact' ? 'active' : ''}`}
-              onClick={() => handleNavClick('contact')}
+              onClick={(e) => handleNavClick(e, 'contact')}
             >
               Contact
             </a>
@@ -238,7 +241,7 @@ const Navbar = () => {
                 className={`nav-link block py-3 px-6 text-base hover:bg-gray-800/50 transition-colors duration-300 ${
                   activeSection === 'home' ? 'active' : ''
                 }`}
-                onClick={() => handleNavClick('home')}
+                onClick={(e) => handleNavClick(e, 'home')}
               >
                 Home
               </a>
@@ -249,7 +252,7 @@ const Navbar = () => {
                 className={`nav-link block py-3 px-6 text-base hover:bg-gray-800/50 transition-colors duration-300 ${
                   activeSection === 'about' ? 'active' : ''
                 }`}
-                onClick={() => handleNavClick('about')}
+                onClick={(e) => handleNavClick(e, 'about')}
               >
                 About
               </a>
@@ -260,7 +263,7 @@ const Navbar = () => {
                 className={`nav-link block py-3 px-6 text-base hover:bg-gray-800/50 transition-colors duration-300 ${
                   activeSection === 'experience' ? 'active' : ''
                 }`}
-                onClick={() => handleNavClick('experience')}
+                onClick={(e) => handleNavClick(e, 'experience')}
               >
                 Experience
               </a>
@@ -271,7 +274,7 @@ const Navbar = () => {
                 className={`nav-link block py-3 px-6 text-base hover:bg-gray-800/50 transition-colors duration-300 ${
                   activeSection === 'portfolio' ? 'active' : ''
                 }`}
-                onClick={() => handleNavClick('portfolio')}
+                onClick={(e) => handleNavClick(e, 'portfolio')}
               >
                 Portfolio
               </a>
@@ -282,7 +285,7 @@ const Navbar = () => {
                 className={`nav-link block py-3 px-6 text-base hover:bg-gray-800/50 transition-colors duration-300 ${
                   activeSection === 'contact' ? 'active' : ''
                 }`}
-                onClick={() => handleNavClick('contact')}
+                onClick={(e) => handleNavClick(e, 'contact')}
               >
                 Contact
               </a>

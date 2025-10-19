@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react'
-import { ProjectIcon, Contact, homeData } from '../content.js'
+import { homeData } from '../content.js'
+import { HiFolder, HiMail } from 'react-icons/hi'
 
 const Home = () => {
   // Extract data from homeData
@@ -73,11 +74,11 @@ const Home = () => {
         </div>
         <div className="text-sm sm:text-base md:text-lg flex flex-col sm:flex-row gap-3 sm:gap-4 animate-slide-in-up delay-400">
             <button className="group flex gap-2 items-center justify-center rounded-lg bg-gradientMaroon text-amber-50 dark:bg-gray-700/50 py-2 sm:py-1 px-6 sm:px-8 w-full sm:w-fit hover:bg-gradient-to-r hover:from-gradientRed hover:via-gradientMaroon hover:to-gradientOrange hover:scale-105 hover:shadow-xl hover:shadow-gradientRed/30 transition-all duration-300">
-              <img src={ProjectIcon} alt="Projects" className="w-4 h-4 sm:w-5 sm:h-5 group-hover:scale-110 transition-transform duration-300" />
+              <HiFolder className="w-4 h-4 sm:w-5 sm:h-5 group-hover:scale-110 transition-transform duration-300" />
               <a href="#portfolio" className="group-hover:text-amber-50 transition-colors duration-300">Projects</a>
             </button>
             <button className="group flex gap-2 items-center justify-center rounded-lg bg-gradientMaroon text-amber-50 dark:bg-gray-700/50 py-2 sm:py-1 px-6 sm:px-8 w-full sm:w-fit hover:bg-gradient-to-r hover:from-gradientRed hover:via-gradientMaroon hover:to-gradientOrange hover:scale-105 hover:shadow-xl hover:shadow-gradientRed/30 transition-all duration-300">
-              <img src={Contact} alt="Contact" className="w-4 h-4 sm:w-5 sm:h-5 group-hover:scale-110 transition-transform duration-300" />
+              <HiMail className="w-4 h-4 sm:w-5 sm:h-5 group-hover:scale-110 transition-transform duration-300" />
               <a href="#contact" className="group-hover:text-amber-50 transition-colors duration-300">Contact</a>
             </button>
         </div>

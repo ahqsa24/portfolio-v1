@@ -1,5 +1,6 @@
 import { Project, Certificates } from '../data.js'
-import { TotalProjects, About as AboutImage, Certificate, Experiences, aboutData } from '../content.js'
+import { About as AboutImage, aboutData } from '../content.js'
+import { HiFolder, HiBadgeCheck, HiCalendar, HiChevronRight } from 'react-icons/hi'
 
 const About = () => {
   const about = aboutData[0] // Get the first (and only) about data object
@@ -32,7 +33,7 @@ const About = () => {
       <div className="flex flex-col xl:flex-row justify-center gap-4 sm:gap-6 md:gap-4 mt-12 sm:mt-14 text-sm sm:text-base md:text-lg animate-slide-in-up delay-300">
         <div className="group xl:w-[33%] xl:py-8 xl:px-8 flex flex-col gap-3 sm:gap-4 bg-gradientMaroon text-amber-50 dark:bg-gray-700/50 px-6 sm:px-8 md:px-10 lg:px-12 py-4 sm:py-5 md:py-6 rounded-xl dark:hover:bg-gradient-to-br dark:hover:from-gray-700/60 dark:hover:to-gray-600/60 hover:scale-105 hover:shadow-xl dark:hover:shadow-gradientRed/20 transition-all duration-300 cursor-pointer">
           <div className="flex justify-between items-center">
-            <img src={TotalProjects} alt="Total Projects" className="w-8 h-8 sm:w-10 sm:h-10 group-hover:scale-110 transition-transform duration-300" />
+            <HiFolder className="w-8 h-8 sm:w-10 sm:h-10 group-hover:scale-110 transition-transform duration-300" />
             <p className="text-xl sm:text-2xl font-semibold dark:group-hover:text-gradientOrange transition-colors duration-300">{Project.length}</p>
           </div>
           <div className="flex justify-between items-center gap-8 sm:gap-12 md:gap-16 lg:gap-36">
@@ -40,14 +41,14 @@ const About = () => {
               <h1 className="text-base sm:text-lg md:text-xl font-bold group-hover:bg-gradient-to-r dark:group-hover:from-gradientRed dark:group-hover:via-gradientMaroon dark:group-hover:to-gradientOrange dark:group-hover:bg-clip-text dark:group-hover:text-transparent transition-all duration-300">TOTAL PROJECTS</h1>
               <p className="text-xs sm:text-sm dark:group-hover:text-gray-300 transition-colors duration-300">Innovative web solution crafted</p>
             </div>
-            <svg className="w-5 h-5 sm:w-6 sm:h-6 text-amber-50 flex-shrink-0 dark:group-hover:text-gradientOrange group-hover:translate-x-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <a href="#portfolio"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></a>
-            </svg>
+            <HiChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-amber-50 flex-shrink-0 dark:group-hover:text-gradientOrange group-hover:translate-x-1 transition-all duration-300">
+              <a href="#portfolio"></a>
+            </HiChevronRight>
           </div>
         </div>
         <div className="group xl:w-[33%] xl:py-8 xl:px-8 flex flex-col gap-3 sm:gap-4 bg-gradientMaroon text-amber-50 dark:bg-gray-700/50 px-6 sm:px-8 md:px-10 lg:px-12 py-4 sm:py-5 md:py-6 rounded-xl dark:hover:bg-gradient-to-br dark:hover:from-gray-700/60 dark:hover:to-gray-600/60 hover:scale-105 hover:shadow-xl dark:hover:shadow-gradientRed/20 transition-all duration-300 cursor-pointer">
           <div className="flex justify-between items-center">
-            <img src={Certificate} alt="Certificates" className="w-8 h-8 sm:w-10 sm:h-10 group-hover:scale-110 transition-transform duration-300" />
+            <HiBadgeCheck className="w-8 h-8 sm:w-10 sm:h-10 group-hover:scale-110 transition-transform duration-300" />
             <p className="text-xl sm:text-2xl font-semibold dark:group-hover:text-gradientOrange transition-colors duration-300">{Certificates.length}</p>
           </div>
           <div className="flex justify-between items-center gap-8 sm:gap-12 md:gap-16 lg:gap-36">
@@ -55,14 +56,14 @@ const About = () => {
               <h1 className="text-base sm:text-lg md:text-xl font-bold group-hover:bg-gradient-to-r dark:group-hover:from-gradientRed dark:group-hover:via-gradientMaroon dark:group-hover:to-gradientOrange dark:group-hover:bg-clip-text dark:group-hover:text-transparent transition-all duration-300">CERTIFICATES</h1>
               <p className="text-xs sm:text-sm dark:group-hover:text-gray-300 transition-colors duration-300">Professional skills validated</p>
             </div>
-            <svg className="w-5 h-5 sm:w-6 sm:h-6 text-amber-50 flex-shrink-0 dark:group-hover:text-gradientOrange group-hover:translate-x-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <a href="#portfolio"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></a>
-            </svg>
+            <HiChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-amber-50 flex-shrink-0 dark:group-hover:text-gradientOrange group-hover:translate-x-1 transition-all duration-300">
+              <a href="#portfolio"></a>
+            </HiChevronRight>
           </div>
         </div>
         <div className="group xl:w-[33%] xl:py-8 xl:px-8 flex flex-col gap-3 sm:gap-4 bg-gradientMaroon text-amber-50 dark:bg-gray-700/50 px-6 sm:px-8 md:px-10 lg:px-12 py-4 sm:py-5 md:py-6 rounded-xl dark:hover:bg-gradient-to-br dark:hover:from-gray-700/60 dark:hover:to-gray-600/60 hover:scale-105 hover:shadow-xl dark:hover:shadow-gradientRed/20 transition-all duration-300 cursor-pointer">
           <div className="flex justify-between items-center">
-            <img src={Experiences} alt="Experiences" className="w-8 h-8 sm:w-10 sm:h-10 group-hover:scale-110 transition-transform duration-300" />
+            <HiCalendar className="w-8 h-8 sm:w-10 sm:h-10 group-hover:scale-110 transition-transform duration-300" />
             <p className="text-xl sm:text-2xl font-semibold dark:group-hover:text-gradientOrange transition-colors duration-300">3</p>
           </div>
           <div className="flex justify-between items-center gap-8 sm:gap-12 md:gap-16 lg:gap-36">
@@ -70,9 +71,9 @@ const About = () => {
               <h1 className="text-base sm:text-lg md:text-xl font-bold group-hover:bg-gradient-to-r dark:group-hover:from-gradientRed dark:group-hover:via-gradientMaroon dark:group-hover:to-gradientOrange dark:group-hover:bg-clip-text dark:group-hover:text-transparent transition-all duration-300">YEARS OF EXPERIENCES</h1>
               <p className="text-xs sm:text-sm dark:group-hover:text-gray-300 transition-colors duration-300">Continous learning journey</p>
             </div>
-            <svg className="w-5 h-5 sm:w-6 sm:h-6 text-amber-50 flex-shrink-0 dark:group-hover:text-gradientOrange group-hover:translate-x-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <a href="#experience"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></a>
-            </svg>
+            <HiChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-amber-50 flex-shrink-0 dark:group-hover:text-gradientOrange group-hover:translate-x-1 transition-all duration-300">
+              <a href="#experience"></a>
+            </HiChevronRight>
           </div>
         </div>
       </div>
