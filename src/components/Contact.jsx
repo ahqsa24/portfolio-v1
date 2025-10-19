@@ -104,7 +104,7 @@ const Contact = () => {
         
         {/* Right Side - Contact Form */}
         <div className="lg:w-7xl animate-slide-in-right">
-          <div className="bg-gradientMaroon dark:bg-gray-700/50 p-4 sm:p-6 md:p-8 rounded-xl dark:hover:bg-gray-600/50 hover:bg-gradientMaroon/80 hover:shadow-2xl hover:shadow-gradientOrange/10 transition-all duration-500">
+          <div className="bg-gray-700/50 p-4 sm:p-6 md:p-8 rounded-xl hover:bg-gray-600/60 hover:shadow-2xl hover:shadow-gradientOrange/10 transition-all duration-500">
             <form ref={form} onSubmit={sendEmail} className="flex flex-col">
               <div>
                 <h2 className="text-xl sm:text-2xl font-bold mb-2 text-amber-50 dark:bg-gradient-to-r dark:from-gradientRed dark:via-gradientMaroon dark:to-gradientOrange dark:bg-clip-text dark:text-transparent">{contactData[2].heading}</h2>
