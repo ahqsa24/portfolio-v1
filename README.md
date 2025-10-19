@@ -11,6 +11,7 @@ Live Demo: https://portfolio-ahqsa.vercel.app/
 - Framer Motion for component/section animations
 - React Router v7 for routing
 - EmailJS for contact form (optional)
+- Vercel Analytics for visitor tracking
 
 ## 🎨 Customizing Your Portfolio
 
@@ -99,11 +100,13 @@ npm run preview
 ```
 
 ## 📁 Project Structure (key files)
-- `src/main.jsx` – App bootstrap, Router, AOS initialization, Motion wrapper usage
+- `src/main.jsx` – App entry point (renders `<App />`)
+- `src/App.jsx` – Main application component with Router, routes, AOS initialization, and Analytics
 - `src/components/` – UI sections: `Home.jsx`, `About.jsx`, `Experience.jsx`, `Portfolio.jsx`, `Contact.jsx`, `Navbar.jsx`, `Footer.jsx`
 - `src/animations/motion.js` – Shared Framer Motion variants
 - `src/components/MotionSection.jsx` – Wrapper for applying variants + AOS attributes
 - `src/components/AOSRouteInit.jsx` – Refresh AOS on route change
+- `src/text.js` – Centralized content for easy customization
 - `src/data.js` – Static data and asset imports
 
 ## 🎞️ Animations
@@ -114,6 +117,18 @@ This project uses both AOS and Framer Motion. See `ANIMATIONS_GUIDE.md` for quic
   {/* your content */}
 </MotionSection>
 ```
+
+## 📊 Vercel Analytics
+This project includes Vercel Analytics for tracking visitor insights (page views, referrers, devices, etc.). 
+
+**Setup:**
+1. Deploy to Vercel
+2. Enable Analytics in your Vercel project dashboard
+3. Analytics data will appear automatically
+
+**Note:** Analytics only work in production (vercel.com domain), not on localhost.
+
+See [`VERCEL_ANALYTICS_GUIDE.md`](./VERCEL_ANALYTICS_GUIDE.md) for detailed setup and usage instructions.
 
 ## 🚨 Troubleshooting
 - Ensure you’re in the correct directory before running commands
