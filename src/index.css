@@ -127,12 +127,16 @@
 
   /* Gradient Background Utility */
   .bg-gradient-red-via-maroon-to-orange {
-    @apply bg-gradient-to-r from-gradientRed via-gradientMaroon to-gradientOrange;
+    background: linear-gradient(to right, var(--color-gradientRed), var(--color-gradientMaroon), var(--color-gradientOrange));
   }
 
   /* Gradient Text Utility */
   .text-gradient-red-via-maroon-to-orange {
-    @apply bg-gradient-to-r from-gradientRed via-gradientMaroon to-gradientOrange bg-clip-text text-transparent;
+    background: linear-gradient(to right, var(--color-gradientRed), var(--color-gradientMaroon), var(--color-gradientOrange));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
   }
   
   @keyframes fadeIn {
