@@ -124,6 +124,16 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
+
+  /* Gradient Background Utility */
+  .bg-gradient-red-via-maroon-to-orange {
+    @apply bg-gradient-to-r from-gradientRed via-gradientMaroon to-gradientOrange;
+  }
+
+  /* Gradient Text Utility */
+  .text-gradient-red-via-maroon-to-orange {
+    @apply bg-gradient-to-r from-gradientRed via-gradientMaroon to-gradientOrange bg-clip-text text-transparent;
+  }
   
   @keyframes fadeIn {
     from {

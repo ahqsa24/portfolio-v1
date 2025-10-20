@@ -142,12 +142,12 @@ const Navbar = () => {
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="flex items-center justify-between py-4 sm:py-6 px-4 sm:px-8 md:px-16 lg:px-24">
         {/* Logo */}
-        <div className="font-bold text-lg sm:text-xl bg-gradient-to-r from-gradientRed via-gradientMaroon to-gradientOrange bg-clip-text text-transparent">
+        <div className="font-bold text-lg sm:text-xl text-gradient-red-via-maroon-to-orange">
           {navItems.title}
         </div>
 
         {/* Desktop Menu */}
-  <ul className="menu hidden md:flex items-center gap-6 lg:gap-8">
+        <ul className="menu hidden md:flex items-center gap-6 lg:gap-8">
           <li>
             <a 
               href="#home" 
@@ -219,13 +219,13 @@ const Navbar = () => {
           onClick={toggleMobileMenu}
           aria-label="Toggle mobile menu"
         >
-          <span className={`block w-6 h-0.5 bg-white transition-all duration-300 ease-in-out ${
+          <span className={`block w-6 h-0.5 bg-gray-900 dark:bg-white transition-all duration-300 ease-in-out ${
             isMobileMenuOpen ? 'rotate-45 translate-y-1.5' : ''
           }`}></span>
-          <span className={`block w-6 h-0.5 bg-white transition-all duration-300 ease-in-out ${
+          <span className={`block w-6 h-0.5 bg-gray-900 dark:bg-white transition-all duration-300 ease-in-out ${
             isMobileMenuOpen ? 'opacity-0' : ''
           }`}></span>
-          <span className={`block w-6 h-0.5 bg-white transition-all duration-300 ease-in-out ${
+          <span className={`block w-6 h-0.5 bg-gray-900 dark:bg-white transition-all duration-300 ease-in-out ${
             isMobileMenuOpen ? '-rotate-45 -translate-y-1.5' : ''
           }`}></span>
         </button>
@@ -233,7 +233,7 @@ const Navbar = () => {
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div className="md:hidden fixed top-full left-0 right-0 bg-gray-900/95 backdrop-blur-sm border-t border-gray-700 z-40">
+        <div className="md:hidden fixed top-full left-0 right-0 bg-yellow-50/95 dark:bg-gray-900/95 backdrop-blur-sm border-t border-gray-700 z-40">
           <ul className="flex flex-col py-4">
             <li>
               <a 
