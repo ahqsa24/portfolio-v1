@@ -19,7 +19,7 @@ const Footer = () => {
                 </div>
                 <div className="grid grid-cols-1 gap-8 sm:gap-6 sm:grid-cols-2">
                     <div>
-                        <h2 className="mb-6 text-lg font-bold bg-gradient-to-r from-gradientRed via-gradientMaroon to-gradientOrange bg-clip-text text-transparent uppercase dark:text-white">Resources</h2>
+                        <h2 className="mb-6 text-lg font-bold text-gradient-red-via-maroon-to-orange uppercase dark:text-white">Resources</h2>
                         <ul className="text-gray-500 dark:text-gray-400 font-medium">
                             <li className="mb-4">
                                 <a href="https://react.dev/" className="hover:underline">React JS</a>
@@ -30,7 +30,7 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div>
-                        <h2 className="mb-6 text-lg font-bold bg-gradient-to-r from-gradientRed via-gradientMaroon to-gradientOrange bg-clip-text text-transparent uppercase dark:text-white">Social Media</h2>
+                        <h2 className="mb-6 text-lg font-bold text-gradient-red-via-maroon-to-orange uppercase dark:text-white">Social Media</h2>
                         <ul className="grid grid-rows-2 grid-flow-col gap-x-8 gap-y-4 text-gray-500 dark:text-gray-400 font-medium">
                             {socialMediaData.socialMedia.map((social, index) => (
                                 <li key={index}>

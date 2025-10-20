@@ -22,12 +22,12 @@ const DetailProject = () => {
     return (
       <div className="min-h-screen flex items-center justify-center px-4 sm:px-8 md:px-16 lg:px-24 pt-20">
         <div className="text-center">
-          <h1 className="text-9xl font-bold bg-gradient-to-r from-gradientRed via-gradientMaroon to-gradientOrange bg-clip-text text-transparent">404</h1>
-          <h1 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-gradientRed via-gradientMaroon to-gradientOrange bg-clip-text text-transparent mb-4">Project Not Found</h1>
+          <h1 className="text-9xl font-bold text-gradient-red-via-maroon-to-orange">404</h1>
+          <h1 className="text-xl sm:text-2xl font-bold text-gradient-red-via-maroon-to-orange mb-4">Project Not Found</h1>
           <p className="dark:text-gray-400 mb-6">The project you're looking for doesn't exist.</p>
           <button 
             onClick={handleBackClick}
-            className="px-6 py-2 bg-gradient-to-r from-gradientRed via-gradientMaroon to-gradientOrange rounded-lg text-white"
+            className="px-6 py-2 bg-gradient-red-via-maroon-to-orange rounded-lg text-white"
           >
             Back to Portfolio
           </button>

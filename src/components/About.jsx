@@ -7,20 +7,20 @@ const About = () => {
 
   return (
     <div id="about" className="min-h-screen px-4 sm:px-8 md:px-16 lg:px-24 py-12 sm:py-16 md:py-20 lg:py-24">
-      <h1 className="flex justify-center mb-8 sm:mb-10 md:mb-12 text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-gradientRed via-gradientMaroon to-gradientOrange bg-clip-text text-transparent hover:from-gradientOrange hover:via-gradientRed hover:to-gradientMaroon transition-all duration-500 animate-fade-in">{about.heading}</h1>
+      <h1 className="flex justify-center mb-8 sm:mb-10 md:mb-12 text-3xl sm:text-4xl md:text-5xl font-bold text-gradient-red-via-maroon-to-orange hover:from-gradientOrange hover:via-gradientRed hover:to-gradientMaroon transition-all duration-500 animate-fade-in">{about.heading}</h1>
       <div className="flex xl:flex-row flex-col-reverse md:flex-row-reverse lg:flex-col-reverse justify-between gap-8 lg:gap-12">
         <div className="flex flex-col gap-6 sm:gap-8 flex-1 animate-slide-in-left">
           <h1 className="flex flex-col gap-3 sm:gap-4 font-bold text-3xl sm:text-4xl md:text-5xl">
-            <span className="bg-gradient-to-r from-gradientRed via-gradientMaroon to-gradientOrange bg-clip-text text-transparent hover:from-gradientOrange hover:via-gradientRed hover:to-gradientMaroon transition-all duration-500 cursor-default">{about.firstLine}</span>
+            <span className="text-gradient-red-via-maroon-to-orange hover:from-gradientOrange hover:via-gradientRed hover:to-gradientMaroon transition-all duration-500 cursor-default">{about.firstLine}</span>
             <span className="hover:text-gray-900/60 dark:hover:text-gray-300 transition-colors duration-300 cursor-default">{about.name}</span>
           </h1>
           <p className="text-sm sm:text-base md:text-lg w-full lg:w-full xl:w-[80%] text-justify leading-relaxed hover:text-gray-900/60 dark:hover:text-gray-300 transition-colors duration-300">{about.description}</p>
           <div className="text-sm sm:text-base md:text-lg flex flex-col sm:flex-row gap-3 sm:gap-4">
-            <button className="group flex gap-2 items-center justify-center rounded-lg bg-gradient-to-r from-gradientRed via-gradientMaroon to-gradientOrange py-2 sm:py-1 px-6 sm:px-8 w-full sm:w-fit hover:from-gradientOrange hover:via-gradientRed hover:to-gradientMaroon hover:scale-105 hover:shadow-xl hover:shadow-gradientRed/30 transition-all duration-300">
+            <button className="group flex gap-2 items-center justify-center rounded-lg bg-gradient-red-via-maroon-to-orange py-2 sm:py-1 px-6 sm:px-8 w-full sm:w-fit hover:from-gradientOrange hover:via-gradientRed hover:to-gradientMaroon hover:scale-105 hover:shadow-xl hover:shadow-gradientRed/30 transition-all duration-300">
               <a href="https://drive.google.com/file/d/1iG7oQWNnhBpxQSON7Wdki1vqO167zSJM/view?usp=drive_link" className="group-hover:text-amber-50 text-amber-50 transition-colors duration-300">Curriculum Vitae</a>
             </button>
             <div className="rounded-lg bg-transparent border-1 border-gradientMaroon from-gradientRed via-gradientMaroon to-gradientOrange w-full sm:w-fit hover:bg-gradient-to-r hover:from-gradientRed/10 hover:via-gradientMaroon/10 hover:to-gradientOrange/10 hover:scale-105 transition-all duration-300">
-              <button className="group font-semibold flex gap-2 items-center justify-center rounded-lg py-2 sm:py-1 px-6 sm:px-8 w-full text-sm sm:text-base md:text-lg bg-gradient-to-r from-gradientRed via-gradientMaroon to-gradientOrange bg-clip-text text-transparent">
+              <button className="group font-semibold flex gap-2 items-center justify-center rounded-lg py-2 sm:py-1 px-6 sm:px-8 w-full text-sm sm:text-base md:text-lg text-gradient-red-via-maroon-to-orange">
                 <a href="#portfolio" className="group-hover:from-gradientOrange group-hover:via-gradientRed group-hover:to-gradientMaroon transition-all duration-300">Project Showcase</a>
               </button>
             </div>
