@@ -10,7 +10,7 @@ const Contact = () => {
 
   // Icon mapping for social media
   const socialMediaIcons = {
-    'Linkedln': FaLinkedin,
+    'LinkedIn': FaLinkedin,
     'GitHub': FaGithub,
     'Instagram': FaInstagram,
     'Email': FaEnvelope,
@@ -94,12 +94,14 @@ const Contact = () => {
                     <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-lg bg-gray-700/50 group-hover:bg-gradient-to-r group-hover:from-gradientRed group-hover:to-gradientOrange transition-all duration-500">
                       {IconComponent ? (
                         <IconComponent className="w-6 h-6 sm:w-7 sm:h-7 text-amber-50 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500" />
-                      ) : (
+                      ) : socialmedia.picture ? (
                         <img 
                           src={socialmedia.picture} 
                           alt={socialmedia.Title} 
                           className="w-10 h-10 sm:w-12 sm:h-12 object-cover rounded-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-500"
                         />
+                      ) : (
+                        <FaEnvelope className="w-6 h-6 sm:w-7 sm:h-7 text-amber-50 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500" />
                       )}
                     </div>
                     <div className="flex-1">

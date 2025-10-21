@@ -1,555 +1,66 @@
-// Education Images
-import IPB from "/assets/Experiences/IPB.png";
-import Bangkit from "/assets/Experiences/Bangkit.png";
-import Necis from "/assets/Experiences/Necis.png";
+// Dummy template data for portfolio
+// Use the three Dummy images requested by the user
+import Experiences from "/assets/Dummy/Experiences.png";
+import ProjectsImg from "/assets/Dummy/Projects.png";
+import CertificatesImg from "/assets/Dummy/Certificates.png";
 
-// Organization Images
-import IEEE from "/assets/Experiences/IEEE.png";
-import Himalkom from "/assets/Experiences/Himalkom.png";
-import PI from "/assets/Experiences/PI.png";
-import Agriinformatics from "/assets/Experiences/Agriinformatics.png";
-import IWDC from "/assets/Experiences/IWDC.png";
-import PSN from "/assets/Experiences/PSN.png";
-import ITToday from "/assets/Experiences/IT-Today.png";
-import CSAgri from "/assets/Experiences/CSAgri.png";
-import PASSIONN7 from "/assets/Experiences/PASSION7.png";
-import TheDoctorIPB from "/assets/Experiences/The-Doctor-IPB.png";
-
-// Projects
-import AiGo from "/assets/Projects/AiGo.png";
-import DesaDigital from "/assets/Projects/KMS.png";
-import FeynMind from "/assets/Projects/FeynMind.png";
-import Infokan from "/assets/Projects/Infokan.png";
-import SDDA from "/assets/Projects/SDDA.png";
-import Notes from "/assets/Projects/Notes.png";
-import Bookshelf from "/assets/Projects/Bookshelf.png";
-import API from "/assets/Projects/API.png";
-
-// Certificates
-import Certificates1 from "/assets/Certificates/1.png";
-import Certificates2 from "/assets/Certificates/2.png";
-import Certificates3 from "/assets/Certificates/3.png";
-import Certificates4 from "/assets/Certificates/4.png";
-import Certificates5 from "/assets/Certificates/5.png";
-import Certificates6 from "/assets/Certificates/6.png";
-import Certificates7 from "/assets/Certificates/7.png";
-import Certificates8 from "/assets/Certificates/8.png";
-import Certificates9 from "/assets/Certificates/9.png";
-import Certificates10 from "/assets/Certificates/10.png";
-import Certificates11 from "/assets/Certificates/11.png";
-import Certificates12 from "/assets/Certificates/12.png";
-import Certificates13 from "/assets/Certificates/13.png";
-import Certificates14 from "/assets/Certificates/14.png";
-import Certificates15 from "/assets/Certificates/15.png";
-import Certificates16 from "/assets/Certificates/16.png";
-import Certificates17 from "/assets/Certificates/17.png";
-import Certificates18 from "/assets/Certificates/18.png";
-import Certificates19 from "/assets/Certificates/19.png";
-import Certificates20 from "/assets/Certificates/20.png";
-import Certificates21 from "/assets/Certificates/21.png";
-import Certificates22 from "/assets/Certificates/22.png";
-import Certificates23 from "/assets/Certificates/23.png";
-import Certificates24 from "/assets/Certificates/24.png";
-
-// Note: Social Media and TechStack icons are now handled by React Icons library
-// No need to import images anymore - see Portfolio.jsx and Contact.jsx
-
+// Education (5 entries) - dummy
 export const educationData = [
-    {
-        id: 1,
-        picture: IPB,
-        institution: "IPB University",
-        degree: "Undergraduate Computer Science",
-        year: "2022 - Present",
-    },
-    {
-        id: 2,
-        picture: Bangkit,
-        institution: "Bangkit Academy",
-        degree: "Cloud Computing Cohort",
-        year: "2024",
-        description: [
-            { text: "Selected as one of 4,636 students from 45,841 applicants to participate in the Bangkit program and graduated with an 'A' grade." },
-            { text: "Acquired hands-on experience with Google Cloud technologies, covering infrastructure, networking, security, load balancing, and Kubernetes for building and managing scalable cloud environments." },
-            { text: "Gained knowledge in implementing DevOps practices, system monitoring, and designing reliable cloud infrastructures using tools such as Terraform and Google Cloud Observability." },
-            { text: "Strengthened programming expertise in JavaScript, Git/GitHub, and backend development to support scalable application deployment." },
-            { text: "Developed practical skills in cloud application development, including integrating services such as Cloud Run, Firestore, and Cloud Storage to deliver secure, end-to-end solutions." }
-        ]
-    },
-    {
-        id: 3,
-        picture: Necis,
-        institution: "SMA N 1 Ciasem",
-        degree: "Mathematics and Natural Sciences",
-        year: "2019 - 2022",
-    }
+    { id: 1, picture: Experiences, institution: "Demo University A", degree: "B.Sc. Computer Science", year: "2018 - 2022" },
+    { id: 2, picture: Experiences, institution: "Demo Institute B", degree: "Diploma Web Dev", year: "2016 - 2018" },
+    { id: 3, picture: Experiences, institution: "Demo Highschool C", degree: "Science Major", year: "2013 - 2016" },
+    { id: 4, picture: Experiences, institution: "Online Course D", degree: "UI/UX Bootcamp", year: "2020" },
+    { id: 5, picture: Experiences, institution: "Short Course E", degree: "Cloud Fundamentals", year: "2021" }
 ];
 
+// Organization (5 entries) - dummy
 export const organizationData = [
-    {
-        id: 1,
-        picture: IEEE,
-        organization: "IEEE Student Branch IPB University",
-        role: "Director of Creative & Branding",
-        year: "January 2024 - December 2024",
-        description: [
-            { text: "Became the lead of the IEEE 2024 grand launching project." },
-            { text: "Responsible for creating the IEEE design system." },
-            { text: "Lead the creative and branding team to enhance insights on IEEE social media." },
-            { text: "Initiate the center of publication template using Google Forms to handle requested briefs from other divisions." }
-        ]
-    },
-    {
-        id: 2,
-        picture: Himalkom,
-        organization: "Himpunan Mahasiswa Ilmu Komputer IPB",
-        role: "Secretary of Media & Branding",
-        year: "January 2024 - December 2024",
-        description: [
-            { text: "Initiate the 2024 grand launching project of Himalkom." },
-            { text: "Responsible for managing administrative tasks for the media & branding division." },
-            { text: "Collaborate with other divisions to complete requested content briefs." },
-            { text: "Responsible for creating Himalkom Instagram feeds." }
-        ]
-    },
-    {
-        id: 3,
-        picture: Agriinformatics,
-        organization: "Agriinformatics 2024",
-        role: "Head of Creative & Branding",
-        year: "April 2024 - November 2024"
-    },
-    {
-        id: 4,
-        picture: PI,
-        organization: "Pekan Ilkomerz 2024",
-        role: "Staff of Public Relations",
-        year: "June 2024 - September 2024",
-    },
-    {
-        id: 5,
-        picture: IWDC,
-        organization: "IPB Web Development Community",
-        role: "Coordinator of Social Media Team",
-        year: "October 2023 - October 2024",
-        description: [
-            { text: "Responsible for attending every meeting held by the organization." },
-            { text: "Served as coordinator for the social media team." },
-            { text: "Organized and managed the official Instagram account of IWDC." }
-        ]
-    },
-    {
-        id: 6,
-        picture: PSN,
-        organization: "Pesta Sains Nasional",
-        role: "Head of Graphic Designer",
-        year: "July 2023 - November 2023",
-        description: [
-            { text: "Led the graphic design team to maintain and develop PSN branding content." },
-            { text: "Created promotional posters to increase participant registrations." },
-            { text: "Operated the camera and handled documentation during the event." },
-            { text: "Collaborated with other divisions to fulfill creative design requests." }
-        ]
-    },
-    {
-        id: 7,
-        picture: CSAgri,
-        organization: "Summer Course CSAgri IPB 2022",
-        role: "Staff of Event",
-        year: "August 2023 - October 2023",
-        description: [
-            { text: "Operated presentation slides during speaker sessions." },
-            { text: "Collaborated with other staff to organize event logistics." },
-            { text: "Created PowerPoint templates for the main sessions." },
-            { text: "Handled documentation as camera operator." }
-        ]
-    },
-    {
-        id: 8,
-        picture: ITToday,
-        organization: "IT TODAY IPB",
-        role: "Staff of Creative",
-        year: "January 2023 - October 2023",
-        description: [
-            { text: "Created Instagram feed designs for IT TODAY’s official account." },
-            { text: "Collaborated with other divisions to complete creative design requests." },
-            { text: "Designed posters that helped increase participant registration." }
-        ]
-    },
-    {
-        id: 9,
-        picture: PASSIONN7,
-        organization: "Eksekutif Ormawa PKU IPB",
-        role: "Staff of Competition",
-        year: "January 2023 - July 2023",
-        description: [
-            { text: "Created TOR and MOU documents for competition preparation." },
-            { text: "Served as information source for PUBGM and Videography competition participants." },
-            { text: "Collaborated with the events division to prepare and execute the PUBGM competition attended by 100+ participants." }
-        ]
-    },
-    {
-        id: 10,
-        picture: TheDoctorIPB,
-        organization: "The Doctor IPB",
-        role: "Digital Entrepreneur in Wirausaha Muda",
-        year: "September 2022 - July 2023",
-        description: [
-            { text: "Led photoshoot projects for Wirausaha Muda members." },
-            { text: "Coordinated over 50 Instagram posts for Wirausaha Muda program." },
-            { text: "Collaborated with public relations division to craft captions for Instagram content." }
-        ]
-    }
+    { id: 1, picture: Experiences, organization: "Demo Org A", role: "Designer", year: "2022", description: [{ text: "Led design initiatives." }] },
+    { id: 2, picture: Experiences, organization: "Demo Org B", role: "Developer", year: "2021", description: [{ text: "Built frontend features." }] },
+    { id: 3, picture: Experiences, organization: "Demo Org C", role: "Coordinator", year: "2020", description: [{ text: "Coordinated events." }] },
+    { id: 4, picture: Experiences, organization: "Demo Org D", role: "Volunteer", year: "2019", description: [{ text: "Community volunteer work." }] },
+    { id: 5, picture: Experiences, organization: "Demo Org E", role: "Contributor", year: "2018", description: [{ text: "Open-source contributions." }] }
+];
 
-]
-
+// Projects (7 entries) - dummy
 export const Project = [
-    {
-        id: 1,
-        picture: DesaDigital,
-        Title: "KMS Inovasi Desa Digital",
-        Description: "Desa Digital merupakan sebuah platform sistem terintegrasi yang dirancang untuk menghubungkan perangkat desa dengan para inovator guna mendukung penerapan inovasi di tingkat desa.  Pada Capstone Desa Digital 2025, saya berkontribusi dalam optimalisasi platform dengan mengembangkan beberapa fitur utama, seperti Tambah Inovasi, Pengajuan Inovasi, dan Pengajuan Klaim yang memungkinkan pengguna menambahkan dan melihat inovasi serta klaim dari desa. Saya juga mengembangkan fitur Klaim Inovasi untuk memungkinkan desa mengklaim inovasi yang dibutuhkan, serta Report Admin untuk membantu admin memantau seluruh aktivitas inovasi dan klaim. Proyek ini merupakan kelanjutan dari tahun sebelumnya dan berfokus pada peningkatan fungsionalitas agar platform lebih siap digunakan oleh publik.",
-        Link: [
-            { LiveDemo: "https://desa-digital-v2.vercel.app/" },
-            { GitHub: "https://github.com/Adsattt/desa-digital.v2" },
-        ],
-        Technologies: ["ReactJS", "Typescript", "Tailwind CSS", "Firestore"],
-        KeyFeature: [
-            { text: "Mengbubungkan perangkat desa dengan inovator untuk menerapkan inovasi yang diterapkan." },
-            { text: "Menyediakan fitur pencarian dan filter untuk mempermudah pencocokan inovasi, desa, dan inovator" },
-            { text: "Memantau aktivitas inovasi dan klaim melalui dashboard admin" },
-            { text: "Memberikan sistem badge dan ranking untuk mendorong partisipasi aktif dan inovasi unggulan" }
-        ]
-    },
-    {
-        id: 2,
-        picture: FeynMind,
-        Title: "FeynMind: Your Learning Buddy",
-        Description: "FeynMind adalah aplikasi mobile yang dirancang untuk meningkatkan pemahaman sains terutama biologi  bagi siswa SMA di Indonesia dengan menerapkan Feynman Technique, yaitu metode belajar melalui penjelasan konsep untuk memperdalam pemahaman. Aplikasi ini memungkinkan siswa memasukkan materi pelajaran dan melakukan sesi mengajar simulasi, di mana sistem akan mengajukan pertanyaan untuk mengidentifikasi celah pemahaman mereka. Dengan fitur pengenalan suara dan respons interaktif, FeynMind membantu siswa belajar secara lebih aktif. FeynMind dirancang agar dapat menyesuaikan tingkat kesulitan pertanyaan berdasarkan pemahaman siswa, sehingga pembelajaran menjadi lebih personal dan efektif. Aplikasi ini juga dilengkapi dengan fitur referensi pintar yang menyediakan sumber belajar tambahan untuk membantu siswa memahami konsep yang masih kurang dikuasai.  FeynMind berfungsi sebagai asisten belajar yang mendukung siswa dalam menguasai materi sains secara mandiri dan menyenangkan.",
-        Link: [
-            { GitHub: "https://github.com/FeynMind" },
-        ],
-        Technologies: ["Express", "Cloud Run", "Firestore"],
-        KeyFeature: [
-            { text: "Menganalisis penjelasan siswa melalui pengenalan suara dan memberikan umpan balik atau pertanyaan lanjutan." },
-            { text: "Memungkinkan siswa menjelaskan materi secara verbal untuk menguji pemahaman mereka." },
-            { text: "Menyediakan sumber belajar tambahan untuk membantu memperjelas konsep yang belum dikuasai." },
-        ]
-    },
-    {
-        id: 3,
-        picture: AiGo,
-        Title: "AiGo: Enhance The Beautiful of Indonesia",
-        Description: "AiGo merupakan sebuah Travel Journal Website yang memiliki tagline “Rangkum Perjalanmu Menjadi Lebih Mudah”. AiGo berfokus ke dalam bidang pariwisata, seperti memudahkan pengguna dalam mencari informasi mengenai destinasi wisata, berbagi pengalaman perjalanan menarik dengan pengguna lainnya, serta dapat berinteraksi terhadap sesama penggemar pariwisata secara online. Tujuan utama dari aplikasi Travel Journal ini adalah untuk menyediakan platform yang komprehensif bagi wisatawan dalam merencanakan, mencatat, dan berbagi pengalaman perjalanan mereka. AiGo menawarkan beberapa manfaat kepada para pengguna, seperti memudahkan pengguna dalam merekap dan mengorganisir riwayat perjalanan, mencari informasi terkait destinasi wisata di Indonesia melalui artikel informatif, serta menyediakan forum diskusi interaktif yang memungkinkan pengguna bertanya, berbagi pengalaman, dan berkomentar mengenai berbagai destinasi wisata.",
-        Link: [
-            { GitHub: "https://github.com/ahqsa24/aigo-rpl" },
-        ],
-        Technologies: ["VanillaCSS", "JavaScript"],
-        KeyFeature: [
-            { text: "Memudahkan para penggiat traveling untuk saling bertanya dan mengutarakan pendapat dengan fitur forum bersama." },
-            { text: "Membantu para penggiat traveling untuk merekap tempat yang sudah mereka kunjungi dengan fitur daftar kunjungan." },
-            { text: "Membantu penggiat travelling untuk mencari informasi terkait tempat wisata yang dituju berbasis artikel informatif" }
-        ]
-    },
-    {
-        id: 4,
-        picture: Infokan,
-        Title: "Infokan: Interactive Learning Platform",
-        Description: "Infokan merupakan sebuah media pembelajaran interaktif yang berfokus pada materi seputaran dunia ilmu komputer. Platform ini dibuat sebagai keperluan untuk projek basis data dengan pengembangan utama terdapat pada fitur CRUD (Create, Read, Update, Delete) dan integrasi terhadap DBMS untuk keperluan manajemen data dari aplikasi. Infokan memiliki beberapa fitur yang sudah dikembangkan, mencakup fitur utama forum diskusi yang menjadi ajang tanya jawab kepada sesama mahasiswa lainnya, fitur notes yang dibuat guna mendukung proses pembelajaran dari mahasiswa setelah mempelajari berbagai macam materi yang disediakan, dan pengembangan sistem secara CRUD (Create, Read, Update, Delete) untuk beberapa fitur seperti profile, notes, sampai pertanyaan, dan komentar pada forum diskusi. Platform ini dikembangkan dengan Vanilla CSS dan HTML sebagai frontend, bahasa PHP murni sebagai backend, dan integrasi dengan MySQL sebagai Database Management System.",
-        Link: [
-         { GitHub: "https://github.com/ahqsa24/infokan-basis-data" },
-        ],
-        Technologies: ["VanillaCSS", "PHP", "MySQL"],
-        KeyFeature: [
-            { text: "Berdiskusi melalui forum diskusi interaktif dengan sesama pengguna lainnya." },
-            { text: "Menambahkan notes yang bisa disesuaikan dengan materi dan sub-materi yang sedang dipelajari." },
-            { text: "Melakukan operasi CRUD terkait dengan notes, profile, pertanyaan, dan komentar yang diberikan oleh pengguna." },
-        ]
-    },
-    {
-        id: 5,
-        picture: SDDA,
-        Title: "SDDA Creative Landing Page",
-        Description: "Sadida Creative merupakan sebuah platform yang menyediakan jasa pembuatan desain grafis sesuai dengan keinginan dari Client. Tampilan di atas merupakan landing page sederhana yang berisi data dummy dari platform Sadida Creative yang kita sebut sebagai iterasi pertama. Kedepannya landing page ini akan dikembangkan pada iterasi kedua dengan data rill yang akan membuatnya lebih interaktif kepada pengguna. Landing page tersebut berisi beberapa informasi dari Sadida Creative, seperti pengenalan singkat tentang Sadida Creative, pengenalan para eksekutor di balik layar Sadida Creative, melihat rating dari para eksekutor tersebut, melihat projek-projek yang sudah diselesaikan, sampai menghubungi narabuhung dari Sadida Creative untuk melakukan pemesanan jasa desain grafis. Landing page tersebut dibuat sebagai keperluan submisi untuk projek akhir dari Dicoding menggunakan HTML dan CSS sederhana. ",
-        Link: [
-            { LiveDemo: "https://ahqsa24.github.io/sddacreative.github.io/" },
-            { GitHub: "https://github.com/ahqsa24/sddacreative.github.io" },
-        ],
-        Technologies: ["HTML", "VanillaCSS"],
-        KeyFeature: [
-            { text: "Menghubungi narahubung untuk melakukan pemesanan terkait jasa desain grafis." },
-            { text: "Menyediakan informasi terkait pengenalan sadida creative dan para eksekutor di balik layar." },
-            { text: "Menampilkan rating dari para eksekutor sebagai bentuk transparansi kepada para pelanggan," },
-            { text: "Menampilkan projek-projek yang sudah diselesaikan sebagai portofolio dari Sadida Creative." }
-        ]
-    },
-    {
-        id: 6,
-        picture: Notes,
-        Title: "Personal Notes Using ReactJS",
-        Description: "Aplikasi catatan pribadi berbasis ReactJS yang memungkinkan pengguna untuk menulis, mengedit, dan menghapus catatan secara interaktif. Dibangun dengan arsitektur SPA (Single Page Application) menggunakan Vite untuk performa tinggi dan respon cepat. Fitur utama mencakup pengarsipan catatan yang sudah tidak digunakan serta pembatasan karakter judul untuk menjaga keterbacaan dan kerapian tampilan.",
-        Link: [
-         { GitHub: "https://github.com/ahqsa24/react-notes" },
-        ],
-        Technologies: ["ReactJS", "Vite"],
-        KeyFeature: [
-            { text: "Melakukan operasi CRUD dalam membuat notes baru dengan atribut judul dan deskripsi." },
-            { text: "Mengarsipkan notes yang sudah tidak digunakan membantu efektifitas tampilan dari notes." },
-            { text: "Menghitung jumlah karakter dari judul notes dan membatasi maksimal 50 karakter." },
-        ]
-    },
-    {
-        id: 7,
-        picture: Bookshelf,
-        Title: "Bookshelf App Using JavaScript",
-        Description: "Aplikasi rak buku sederhana berbasis JavaScript murni yang dirancang untuk membantu pengguna mengelola daftar bacaan mereka. Data buku disimpan secara lokal menggunakan Local Storage, memungkinkan pengguna menambahkan, memindahkan, dan menghapus buku tanpa koneksi internet. Aplikasi ini juga dilengkapi fitur pencarian buku untuk mempermudah navigasi dan pengelolaan koleksi.",
-        Link: [
-         { GitHub: "https://github.com/ahqsa24/bookshelf-api" },
-        ],
-        Technologies: ["JavaScript"],
-        KeyFeature: [
-            { text: "Menyimpan input dari user dengan local storage pada JavaScipt." },
-            { text: "Memindahkan notes dari rak belum dibaca menjadi sudah dibaca." },
-            { text: "Membuat, menghapus, dan mencari notes sesuai input yang diberikan pengguna." }
-        ]
-    },
-    {
-        id: 8,
-        picture: API,
-        Title: "Bookshelf API Backend HapiJS",
-        Description: "API backend yang dikembangkan menggunakan HapiJS untuk mendukung aplikasi Bookshelf. Proyek ini menerapkan prinsip RESTful API dan memungkinkan operasi CRUD (Create, Read, Update, Delete) untuk data buku. Dengan validasi input dan penanganan error yang baik, API ini memastikan pengalaman pengguna yang stabil dan responsif dalam mengelola data bacaan melalui endpoint terstruktur.",
-        Link: [
-         { GitHub: "https://github.com/ahqsa24/notes-app-back-end" },
-        ],
-        Technologies: ["NodeJS", "HapiJS", "Postman"],
-        KeyFeature: [
-            { text: "Melakukan operasi CRUD berbasis HapiJS untuk menerima input dari pengguna." },
-            { text: "Mengembalikan pesan error ketika ada kondisi salah yang dimasukkan oleh pengguna." },
-            { text: "Membagi buku ke dalam kelompok sudah dibaca dan belum dibaca seperti prinsip rak buku." }
-        ]
-    },
-]
+    { id: 1, picture: ProjectsImg, Title: "Demo Project 1", Description: "Short dummy description for project 1.", Link: [{ GitHub: "https://example.com" }], Technologies: ["React", "Tailwind"], KeyFeature: [{ text: "Feature A" }] },
+    { id: 2, picture: ProjectsImg, Title: "Demo Project 2", Description: "Short dummy description for project 2.", Link: [{ GitHub: "https://example.com" }], Technologies: ["Node", "Express"], KeyFeature: [{ text: "Feature B" }] },
+    { id: 3, picture: ProjectsImg, Title: "Demo Project 3", Description: "Short dummy description for project 3.", Link: [{ GitHub: "https://example.com" }], Technologies: ["VanillaJS"], KeyFeature: [{ text: "Feature C" }] },
+    { id: 4, picture: ProjectsImg, Title: "Demo Project 4", Description: "Short dummy description for project 4.", Link: [{ GitHub: "https://example.com" }], Technologies: ["React"], KeyFeature: [{ text: "Feature D" }] },
+    { id: 5, picture: ProjectsImg, Title: "Demo Project 5", Description: "Short dummy description for project 5.", Link: [{ GitHub: "https://example.com" }], Technologies: ["HTML", "CSS"], KeyFeature: [{ text: "Feature E" }] },
+    { id: 6, picture: ProjectsImg, Title: "Demo Project 6", Description: "Short dummy description for project 6.", Link: [{ GitHub: "https://example.com" }], Technologies: ["Python"], KeyFeature: [{ text: "Feature F" }] },
+    { id: 7, picture: ProjectsImg, Title: "Demo Project 7", Description: "Short dummy description for project 7.", Link: [{ GitHub: "https://example.com" }], Technologies: ["Go"], KeyFeature: [{ text: "Feature G" }] }
+];
 
+// Certificates (7 entries) - dummy
 export const Certificates = [
-    {
-        id: 1,
-        picture: Certificates1,
-        Title: "Bangkit 2024 Batch 2 Cloud Computing",
-    },
-    {
-        id: 2,
-        picture: Certificates2,
-        Title: "Belajar Membuat Aplikasi Web dengan React.js",
-    },
-    {
-        id: 3,
-        picture: Certificates3,
-        Title: "Belajar Jaringan Komputer untuk Pemula",
-    },
-    {
-        id: 4,
-        picture: Certificates4,
-        Title: "UIUX Design Mastery Skilvul",
-    },
-    {
-        id: 5,
-        picture: Certificates5,
-        Title: "Belajar Penerapan Machine Learning dengan Google Cloud",
-    },
-    {
-        id: 6,
-        picture: Certificates6,
-        Title: "Belajar Dasar-Dasar DevOps",
-    },
-    {
-        id: 7,
-        picture: Certificates7,
-        Title: "Belajar Back-End Pemula dengan JavaScript",
-    },
-    {
-        id: 8,
-        picture: Certificates8,
-        Title: "Menjadi Google Cloud Engineer",
-    },
-    {
-        id: 9,
-        picture: Certificates9,
-        Title: "Belajar Membuat Aplikasi Back-End untuk Pemula dengan Google Cloud",
-    },
-    {
-        id: 10,
-        picture: Certificates10,
-        Title: "Belajar Dasar AI",
-    },
-    {
-        id: 11,
-        picture: Certificates11,
-        Title: "Belajar Dasar Pemrograman JavaScript",
-    },
-    {
-        id: 12,
-        picture: Certificates12,
-        Title: "Belajar Dasar Pemrograman Web",
-    },
-    {
-        id: 13,
-        picture: Certificates13,
-        Title: "Belajar Dasar Git dengan GitHub",
-    },
-    {
-        id: 14,
-        picture: Certificates14,
-        Title: "Pengenalan ke Logika Pemrograman (Programming Logic 101)",
-    },
-    {
-        id: 15,
-        picture: Certificates15,
-        Title: "Memulai Dasar Pemrograman untuk Menjadi Pengembang Software",
-    },
-    {
-        id: 16,
-        picture: Certificates16,
-        Title: "Belajar Machine Learning untuk Pemula",
-    },
-    {
-        id: 17,
-        picture: Certificates17,
-        Title: "Belajar Dasar SQL",
-    },
-    {
-        id: 18,
-        picture: Certificates18,
-        Title: "Belajar Dasar Data Science",
-    },
-    {
-        id: 19,
-        picture: Certificates19,
-        Title: "Belajar Dasar Manajemen Proyek",
-    },
-    {
-        id: 20,
-        picture: Certificates20,
-        Title: "Belajar Dasar Visualisasi Data",
-    },
-    {
-        id: 21,
-        picture: Certificates21,
-        Title: "Belajar Dasar Pemrograman Python",
-    },
-    {
-        id: 22,
-        picture: Certificates22,
-        Title: "Belajar Membuat Front-End Web untuk Pemula",
-    },
-    {
-        id: 23,
-        picture: Certificates23,
-        Title: "Belajar Dasar AWS Cloud",
-    },
-    {
-        id: 24,
-        picture: Certificates24,
-        Title: "Belajar Implementasi CI CD",
-    },
+    { id: 1, picture: CertificatesImg, Title: "Demo Certificate 1" },
+    { id: 2, picture: CertificatesImg, Title: "Demo Certificate 2" },
+    { id: 3, picture: CertificatesImg, Title: "Demo Certificate 3" },
+    { id: 4, picture: CertificatesImg, Title: "Demo Certificate 4" },
+    { id: 5, picture: CertificatesImg, Title: "Demo Certificate 5" },
+    { id: 6, picture: CertificatesImg, Title: "Demo Certificate 6" },
+    { id: 7, picture: CertificatesImg, Title: "Demo Certificate 7" }
+];
 
-]
-
+// Tech stack (7 entries) - dummy
 export const TechStack = [
-    {
-        id: 1,
-        Title: "HTML",
-    },
-    {
-        id: 2,
-        Title: "CSS",
-    },
-    {
-        id: 3,
-        Title: "JavaScript",
-    },
-    {
-        id: 4,
-        Title: "ReactJS",
-    },
-    {
-        id: 5,
-        Title: "Tailwind CSS",
-    },
-    {
-        id: 6,
-        Title: "Nodejs",
-    },
-    {
-        id: 7,
-        Title: "ExpressJS",
-    },
-    {
-        id: 8,
-        Title: "NextJS",
-    },
-    {
-        id: 9,
-        Title: "Shadcn/UI",
-    },
-    {
-        id: 10,
-        Title: "Vite",
-    },
-    {
-        id: 11,
-        Title: "Firebase",
-    },
-    {
-        id: 12,
-        Title: "Vercel",
-    },
-    {
-        id: 13,
-        Title: "MySQL",
-    },
-    {
-        id: 14,
-        Title: "Google Cloud Platform",
-    },
-    {
-        id: 15,
-        Title: "Figma",
-    },
-    {
-        id: 16,
-        Title: "Postman",
-    }
-]
+    { id: 1, Title: "HTML" },
+    { id: 2, Title: "CSS" },
+    { id: 3, Title: "JavaScript" },
+    { id: 4, Title: "ReactJS" },
+    { id: 5, Title: "Tailwind CSS" },
+    { id: 6, Title: "Nodejs" },
+    { id: 7, Title: "Figma" }
+];
 
+// Social media (5 dummy entries)
 export const SocialMedia = [
-    {
-        id: 1,
-        Title: "Linkedln",
-        Name: "Ahmad Qaulan Sadida",
-        link: "https://www.linkedin.com/in/adidsadida"
-    },
-    {
-        id: 2,
-        Title: "GitHub",
-        Name: "ahqsa24",
-        link: "https://github.com/ahqsa24"
-    },
-    {
-        id: 3,
-        Title: "Instagram",
-        Name: "@adidsadida24",
-        link: "https://www.instagram.com/adidsadida24/"
-    },
-    {
-        id: 4,
-        Title: "Email",
-        Name: "adhiet353@gmail.com",
-        link: "mailto:adhiet353@gmail.com"
-    },
-    {
-        id: 5,
-        Title: "YouTube",
-        Name: "Cozzy",
-        link: "https://www.youtube.com/adidsadida"
-    }
-]
+    { id: 1, Title: "LinkedIn", Name: "Demo User", link: "https://example.com" },
+    { id: 2, Title: "GitHub", Name: "demo", link: "https://github.com" },
+    { id: 3, Title: "Instagram", Name: "@demo", link: "https://instagram.com" },
+    { id: 4, Title: "Email", Name: "demo@example.com", link: "mailto:demo@example.com" },
+    { id: 5, Title: "YouTube", Name: "Demo", link: "https://youtube.com" }
+];
+

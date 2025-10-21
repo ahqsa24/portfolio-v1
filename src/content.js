@@ -22,8 +22,8 @@
 // SITE ASSETS - Icons and Images
 // ============================================
 // Update these paths if you rename or move your asset files
-import About from "/assets/about-image.png";
-import Logo from "/assets/Logo.png";
+import About from "/assets/Dummy/about-dummy.png";
+import Logo from "/assets/Dummy/Logo.png";
 
 // Note: Icon images (ProjectIcon, Contact, TotalProjects, Certificate, Experiences, Code, Certif, Education, Organization, Tech)
 // have been replaced with React Icons library for better performance and smaller bundle size.
@@ -48,7 +48,7 @@ export const Image = [
 export const navData = [
     {
         id: 1,
-        title: "Ahqsa",
+        title: "Portfolio",
     }
 ]
 
@@ -71,8 +71,8 @@ export const homeData = [
     },
     {
         id: 2,
-        firstName: "Ahmad Qaulan", // Your first name (with gradient)
-        lastName: "Sadida",        // Your last name
+        firstName: "John Doe", // Your first name (with gradient)
+        lastName: "Smith",        // Your last name
     },
     {
         id: 3,
@@ -84,14 +84,14 @@ export const homeData = [
     },
     {
         id: 4,
-        text: "Membangun Antarmuka Digital yang Responsif, Interaktif, dan Estetis untuk Pengalaman Pengguna Terbaik." // Hero description
+        text: "This is a placeholder hero description for the portfolio. Replace this text with your own tagline or short summary about your work and interests." // Hero description (dummy)
     },
     {
         id: 5,
         techstack: [
             { text: "ReactJS" },      // Tech badge 1
             { text: "TailwindCSS" },  // Tech badge 2
-            { text: "UI/UX" },        // Tech badge 3
+            { text: "React Icons" },        // Tech badge 3
             { text: "Figma" }         // Tech badge 4
             // Add more tech badges as needed
         ]
@@ -114,10 +114,10 @@ export const aboutData = [
         id: 1,
         heading: "About Me",           // Section title
         firstLine: "Hello I'm",        // Greeting text before name
-        name: "Ahmad Qaulan Sadida",   // Your full name
-        description: "I am an undergraduate student of Computer Science at IPB University with a strong interest in programming and creative fields, especially web development and graphic design. I consider myself a hardworking person with good time management skills. When I commit to something, I strive to achieve it to the best of my ability.", // Your bio/description
+        name: "John Doe Smith",   // Your full name
+        description: "This is a short placeholder bio. Replace with details about studies, interests, skills, and any personal highlights you want visitors to know.", // Your bio/description (dummy)
         picture: About,                 // Profile image (imported above)
-        cvLink: "https://drive.google.com/file/d/1iG7oQWNnhBpxQSON7Wdki1vqO167zSJM/view?usp=drive_link" // Link to your CV or resume
+        cvLink: "https://drive.google.com/" // Link to your CV or resume
     }
 ]
 
@@ -186,21 +186,21 @@ export const contactData = [
 export const footerData = [
     {
         id: 1,
-        title: "Ahqsa Portfolio", // Portfolio name in footer
-        link: "https://www.linkedin.com/in/adidsadida/", // Portfolio link
+        title: "Portfolio", // Portfolio name in footer
+        link: "https://www.linkedin.com/", // Portfolio link
         logo: Logo
     },
     {
         id: 2,
         socialMedia: [
-            { name: "Github", link: "https://github.com/ahqsa24" },
-            { name: "LinkedIn", link: "https://www.linkedin.com/in/adidsadida/" },
-            { name: "Instagram", link: "https://www.instagram.com/adidsadida24/" },
-            { name: "Email", link: "mailto:adhiet353@gmail.com" }
+            { name: "Github", link: "https://github.com/" },
+            { name: "LinkedIn", link: "https://www.linkedin.com/" },
+            { name: "Instagram", link: "https://www.instagram.com/" },
+            { name: "Email", link: "mailto:name@gmail.com" }
         ]
     },
     {
         id: 3,
-        year: "© " + new Date().getFullYear() + " Ahqsa™. All Rights Reserved."
+        year: "© " + new Date().getFullYear() + "Portfolio™. All Rights Reserved."
     }
 ]
