@@ -116,7 +116,8 @@ export const aboutData = [
         firstLine: "Hello I'm",        // Greeting text before name
         name: "Ahmad Qaulan Sadida",   // Your full name
         description: "I am an undergraduate student of Computer Science at IPB University with a strong interest in programming and creative fields, especially web development and graphic design. I consider myself a hardworking person with good time management skills. When I commit to something, I strive to achieve it to the best of my ability.", // Your bio/description
-        picture: About                 // Profile image (imported above)
+        picture: About,                 // Profile image (imported above)
+        cvLink: "https://drive.google.com/file/d/1iG7oQWNnhBpxQSON7Wdki1vqO167zSJM/view?usp=drive_link" // Link to your CV or resume
     }
 ]
 

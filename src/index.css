@@ -138,6 +138,24 @@
     -webkit-text-fill-color: transparent;
     color: transparent;
   }
+
+  /* Hover variant utility (use as a class on the element) */
+  .hover-text-gradient-orange-via-red-to-maroon:hover {
+    background: linear-gradient(to right, var(--color-gradientOrange), var(--color-gradientRed), var(--color-gradientMaroon));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  /* Tailwind-like class name for code consistency: use `hover:text-gradient-orange-via-red-to-maroon` in markup */
+  .hover\:text-gradient-orange-via-red-to-maroon:hover {
+    background: linear-gradient(to right, var(--color-gradientOrange), var(--color-gradientRed), var(--color-gradientMaroon));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
   
   @keyframes fadeIn {
     from {

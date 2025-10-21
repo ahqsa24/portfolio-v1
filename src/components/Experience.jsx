@@ -38,7 +38,7 @@ const Experience = () => {
   return (
     <div id="experience" className="min-h-screen px-4 sm:px-8 md:px-16 lg:px-24 py-12 sm:py-16 md:py-20 lg:py-24">
       <div className="flex flex-col justify-center items-center animate-fade-in">
-        <h1 className="flex justify-center mb-4 sm:mb-6 text-3xl sm:text-4xl md:text-5xl font-bold text-gradient-red-via-maroon-to-orange hover:from-gradientOrange hover:via-gradientRed hover:to-gradientMaroon transition-all duration-500">{experienceContent.heading}</h1>
+  <h1 className="flex justify-center mb-4 sm:mb-6 text-3xl sm:text-4xl md:text-5xl font-bold text-gradient-red-via-maroon-to-orange hover:text-gradient-orange-via-red-to-maroon transition-all duration-500">{experienceContent.heading}</h1>
         <p className="flex w-full sm:w-[80%] md:w-[70%] text-center text-sm sm:text-base md:text-lg leading-relaxed hover:text-gray-900/60 dark:hover:text-gray-300 transition-colors duration-300">{experienceContent.text}</p>
       </div>
       <div className="flex flex-row sm:flex-row gap-2 sm:gap-8 mt-8 sm:mt-10 md:mt-12 justify-between bg-gradientMaroon dark:bg-gray-700/50 py-2 rounded-xl hover:bg-gradinetMaroon/80 dark:hover:bg-gray-600/60 transition-all duration-300 animate-slide-in-up delay-200">

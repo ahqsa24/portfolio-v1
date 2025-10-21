@@ -22,8 +22,8 @@ const DetailProject = () => {
     return (
       <div className="min-h-screen flex items-center justify-center px-4 sm:px-8 md:px-16 lg:px-24 pt-20">
         <div className="text-center">
-          <h1 className="text-9xl font-bold text-gradient-red-via-maroon-to-orange">404</h1>
-          <h1 className="text-xl sm:text-2xl font-bold text-gradient-red-via-maroon-to-orange mb-4">Project Not Found</h1>
+          <h1 className="text-9xl font-bold text-gradient-red-via-maroon-to-orange hover:text-gradient-orange-via-red-to-maroon">404</h1>
+          <h1 className="text-xl sm:text-2xl font-bold text-gradient-red-via-maroon-to-orange hover:text-gradient-orange-via-red-to-maroon mb-4">Project Not Found</h1>
           <p className="dark:text-gray-400 mb-6">The project you're looking for doesn't exist.</p>
           <button 
             onClick={handleBackClick}

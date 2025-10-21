@@ -142,7 +142,7 @@ const Navbar = () => {
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="flex items-center justify-between py-4 sm:py-6 px-4 sm:px-8 md:px-16 lg:px-24">
         {/* Logo */}
-        <div className="font-bold text-lg sm:text-xl text-gradient-red-via-maroon-to-orange">
+        <div className="font-bold text-lg sm:text-xl text-gradient-red-via-maroon-to-orange hover:text-gradient-orange-via-red-to-maroon">
           {navItems.title}
         </div>
 

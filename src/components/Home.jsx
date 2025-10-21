@@ -54,7 +54,7 @@ const Home = () => {
     <div id="home" className="min-h-screen flex flex-col gap-4 sm:gap-6 md:gap-8 px-4 sm:px-8 md:px-16 lg:px-24 justify-center animate-fade-in">
         <p className="text-sm sm:text-base md:text-lg lg:text-xl rounded-full dark:bg-gray-700/50 bg-gradientMaroon text-amber-50 border border-white py-2 px-4 sm:px-6 md:px-8 w-fit hover:border-gray-300 hover:scale-105 transition-all duration-300 cursor-pointer animate-slide-in-down">{badgeText}</p>
         <h1 className="flex flex-col gap-4 sm:gap-6 md:gap-8 font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl animate-slide-in-left">
-          <span className="text-gradient-red-via-maroon-to-orange hover:from-gradientOrange hover:via-gradientRed hover:to-gradientMaroon transition-all duration-500 cursor-default">{firstName}</span>
+          <span className="text-gradient-red-via-maroon-to-orange hover:text-gradient-orange-via-red-to-maroon transition-all duration-500 cursor-default">{firstName}</span>
           <span className="hover:text-gray-900/60 dark:hover:text-gray-300 transition-colors duration-300 cursor-default"> {lastName}</span>
         </h1>
         <h3 className="text-lg sm:text-xl md:text-2xl animate-slide-in-right">
