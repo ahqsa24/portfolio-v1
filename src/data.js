@@ -15,6 +15,12 @@ import CSAgri from "/assets/Experiences/CSAgri.png";
 import PASSIONN7 from "/assets/Experiences/PASSION7.png";
 import TheDoctorIPB from "/assets/Experiences/The-Doctor-IPB.png";
 
+// Professional Imagess
+import PTSapphire from "/assets/Experiences/PTSapphire.png";
+import Newsmaker23 from "/assets/Experiences/Newsmaker23.png";
+import TyblooLab from "/assets/Experiences/TyblooLab.png";
+import LPKPBMerdeka from "/assets/Experiences/LPKPBMerdeka.png";
+
 // Projects
 import AiGo from "/assets/Projects/AiGo.png";
 import DesaDigital from "/assets/Projects/KMS.png";
@@ -24,6 +30,10 @@ import SDDA from "/assets/Projects/SDDA.png";
 import Notes from "/assets/Projects/Notes.png";
 import Bookshelf from "/assets/Projects/Bookshelf.png";
 import API from "/assets/Projects/API.png";
+import logbook from "/assets/Projects/logbook.png"
+import lpkmerdeka from "/assets/Projects/lpkmerdeka.png"
+import tybloo from "/assets/Projects/tybloo.png"
+import newsmaker from "/assets/Projects/newsmaker.png"
 
 // Certificates
 import Certificates1 from "/assets/Certificates/1.png";
@@ -203,9 +213,128 @@ export const organizationData = [
 
 ]
 
+export const workData = [
+    {
+        id: 1,
+        picture: TyblooLab,
+        company: "Tybloo Lab",
+        role: "Founder & Software Engineer",
+        year: "January 2026 - Present",
+        description: [
+            { text: "Developed project briefs to define requirements, scope, and planning for digital product development " },
+            { text: "Built digital products including portfolio websites, landing pages, and CMS using React.js and Next.js " },
+            { text: "Developed company website using Next.js and NestJS for handling dynamic web operations, delivering an interactive UI and seamless order tracking dashboards with integrated bilingual systems. " },
+            { text: "Led team collaboration and facilitated regular meetings to manage end-to-end development processes." }
+        ]
+    },
+    {
+        id: 2,
+        picture: Newsmaker23,
+        company: "Newsmaker23",
+        role: "Web Developer Intern",
+        year: "March 2026 - Present",
+        description: [
+            { text: "Redesigned and modernized website UI to improve user experience and visual consistency." },
+            { text: "Integrated news APIs and implemented category-based filtering for dynamic content delivery." },
+            { text: "Fetched and displayed real-time data including live charts, economic calendar, and investment instrument prices." },
+            { text: "Developed financial calculators for pivot points and Fibonacci analysis." }
+        ]
+    },
+    {
+        id: 3,
+        picture: LPKPBMerdeka,
+        company: "LPK PB Merdeka",
+        role: "Web Developer Intern",
+        year: "December 2025 - February 2026",
+        description: [
+            { text: "Developed landing page and CMS for dynamic content management." },
+            { text: "Built multi-role system (user, admin, superadmin) with role-based access control" },
+            { text: "Implemented authentication system included register, login, forgot password, and 2FA authencticator using Better Auth." },
+            { text: "Designed and developed RESTful APIs for LMS features including video/ebook materials, attendance tracking, and leaderboard system " }
+        ]
+    },
+    {
+        id: 4,
+        picture: PTSapphire,
+        company: "PT Sapphire Asset International",
+        role: "IT Intern",
+        year: "September - December 2025",
+        description: [
+            { text: "Converted company subsidiary websites into cross-platform web applications using Flutter." },
+            { text: "Implemented bottom navigation bar to enhance mobile user experience." },
+            { text: "Integrated Shorebird for over-the-air updates and application version management." },
+            { text: "Created test cases and performed manual black-box testing for company subsidiary websites." }
+        ]
+    },
+]
+
 export const Project = [
     {
         id: 1,
+        picture: logbook,
+        Title: "IPB Logbook Generator System",
+        Description: "IPB Logbook Generator adalah sebuah sistem yang dibuat untuk mempermudah proses pengisian logbook pada student portal IPB University. Sistem ini memungkinkan pengisian logbook menggunakan input berupa file Excel yang telah disesuaikan dengan format pada platform. Dibandingkan dengan metode pada student portal yang mengharuskan pengisian satu per satu, penggunaan Excel jauh lebih mudah dan praktis, terutama jika terjadi kesalahan saat submit. Selain itu, sistem ini telah mendukung batch upload, sehingga beberapa file Excel dapat digabungkan menjadi satu batch yang siap digenerate ke platform student portal. Tidak hanya melalui input Excel, platform ini juga mendukung fitur CRUD, sehingga pengguna dapat menambahkan row yang kurang, menghapus row yang tidak diperlukan, serta mengedit data jika terdapat kesalahan. Sistem ini memanfaatkan cookies dan ID logbook pengguna untuk proses autentikasi, sehingga dapat mengakses dan melakukan generate logbook secara otomatis.",
+        Link: [
+            { LiveDemo: "https://ipb-logbook-generator.vercel.app/" },
+            { GitHub: "https://github.com/ahqsa24/logbook-generator" },
+        ],
+        Technologies: ["NextJS", "Supabase", "Tailwind CSS"],
+        KeyFeature: [
+            { text: "Memanfaatkan cookies dan ID logbook untuk melakukan autentikasi dan mengakses sistem." },
+            { text: "Menggunakan file Excel sebagai input utama yang telah disesuaikan dengan format logbook pada platform." },
+            { text: "Mendukung input gambar melalui file ZIP yang digabungkan dengan data Excel dalam satu proses upload." },
+            { text: "Menyediakan fitur CRUD serta dukungan batch untuk mengelola dan menggabungkan beberapa file Excel atau ZIP." }
+        ]
+    },
+    {
+        id: 2,
+        picture: lpkmerdeka,
+        Title: "LPK PB Merdeka Platform",
+        Description: "LPK PB Merdeka merupakan sebuah sistem pelatihan kerja pialang berjangka yang menerapkan konsep gamifikasi di dalamnya. Sistem ini memiliki tiga role utama, yaitu user, admin, dan superadmin. User dapat mengakses dashboard user, admin dapat mengakses dashboard admin serta melakukan assign user, sedangkan superadmin memiliki akses penuh ke dashboard admin sekaligus dapat melakukan assign admin. Sistem autentikasi dibangun menggunakan Better Auth yang mendukung login melalui Google dan fitur 2FA, selain fitur umum seperti login, registrasi, dan lupa kata sandi. Pada dashboard admin, tersedia fitur untuk melihat overview sistem, mengelola materi pembelajaran seperti video dan e-book, mengatur absensi, serta melakukan manajemen user. Selain itu, sistem gamifikasi diimplementasikan melalui leaderboard yang berbasis API, sehingga user dapat melihat peringkat berdasarkan aktivitas mereka. User juga dapat mengakses dashboard yang berisi konten pembelajaran yang telah disediakan oleh admin. Terdapat juga landing page yang seluruh kontennya dapat dikelola melalui CMS pada dashboard admin.",
+        Link: [
+            { LiveDemo: "https://lpk-merdeka.vercel.app/" },
+        ],
+        Technologies: ["NextJS", "Prisma", "Better Auth", "Railway"],
+        KeyFeature: [
+            { text: "Sistem autentikasi terintegrasi dengan Better Auth yang mendukung login Google, 2FA, serta fitur autentikasi umum." },
+            { text: "Manajemen role terstruktur dengan tiga level akses (user, admin, dan superadmin) beserta kontrol assign pengguna." },
+            { text: "Dashboard admin lengkap untuk mengelola materi pembelajaran, absensi, user, serta monitoring sistem." },
+            { text: "Implementasi gamifikasi melalui leaderboard berbasis API dan CMS untuk pengelolaan konten landing page." }
+        ]
+    },
+    {
+        id: 3,
+        picture: newsmaker,
+        Title: "Newsmaker23",
+        Description: "Newsmaker23 merupakan sebuah platform berita digital yang berfokus pada penyajian informasi di bidang ekonomi dan keuangan. Platform ini menyediakan berbagai konten terkait instrumen investasi seperti emas, forex, cryptocurrency, serta kategori ekonomi lainnya dalam bentuk berita yang aktual dan relevan. Selain itu, Newsmaker23 juga dilengkapi dengan fitur kalender ekonomi yang menampilkan jadwal rilis data penting global, sehingga pengguna dapat memantau peristiwa yang berpotensi memengaruhi pergerakan pasar. Platform ini juga menyediakan data historis harga dari berbagai indeks dan instrumen keuangan yang diperbarui secara harian, sehingga pengguna dapat melakukan analisis berbasis data dengan lebih akurat. Untuk mendukung analisis teknikal, tersedia juga tools seperti kalkulator pivot point dan Fibonacci yang membantu dalam menentukan level support dan resistance. Selain sebagai sumber informasi, Newsmaker23 juga menghadirkan analisis pasar terkini setiap harinya yang dapat dijadikan referensi dalam pengambilan keputusan investasi.",
+        Link: [
+            { LiveDemo: "https://newsmaker-v2.vercel.app/" },
+        ],
+        Technologies: ["NextJS", "ExpressJS", "Tailwind CSS"],
+        KeyFeature: [
+            { text: "Menyediakan berita ekonomi dan investasi terkini yang mencakup berbagai instrumen seperti emas, forex, dan cryptocurrency." },
+            { text: "Menampilkan kalender ekonomi global untuk memantau jadwal rilis data penting." },
+            { text: "Menyediakan data historis harga harian untuk berbagai indeks dan instrumen keuangan." },
+            { text: "Dilengkapi tools analisis seperti kalkulator pivot point dan Fibonacci serta insight analisis pasar harian." }
+        ]
+    },
+    {
+        id: 4,
+        picture: tybloo,
+        Title: "Tybloo Lab",
+        Description: "Tybloo Lab merupakan sebuah platform tempat produk digital yang difokuskan pada software seperti website, aplikasi, ataupun script automation. Platform ini sedang dalam masa pengembangan awal pada bagian frontend, yang secara khusus dirancang untuk memberikan pengalaman pengguna kelas premium dengan standar estetika SaaS modern. Melalui platform ini, pengguna tidak hanya dapat mengeksplorasi katalog produk dan membeli template lisensi siap pakai, tetapi juga dapat mengajukan request kustomisasi fitur, pemeliharaan (maintenance), hingga deployment aplikasi ke cloud. Sistem ini menawarkan dashboard terpusat yang interaktif, sehingga pelanggan dapat dengan transparan melacak seluruh riwayat pesanan dan status proyek mereka. Selain itu, platform ini juga mendemonstrasikan sistem percakapan (chat/messaging) terintegrasi yang memudahkan komunikasi antara klien dengan tim customer service maupun developer yang sedang menangani proyek bersangkutan. Dengan antarmuka responsif dan dukungan penuh pada lokalisasi dwibahasa, Tybloo Lab memastikan aksesibilitas yang optimal bagi pasar lokal maupun internasional.",
+        Link: [
+            { LiveDemo: "https://tybloolab.vercel.app/" },
+        ],
+        Technologies: ["NextJS", "NestJS", "Tailwind CSS", "Supabase"],
+        KeyFeature: [
+            { text: "Menghadirkan UI berstandar premium dengan layout bento grid yang responsif dan animasi yang interaktif di berbagai perangkat." },
+            { text: "Mendukung fitur transisi dwibahasa (Inggris dan Indonesia) secara real-time di seluruh platform." },
+            { text: "Menyediakan dashboard pengguna untuk memantau pesanan, histori transaksi, dan status permintaan kustomisasi." }
+        ]
+    },
+    {
+        id: 5,
         picture: DesaDigital,
         Title: "KMS Inovasi Desa Digital",
         Description: "Desa Digital merupakan sebuah platform sistem terintegrasi yang dirancang untuk menghubungkan perangkat desa dengan para inovator guna mendukung penerapan inovasi di tingkat desa.  Pada Capstone Desa Digital 2025, saya berkontribusi dalam optimalisasi platform dengan mengembangkan beberapa fitur utama, seperti Tambah Inovasi, Pengajuan Inovasi, dan Pengajuan Klaim yang memungkinkan pengguna menambahkan dan melihat inovasi serta klaim dari desa. Saya juga mengembangkan fitur Klaim Inovasi untuk memungkinkan desa mengklaim inovasi yang dibutuhkan, serta Report Admin untuk membantu admin memantau seluruh aktivitas inovasi dan klaim. Proyek ini merupakan kelanjutan dari tahun sebelumnya dan berfokus pada peningkatan fungsionalitas agar platform lebih siap digunakan oleh publik.",
@@ -222,7 +351,7 @@ export const Project = [
         ]
     },
     {
-        id: 2,
+        id: 6,
         picture: FeynMind,
         Title: "FeynMind: Your Learning Buddy",
         Description: "FeynMind adalah aplikasi mobile yang dirancang untuk meningkatkan pemahaman sains terutama biologi  bagi siswa SMA di Indonesia dengan menerapkan Feynman Technique, yaitu metode belajar melalui penjelasan konsep untuk memperdalam pemahaman. Aplikasi ini memungkinkan siswa memasukkan materi pelajaran dan melakukan sesi mengajar simulasi, di mana sistem akan mengajukan pertanyaan untuk mengidentifikasi celah pemahaman mereka. Dengan fitur pengenalan suara dan respons interaktif, FeynMind membantu siswa belajar secara lebih aktif. FeynMind dirancang agar dapat menyesuaikan tingkat kesulitan pertanyaan berdasarkan pemahaman siswa, sehingga pembelajaran menjadi lebih personal dan efektif. Aplikasi ini juga dilengkapi dengan fitur referensi pintar yang menyediakan sumber belajar tambahan untuk membantu siswa memahami konsep yang masih kurang dikuasai.  FeynMind berfungsi sebagai asisten belajar yang mendukung siswa dalam menguasai materi sains secara mandiri dan menyenangkan.",
@@ -237,7 +366,7 @@ export const Project = [
         ]
     },
     {
-        id: 3,
+        id: 7,
         picture: AiGo,
         Title: "AiGo: Enhance The Beautiful of Indonesia",
         Description: "AiGo merupakan sebuah Travel Journal Website yang memiliki tagline “Rangkum Perjalanmu Menjadi Lebih Mudah”. AiGo berfokus ke dalam bidang pariwisata, seperti memudahkan pengguna dalam mencari informasi mengenai destinasi wisata, berbagi pengalaman perjalanan menarik dengan pengguna lainnya, serta dapat berinteraksi terhadap sesama penggemar pariwisata secara online. Tujuan utama dari aplikasi Travel Journal ini adalah untuk menyediakan platform yang komprehensif bagi wisatawan dalam merencanakan, mencatat, dan berbagi pengalaman perjalanan mereka. AiGo menawarkan beberapa manfaat kepada para pengguna, seperti memudahkan pengguna dalam merekap dan mengorganisir riwayat perjalanan, mencari informasi terkait destinasi wisata di Indonesia melalui artikel informatif, serta menyediakan forum diskusi interaktif yang memungkinkan pengguna bertanya, berbagi pengalaman, dan berkomentar mengenai berbagai destinasi wisata.",
@@ -252,12 +381,12 @@ export const Project = [
         ]
     },
     {
-        id: 4,
+        id: 8,
         picture: Infokan,
         Title: "Infokan: Interactive Learning Platform",
         Description: "Infokan merupakan sebuah media pembelajaran interaktif yang berfokus pada materi seputaran dunia ilmu komputer. Platform ini dibuat sebagai keperluan untuk projek basis data dengan pengembangan utama terdapat pada fitur CRUD (Create, Read, Update, Delete) dan integrasi terhadap DBMS untuk keperluan manajemen data dari aplikasi. Infokan memiliki beberapa fitur yang sudah dikembangkan, mencakup fitur utama forum diskusi yang menjadi ajang tanya jawab kepada sesama mahasiswa lainnya, fitur notes yang dibuat guna mendukung proses pembelajaran dari mahasiswa setelah mempelajari berbagai macam materi yang disediakan, dan pengembangan sistem secara CRUD (Create, Read, Update, Delete) untuk beberapa fitur seperti profile, notes, sampai pertanyaan, dan komentar pada forum diskusi. Platform ini dikembangkan dengan Vanilla CSS dan HTML sebagai frontend, bahasa PHP murni sebagai backend, dan integrasi dengan MySQL sebagai Database Management System.",
         Link: [
-         { GitHub: "https://github.com/ahqsa24/infokan-basis-data" },
+            { GitHub: "https://github.com/ahqsa24/infokan-basis-data" },
         ],
         Technologies: ["VanillaCSS", "PHP", "MySQL"],
         KeyFeature: [
@@ -267,7 +396,7 @@ export const Project = [
         ]
     },
     {
-        id: 5,
+        id: 9,
         picture: SDDA,
         Title: "SDDA Creative Landing Page",
         Description: "Sadida Creative merupakan sebuah platform yang menyediakan jasa pembuatan desain grafis sesuai dengan keinginan dari Client. Tampilan di atas merupakan landing page sederhana yang berisi data dummy dari platform Sadida Creative yang kita sebut sebagai iterasi pertama. Kedepannya landing page ini akan dikembangkan pada iterasi kedua dengan data rill yang akan membuatnya lebih interaktif kepada pengguna. Landing page tersebut berisi beberapa informasi dari Sadida Creative, seperti pengenalan singkat tentang Sadida Creative, pengenalan para eksekutor di balik layar Sadida Creative, melihat rating dari para eksekutor tersebut, melihat projek-projek yang sudah diselesaikan, sampai menghubungi narabuhung dari Sadida Creative untuk melakukan pemesanan jasa desain grafis. Landing page tersebut dibuat sebagai keperluan submisi untuk projek akhir dari Dicoding menggunakan HTML dan CSS sederhana. ",
@@ -284,12 +413,12 @@ export const Project = [
         ]
     },
     {
-        id: 6,
+        id: 10,
         picture: Notes,
         Title: "Personal Notes Using ReactJS",
         Description: "Aplikasi catatan pribadi berbasis ReactJS yang memungkinkan pengguna untuk menulis, mengedit, dan menghapus catatan secara interaktif. Dibangun dengan arsitektur SPA (Single Page Application) menggunakan Vite untuk performa tinggi dan respon cepat. Fitur utama mencakup pengarsipan catatan yang sudah tidak digunakan serta pembatasan karakter judul untuk menjaga keterbacaan dan kerapian tampilan.",
         Link: [
-         { GitHub: "https://github.com/ahqsa24/react-notes" },
+            { GitHub: "https://github.com/ahqsa24/react-notes" },
         ],
         Technologies: ["ReactJS", "Vite"],
         KeyFeature: [
@@ -299,12 +428,12 @@ export const Project = [
         ]
     },
     {
-        id: 7,
+        id: 11,
         picture: Bookshelf,
         Title: "Bookshelf App Using JavaScript",
         Description: "Aplikasi rak buku sederhana berbasis JavaScript murni yang dirancang untuk membantu pengguna mengelola daftar bacaan mereka. Data buku disimpan secara lokal menggunakan Local Storage, memungkinkan pengguna menambahkan, memindahkan, dan menghapus buku tanpa koneksi internet. Aplikasi ini juga dilengkapi fitur pencarian buku untuk mempermudah navigasi dan pengelolaan koleksi.",
         Link: [
-         { GitHub: "https://github.com/ahqsa24/bookshelf-api" },
+            { GitHub: "https://github.com/ahqsa24/bookshelf-api" },
         ],
         Technologies: ["JavaScript"],
         KeyFeature: [
@@ -314,12 +443,12 @@ export const Project = [
         ]
     },
     {
-        id: 8,
+        id: 12,
         picture: API,
         Title: "Bookshelf API Backend HapiJS",
         Description: "API backend yang dikembangkan menggunakan HapiJS untuk mendukung aplikasi Bookshelf. Proyek ini menerapkan prinsip RESTful API dan memungkinkan operasi CRUD (Create, Read, Update, Delete) untuk data buku. Dengan validasi input dan penanganan error yang baik, API ini memastikan pengalaman pengguna yang stabil dan responsif dalam mengelola data bacaan melalui endpoint terstruktur.",
         Link: [
-         { GitHub: "https://github.com/ahqsa24/notes-app-back-end" },
+            { GitHub: "https://github.com/ahqsa24/notes-app-back-end" },
         ],
         Technologies: ["NodeJS", "HapiJS", "Postman"],
         KeyFeature: [
@@ -468,6 +597,10 @@ export const TechStack = [
         Title: "JavaScript",
     },
     {
+        id: 3,
+        Title: "Typescript",
+    },
+    {
         id: 4,
         Title: "ReactJS",
     },
@@ -518,6 +651,18 @@ export const TechStack = [
     {
         id: 16,
         Title: "Postman",
+    },
+    {
+        id: 17,
+        Title: "MongoDB",
+    },
+    {
+        id: 18,
+        Title: "Railway",
+    },
+    {
+        id: 19,
+        Title: "Supabase",
     }
 ]
 
