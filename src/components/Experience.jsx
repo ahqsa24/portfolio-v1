@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { educationData, organizationData } from '../data.js'
+import { educationData, organizationData, workData } from '../data.js'
 import { experiencesData } from '../content.js'
-import { HiAcademicCap, HiUserGroup } from 'react-icons/hi'
+import { HiAcademicCap, HiUserGroup, HiBriefcase } from 'react-icons/hi'
 
 const Experience = () => {
   const experienceContent = experiencesData[0] // Get heading and intro text
@@ -10,7 +10,8 @@ const Experience = () => {
   const [expandedItems, setExpandedItems] = useState({});
   const [showAll, setShowAll] = useState({
     education: false,
-    organization: false
+    organization: false,
+    work: false
   });
 
   const handleTabClick = (tab) => {
@@ -38,34 +39,44 @@ const Experience = () => {
   return (
     <div id="experience" className="min-h-screen px-4 sm:px-8 md:px-16 lg:px-24 py-12 sm:py-16 md:py-20 lg:py-24">
       <div className="flex flex-col justify-center items-center animate-fade-in">
-  <h1 className="flex justify-center mb-4 sm:mb-6 text-3xl sm:text-4xl md:text-5xl font-bold text-gradient-red-via-maroon-to-orange hover:text-gradient-orange-via-red-to-maroon transition-all duration-500">{experienceContent.heading}</h1>
+        <h1 className="flex justify-center mb-4 sm:mb-6 text-3xl sm:text-4xl md:text-5xl font-bold text-gradient-red-via-maroon-to-orange hover:text-gradient-orange-via-red-to-maroon transition-all duration-500">{experienceContent.heading}</h1>
         <p className="flex w-full sm:w-[80%] md:w-[70%] text-center text-sm sm:text-base md:text-lg leading-relaxed hover:text-gray-900/60 dark:hover:text-gray-300 transition-colors duration-300">{experienceContent.text}</p>
       </div>
       <div className="flex flex-row sm:flex-row gap-2 sm:gap-8 mt-8 sm:mt-10 md:mt-12 justify-between bg-gradientMaroon dark:bg-gray-700/50 py-2 rounded-xl hover:bg-gradinetMaroon/80 dark:hover:bg-gray-600/60 transition-all duration-300 animate-slide-in-up delay-200">
-        <div 
-          className={`group flex flex-col gap-2 mx-auto items-center py-3 sm:py-4 w-full sm:w-[45%] rounded-xl cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg ${
-            activeTab === 'education' 
-              ? 'bg-yellow-50 dark:bg-gradient-to-r dark:from-gradientRed dark:via-gradientMaroon dark:to-gradientOrange text-gradientMaroon dark:text-amber-50 shadow-xl shadow-gradientRed/30' 
-              : 'text-gray-300 hover:text-white hover:bg-gray-600/30'
-          }`}
+        <div
+          className={`group flex flex-col gap-2 mx-auto items-center py-3 sm:py-4 w-full sm:w-[45%] rounded-xl cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg ${activeTab === 'education'
+            ? 'bg-yellow-50 dark:bg-gradient-to-r dark:from-gradientRed dark:via-gradientMaroon dark:to-gradientOrange text-gradientMaroon dark:text-amber-50 shadow-xl shadow-gradientRed/30'
+            : 'text-gray-300 hover:text-white hover:bg-gray-600/30'
+            }`}
           onClick={() => handleTabClick('education')}
         >
           <HiAcademicCap className="w-8 h-8 sm:w-10 sm:h-10 group-hover:scale-110 transition-transform duration-300" />
           <p className="text-sm sm:text-base group-hover:font-semibold transition-all duration-300">Education</p>
         </div>
-        <div 
-          className={`group flex flex-col gap-2 mx-auto items-center py-3 sm:py-4 w-full sm:w-[45%] rounded-xl cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg ${
-            activeTab === 'organization' 
-              ? 'bg-yellow-50 dark:bg-gradient-to-r dark:from-gradientRed dark:via-gradientMaroon dark:to-gradientOrange text-gradientMaroon dark:text-amber-50 shadow-xl shadow-gradientRed/30' 
-              : 'text-gray-300 hover:text-white hover:bg-gray-600/30'
-          }`}
+
+        <div
+          className={`group flex flex-col gap-2 mx-auto items-center py-3 sm:py-4 w-full sm:w-[45%] rounded-xl cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg ${activeTab === 'organization'
+            ? 'bg-yellow-50 dark:bg-gradient-to-r dark:from-gradientRed dark:via-gradientMaroon dark:to-gradientOrange text-gradientMaroon dark:text-amber-50 shadow-xl shadow-gradientRed/30'
+            : 'text-gray-300 hover:text-white hover:bg-gray-600/30'
+            }`}
           onClick={() => handleTabClick('organization')}
         >
           <HiUserGroup className="w-8 h-8 sm:w-10 sm:h-10 group-hover:scale-110 transition-transform duration-300" />
           <p className="text-sm sm:text-base">Organization</p>
         </div>
+
+        <div
+          className={`group flex flex-col gap-2 mx-auto items-center py-3 sm:py-4 w-full sm:w-[45%] rounded-xl cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg ${activeTab === 'work'
+            ? 'bg-yellow-50 dark:bg-gradient-to-r dark:from-gradientRed dark:via-gradientMaroon dark:to-gradientOrange text-gradientMaroon dark:text-amber-50 shadow-xl shadow-gradientRed/30'
+            : 'text-gray-300 hover:text-white hover:bg-gray-600/30'
+            }`}
+          onClick={() => handleTabClick('work')}
+        >
+          <HiBriefcase className="w-8 h-8 sm:w-10 sm:h-10 group-hover:scale-110 transition-transform duration-300" />
+          <p className="text-sm sm:text-base">Professional</p>
+        </div>
       </div>
-      
+
       {/* Tab Content */}
       <div className="mt-3 sm:mt-4">
         {activeTab === 'education' && (
@@ -74,9 +85,9 @@ const Experience = () => {
               {getDisplayData(educationData, 'education').map((education) => (
                 <div key={education.id} className="bg-gradientMaroon dark:bg-gray-700/50 p-3 sm:p-4 rounded-xl sm:flex-row gap-3 sm:gap-4 items-start sm:items-center">
                   <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-start">
-                    <img 
-                      src={education.picture} 
-                      alt={education.institution} 
+                    <img
+                      src={education.picture}
+                      alt={education.institution}
                       className="w-12 h-12 sm:w-16 sm:h-16 object-cover rounded-lg flex-shrink-0"
                     />
                     <div className="flex-1">
@@ -85,22 +96,21 @@ const Experience = () => {
                       <p className="text-xs sm:text-sm text-amber-50/70 dark:text-gray-400">{education.year}</p>
                     </div>
                     {education.description && (
-                        <button
-                          onClick={() => toggleDescription(education.id)}
-                          className="p-2 hover:bg-gradientMaroon/80 dark:hover:bg-gray-600 rounded-full transition-colors flex-shrink-0"
+                      <button
+                        onClick={() => toggleDescription(education.id)}
+                        className="p-2 hover:bg-gradientMaroon/80 dark:hover:bg-gray-600 rounded-full transition-colors flex-shrink-0"
+                      >
+                        <svg
+                          className={`w-4 h-4 sm:w-5 sm:h-5 text-gray-300 transform transition-transform duration-300 ${expandedItems[education.id] ? 'rotate-180' : ''
+                            }`}
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
                         >
-                          <svg 
-                            className={`w-4 h-4 sm:w-5 sm:h-5 text-gray-300 transform transition-transform duration-300 ${
-                              expandedItems[education.id] ? 'rotate-180' : ''
-                            }`} 
-                            fill="none" 
-                            stroke="currentColor" 
-                            viewBox="0 0 24 24"
-                          >
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                          </svg>
-                        </button>
-                      )}
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </button>
+                    )}
                   </div>
                   {education.description && expandedItems[education.id] && (
                     <div className="mt-3 sm:mt-4 fade-in">
@@ -119,7 +129,7 @@ const Experience = () => {
             </div>
             {educationData.length > 3 && (
               <div className="flex justify-start mt-4">
-                <button 
+                <button
                   onClick={() => toggleShowAll('education')}
                   className="px-4 sm:px-6 py-2 text-amber-50 bg-gradientMaroon dark:bg-gray-700/50 rounded-lg text-sm sm:text-base font-semibold hover:opacity-90 transition-opacity"
                 >
@@ -129,16 +139,16 @@ const Experience = () => {
             )}
           </div>
         )}
-        
+
         {activeTab === 'organization' && (
           <div className="fade-in">
             <div className="space-y-3">
               {getDisplayData(organizationData, 'organization').map((org) => (
                 <div key={org.id} className="bg-gradientMaroon dark:bg-gray-700/50 p-3 sm:p-4 rounded-xl">
                   <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-start">
-                    <img 
-                      src={org.picture} 
-                      alt={org.organization} 
+                    <img
+                      src={org.picture}
+                      alt={org.organization}
                       className="w-12 h-12 sm:w-16 sm:h-16 object-cover rounded-lg flex-shrink-0"
                     />
                     <div className="flex-1">
@@ -151,12 +161,11 @@ const Experience = () => {
                         onClick={() => toggleDescription(org.id)}
                         className="p-2 hover:bg-gradientMaroon/80 dark:hover:bg-gray-600 rounded-full transition-colors flex-shrink-0"
                       >
-                        <svg 
-                          className={`w-4 h-4 sm:w-5 sm:h-5 text-gray-300 transform transition-transform duration-300 ${
-                            expandedItems[org.id] ? 'rotate-180' : ''
-                          }`} 
-                          fill="none" 
-                          stroke="currentColor" 
+                        <svg
+                          className={`w-4 h-4 sm:w-5 sm:h-5 text-gray-300 transform transition-transform duration-300 ${expandedItems[org.id] ? 'rotate-180' : ''
+                            }`}
+                          fill="none"
+                          stroke="currentColor"
                           viewBox="0 0 24 24"
                         >
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -181,11 +190,72 @@ const Experience = () => {
             </div>
             {organizationData.length > 3 && (
               <div className="flex justify-start mt-4">
-                <button 
+                <button
                   onClick={() => toggleShowAll('organization')}
                   className="px-4 sm:px-6 py-2 text-amber-50 bg-gradientMaroon dark:bg-gray-700/50 rounded-lg text-sm sm:text-base font-semibold hover:opacity-90 transition-opacity"
                 >
                   {showAll.organization ? 'Show Less' : `See More (${organizationData.length - 3} more)`}
+                </button>
+              </div>
+            )}
+          </div>
+        )}
+
+        {activeTab === 'work' && (
+          <div className="fade-in">
+            <div className="space-y-3">
+              {getDisplayData(workData, 'work').map((org) => (
+                <div key={org.id} className="bg-gradientMaroon dark:bg-gray-700/50 p-3 sm:p-4 rounded-xl">
+                  <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-start">
+                    <img
+                      src={org.picture}
+                      alt={org.company}
+                      className="w-12 h-12 sm:w-16 sm:h-16 object-cover rounded-lg flex-shrink-0"
+                    />
+                    <div className="flex-1">
+                      <h3 className="text-lg sm:text-xl text-amber-50 font-semibold mb-1 sm:mb-2">{org.role}</h3>
+                      <p className="text-base sm:text-lg text-amber-50 mb-1">{org.company}</p>
+                      <p className="text-xs sm:text-sm text-amber-50/70 dark:text-gray-400">{org.year}</p>
+                    </div>
+                    {org.description && (
+                      <button
+                        onClick={() => toggleDescription(org.id)}
+                        className="p-2 hover:bg-gradientMaroon/80 dark:hover:bg-gray-600 rounded-full transition-colors flex-shrink-0"
+                      >
+                        <svg
+                          className={`w-4 h-4 sm:w-5 sm:h-5 text-gray-300 transform transition-transform duration-300 ${expandedItems[org.id] ? 'rotate-180' : ''
+                            }`}
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </button>
+                    )}
+                  </div>
+                  {org.description && expandedItems[org.id] && (
+                    <div className="mt-3 sm:mt-4 fade-in">
+                      <ul className="space-y-1">
+                        {org.description.map((desc, index) => (
+                          <li key={index} className="text-amber-50 text-xs sm:text-sm flex items-start">
+                            <span className="mr-2">•</span>
+                            {desc.text}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+            {workData.length > 3 && (
+              <div className="flex justify-start mt-4">
+                <button
+                  onClick={() => toggleShowAll('work')}
+                  className="px-4 sm:px-6 py-2 text-amber-50 bg-gradientMaroon dark:bg-gray-700/50 rounded-lg text-sm sm:text-base font-semibold hover:opacity-90 transition-opacity"
+                >
+                  {showAll.work ? 'Show Less' : `See More (${workData.length - 3} more)`}
                 </button>
               </div>
             )}

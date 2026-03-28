@@ -7,7 +7,7 @@ const About = () => {
 
   return (
     <div id="about" className="min-h-screen px-4 sm:px-8 md:px-16 lg:px-24 py-12 sm:py-16 md:py-20 lg:py-24">
-  <h1 className="flex justify-center mb-8 sm:mb-10 md:mb-12 text-3xl sm:text-4xl md:text-5xl font-bold text-gradient-red-via-maroon-to-orange hover:text-gradient-orange-via-red-to-maroon transition-all duration-500 animate-fade-in">{about.heading}</h1>
+    <h1 className="flex justify-center mb-8 sm:mb-10 md:mb-12 text-3xl sm:text-4xl md:text-5xl font-bold text-gradient-red-via-maroon-to-orange hover:text-gradient-orange-via-red-to-maroon transition-all duration-500 animate-fade-in">{about.heading}</h1>
       <div className="flex xl:flex-row flex-col-reverse md:flex-row-reverse lg:flex-col-reverse justify-between gap-8 lg:gap-12">
         <div className="flex flex-col gap-6 sm:gap-8 flex-1 animate-slide-in-left">
           <h1 className="flex flex-col gap-3 sm:gap-4 font-bold text-3xl sm:text-4xl md:text-5xl">
